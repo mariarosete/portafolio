@@ -77,15 +77,25 @@ Luego abre en tu navegador:
   <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/1.png?raw=true" alt="Desktop 1" width="32%" />
   <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/2.png?raw=true" alt="Desktop 2" width="32%" />
   <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/3.png?raw=true" alt="Desktop 3" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/4.png?raw=true" alt="Desktop 3" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/5.png?raw=true" alt="Desktop 3" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/6.png?raw=true" alt="Desktop 3" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/7.png?raw=true" alt="Desktop 3" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/4.png?raw=true" alt="Desktop 4" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/5.png?raw=true" alt="Desktop 5" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/6.png?raw=true" alt="Desktop 6" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/7.png?raw=true" alt="Desktop 7" width="32%" />
 </p>
 
 ### 📱 Versión móvil
 <p align="center">
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/mobile-1.png?raw=true" alt="Mobile 1" width="30%" />
+
+
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/menu.png?raw=true" alt="Movil 0" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/movil1.png?raw=true" alt="Movil 1" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/movil2.png?raw=true" alt="Movil 2" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/movil3.png?raw=true" alt="Movil 3" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/movil4.png?raw=true" alt="Movil 4" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/movil5.png?raw=true" alt="Movil 5" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/movil6.png?raw=true" alt="Movil 6" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/movil7.png?raw=true" alt="Movil 7" width="32%" />
+
 </p>
 
 ---
