@@ -89,7 +89,7 @@ Este proyecto puede desplegarse fácilmente con **[Vercel](https://vercel.com)**
 4. Espera unos segundos y tendrás tu portafolio online .  
 
 > Ejemplo:  
-> **https://portafolio-mariarosete.vercel.app**
+> **https://portafolio-indol-alpha.vercel.app**
 
 ---
 
