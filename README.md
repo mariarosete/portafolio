@@ -65,6 +65,7 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
   ```
 
 Luego abre en tu navegador:  
+
 👉 [http://localhost:5173](http://localhost:5173)
 
 ---
@@ -75,7 +76,6 @@ Luego abre en tu navegador:
 |-----------------------|-----------------|
 | ![Desktop](https://github.com/mariarosete/portafolio/blob/main/public/screenshot-desktop.png?raw=true) | ![Mobile](https://github.com/mariarosete/portafolio/blob/main/public/screenshot-mobile.png?raw=true) |
 
-> *(Puedes cambiar las rutas de las imágenes según tus capturas reales.)*
 
 ---
 
