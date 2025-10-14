@@ -79,15 +79,6 @@ Luego abre en tu navegador:
 
 ---
 
-## 🔮 Próximas mejoras
-
-- 🌙 Implementar **modo oscuro**.  
-- 🌐 Añadir **soporte multilenguaje (ES/EN)**.  
-- 🧠 Integrar proyectos dinámicos desde una API.  
-- ✨ Optimizar SEO y metadatos para buscadores.  
-
----
-
 ## 📬 Despliegue en línea
 
 Este proyecto puede desplegarse fácilmente con **[Vercel](https://vercel.com)**:
