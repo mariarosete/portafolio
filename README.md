@@ -74,7 +74,7 @@ Luego abre en tu navegador:
 
 | 💻 Versión escritorio | 📱 Versión móvil |
 |-----------------------|-----------------|
-| ![Desktop](https://github.com/mariarosete/portafolio/blob/main/public/screenshot-desktop.png?raw=true) | ![Mobile](https://github.com/mariarosete/portafolio/blob/main/public/screenshot-mobile.png?raw=true) |
+| ![Desktop](https://github.com/mariarosete/portafolio/blob/main/screenshots/1.png?raw=true) | ![Mobile]() |
 
 
 ---
