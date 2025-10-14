@@ -1,69 +1,112 @@
-# React + TypeScript + Vite
+# 💼 Portafolio – React + Vite + TailwindCSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Banner Portafolio](https://github.com/mariarosete/portafolio/blob/main/public/banner.png?raw=true)
 
-Currently, two official plugins are available:
+**Portafolio personal** desarrollado con **React**, **Vite** y **TailwindCSS**, donde presento mis proyectos, experiencia y habilidades como desarrolladora web.  
+Cuenta con un diseño moderno, animaciones suaves y una interfaz completamente responsive.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tecnologías utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🚀 Funcionalidades destacadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- 🎨 **Diseño moderno y minimalista** con TailwindCSS.  
+- ⚡ **Renderizado ultrarrápido** gracias a Vite.  
+- 📱 **Diseño responsive** adaptable a móviles, tablets y escritorio.  
+- 🧭 Navegación fluida entre secciones con animaciones de Framer Motion.  
+- 📬 Sección de **contacto funcional** con validación de formulario y envío de mensajes.  
+- 🌐 Enlaces directos a redes profesionales (GitHub, LinkedIn, correo).  
+
+---
+
+## 💻 Cómo ejecutar el proyecto
+
+### ✅ Requisitos previos
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
+
+- **Node.js 18 o superior** → [Descargar aquí](https://nodejs.org/)
+- **npm** (incluido con Node.js)
+
+---
+
+### 🚀 Instrucciones de instalación
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/mariarosete/portafolio.git
 ```
+   
+# 2. Acceder a la carpeta del proyecto
+cd portafolio
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# 3. Instalar dependencias
+npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# 4. Ejecutar en modo desarrollo
+npm run dev
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Luego abre en tu navegador:  
+👉 [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 📸 Capturas de pantalla
+
+| 💻 Versión escritorio | 📱 Versión móvil |
+|-----------------------|-----------------|
+| ![Desktop](https://github.com/mariarosete/portafolio/blob/main/public/screenshot-desktop.png?raw=true) | ![Mobile](https://github.com/mariarosete/portafolio/blob/main/public/screenshot-mobile.png?raw=true) |
+
+> *(Puedes cambiar las rutas de las imágenes según tus capturas reales.)*
+
+---
+
+## 🔮 Próximas mejoras
+
+- 🌙 Implementar **modo oscuro**.  
+- 🌐 Añadir **soporte multilenguaje (ES/EN)**.  
+- 🧠 Integrar proyectos dinámicos desde una API.  
+- ✨ Optimizar SEO y metadatos para buscadores.  
+
+---
+
+## 📬 Despliegue en línea
+
+Este proyecto puede desplegarse fácilmente con **[Vercel](https://vercel.com)**:
+
+1. Inicia sesión con tu cuenta de GitHub.  
+2. Importa el repositorio `mariarosete/portafolio`.  
+3. Vercel detectará automáticamente que es un proyecto **Vite + React**.  
+4. Espera unos segundos y tendrás tu portafolio online .  
+
+> Ejemplo:  
+> **https://portafolio-mariarosete.vercel.app**
+
+---
+
+## 📩 Contacto
+
+<p align="center">
+  <a href="mailto:marlarosete89@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://linkedin.com/in/mariarosetesuarez">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://github.com/mariarosete">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</p>
+
+---
+
+<p align="center">Desarrollado con ❤️ por <b>María Rosete</b> </p>
+
