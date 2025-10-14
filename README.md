@@ -47,13 +47,22 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
    ```
    
 # 2. Acceder a la carpeta del proyecto
-cd portafolio
+
+ ```bash
+   cd portafolio
+  ```
 
 # 3. Instalar dependencias
-npm install
+
+ ```bash
+   npm install
+  ```
 
 # 4. Ejecutar en modo desarrollo
-npm run dev
+
+ ```bash
+   npm run dev
+  ```
 
 Luego abre en tu navegador:  
 👉 [http://localhost:5173](http://localhost:5173)
