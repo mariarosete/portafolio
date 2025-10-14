@@ -72,24 +72,30 @@ Luego abre en tu navegador:
 
 ## 📸 Capturas de pantalla
 
-| 💻 Versión escritorio                                         | 📱 Versión móvil |
-| ------------------------------------------------------------ | --------------- |
-| ![Desktop](https://github.com/mariarosete/portafolio/blob/main/screenshots/1.png?raw=true) | ![Mobile]()     |
+### 💻 Versión escritorio
+<p align="center">
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/1.png?raw=true" alt="Desktop 1" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/2.png?raw=true" alt="Desktop 2" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/3.png?raw=true" alt="Desktop 3" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/4.png?raw=true" alt="Desktop 3" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/5.png?raw=true" alt="Desktop 3" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/6.png?raw=true" alt="Desktop 3" width="32%" />
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/7.png?raw=true" alt="Desktop 3" width="32%" />
+</p>
 
+### 📱 Versión móvil
+<p align="center">
+  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/mobile-1.png?raw=true" alt="Mobile 1" width="30%" />
+</p>
 
 ---
 
 ## 📬 Despliegue en línea
 
-Este proyecto puede desplegarse fácilmente con **[Vercel](https://vercel.com)**:
+Proyecto desplegado en **Vercel**:  
+**https://portafolio-indol-alpha.vercel.app**
 
-1. Inicia sesión con tu cuenta de GitHub.  
-2. Importa el repositorio `mariarosete/portafolio`.  
-3. Vercel detectará automáticamente que es un proyecto **Vite + React**.  
-4. Espera unos segundos y tendrás tu portafolio online .  
-
-> Ejemplo:  
-> **https://portafolio-indol-alpha.vercel.app**
+> Cada `git push` a `main` actualiza automáticamente el sitio en producción.
 
 ---
 
