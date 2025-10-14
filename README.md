@@ -115,7 +115,7 @@ Proyecto desplegado en **Vercel**:
 
 ---
 
-<p align="center">Desarrollado con ❤️ por <b>María Rosete</b> </p>
+<p align="center">Desarrollado con ❤️ por <b>María Rosete Suárez</b> </p>
 
 
 
