@@ -40,7 +40,7 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
 ### 🚀 Instrucciones de instalación
 
-1. Clona este repositorio:
+# 1. Clona este repositorio:
 
  ```bash
    git clone https://github.com/mariarosete/portafolio.git
