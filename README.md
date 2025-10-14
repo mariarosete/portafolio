@@ -72,33 +72,44 @@ Luego abre en tu navegador:
 
 ## 📸 Capturas de pantalla
 
-### 💻 Versión escritorio
-<p align="center">
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/1.png?raw=true" alt="Desktop 1" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/2.png?raw=true" alt="Desktop 2" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/3.png?raw=true" alt="Desktop 3" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/4.png?raw=true" alt="Desktop 4" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/5.png?raw=true" alt="Desktop 5" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/6.png?raw=true" alt="Desktop 6" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/7.png?raw=true" alt="Desktop 7" width="32%" />
-</p>
+| 🏠 Inicio | 💼 Sobre mí |
+|-----------|-------------|
+| ![Inicio](https://github.com/mariarosete/portafolio/blob/main/screenshots/1.png?raw=true) | ![Sobre mí](https://github.com/mariarosete/portafolio/blob/main/screenshots/2.png?raw=true) |
 
-### 📱 Versión móvil
-<p align="center">
+| 🎓 Educación | 🧾 Certificados |
+|--------------|----------------|
+| ![Educación](https://github.com/mariarosete/portafolio/blob/main/screenshots/3.png?raw=true) | ![Certificados](https://github.com/mariarosete/portafolio/blob/main/screenshots/4.png?raw=true) |
 
+| 💼 Experiencia | 🚀 Proyectos |
+|----------------|-------------|
+| ![Experiencia](https://github.com/mariarosete/portafolio/blob/main/screenshots/5.png?raw=true) | ![Proyectos](https://github.com/mariarosete/portafolio/blob/main/screenshots/6.png?raw=true) |
 
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/menu.png?raw=true" alt="Movil 0" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/movil1.png?raw=true" alt="Movil 1" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/movil2.png?raw=true" alt="Movil 2" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/movil3.png?raw=true" alt="Movil 3" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/movil4.png?raw=true" alt="Movil 4" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/movil5.png?raw=true" alt="Movil 5" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/movil6.png?raw=true" alt="Movil 6" width="32%" />
-  <img src="https://github.com/mariarosete/portafolio/blob/main/screenshots/movil7.png?raw=true" alt="Movil 7" width="32%" />
-
-</p>
+| 🧠 Tecnologías | 📩 Contacto |
+|----------------|-------------|
+| ![Tecnologías](https://github.com/mariarosete/portafolio/blob/main/screenshots/7.png?raw=true) | ![Contacto](https://github.com/mariarosete/portafolio/blob/main/screenshots/8.png?raw=true) |
 
 ---
+
+### 📱 Versión móvil
+
+| 📱 Menú lateral | 🏠 Inicio |
+|----------------|-----------|
+| ![Menu](https://github.com/mariarosete/portafolio/blob/main/screenshots/menu.png?raw=true) | ![Movil 1](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil1.png?raw=true) |
+
+| 💼 Sobre mí | 🎓 Educación |
+|-------------|-------------|
+| ![Movil 2](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil2.png?raw=true) | ![Movil 3](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil3.png?raw=true) |
+
+| 💼 Experiencia | 🚀 Proyectos |
+|----------------|-------------|
+| ![Movil 4](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil4.png?raw=true) | ![Movil 5](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil5.png?raw=true) |
+
+| 🧠 Tecnologías | 📩 Contacto |
+|----------------|-------------|
+| ![Movil 6](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil6.png?raw=true) | ![Movil 7](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil7.png?raw=true) |
+
+---
+
 
 ## 📬 Despliegue en línea
 
