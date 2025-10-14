@@ -78,15 +78,15 @@ Luego abre en tu navegador:
 
 | 🎓 Educación | 🧾 Certificados |
 |--------------|----------------|
-| ![Educación](https://github.com/mariarosete/portafolio/blob/main/screenshots/3.png?raw=true) | ![Certificados](https://github.com/mariarosete/portafolio/blob/main/screenshots/4.png?raw=true) |
+| ![Educación](https://github.com/mariarosete/portafolio/blob/main/screenshots/2.png?raw=true) | ![Certificados](https://github.com/mariarosete/portafolio/blob/main/screenshots/3.png?raw=true) |
 
 | 💼 Experiencia | 🚀 Proyectos |
 |----------------|-------------|
-| ![Experiencia](https://github.com/mariarosete/portafolio/blob/main/screenshots/5.png?raw=true) | ![Proyectos](https://github.com/mariarosete/portafolio/blob/main/screenshots/6.png?raw=true) |
+| ![Experiencia](https://github.com/mariarosete/portafolio/blob/main/screenshots/4.png?raw=true) | ![Proyectos](https://github.com/mariarosete/portafolio/blob/main/screenshots/5.png?raw=true) |
 
 | 🧠 Tecnologías | 📩 Contacto |
 |----------------|-------------|
-| ![Tecnologías](https://github.com/mariarosete/portafolio/blob/main/screenshots/7.png?raw=true) | ![Contacto](https://github.com/mariarosete/portafolio/blob/main/screenshots/8.png?raw=true) |
+| ![Tecnologías](https://github.com/mariarosete/portafolio/blob/main/screenshots/6.png?raw=true) | ![Contacto](https://github.com/mariarosete/portafolio/blob/main/screenshots/7.png?raw=true) |
 
 ---
 
