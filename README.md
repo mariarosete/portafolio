@@ -40,10 +40,11 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
 ### 🚀 Instrucciones de instalación
 
-```bash
-# 1. Clonar el repositorio
-git clone https://github.com/mariarosete/portafolio.git
-```
+1. Clona este repositorio:
+
+ ```bash
+   git clone https://github.com/mariarosete/portafolio.git
+   ```
    
 # 2. Acceder a la carpeta del proyecto
 cd portafolio
