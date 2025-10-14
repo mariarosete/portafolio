@@ -44,25 +44,25 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
  ```bash
    git clone https://github.com/mariarosete/portafolio.git
-   ```
-   
+ ```
+
 # 2. Acceder a la carpeta del proyecto
 
  ```bash
    cd portafolio
-  ```
+ ```
 
 # 3. Instalar dependencias
 
  ```bash
    npm install
-  ```
+ ```
 
 # 4. Ejecutar en modo desarrollo
 
  ```bash
    npm run dev
-  ```
+ ```
 
 Luego abre en tu navegador:  
 
@@ -72,9 +72,9 @@ Luego abre en tu navegador:
 
 ## 📸 Capturas de pantalla
 
-| 💻 Versión escritorio | 📱 Versión móvil |
-|-----------------------|-----------------|
-| ![Desktop](https://github.com/mariarosete/portafolio/blob/main/screenshots/1.png?raw=true) | ![Mobile]() |
+| 💻 Versión escritorio                                         | 📱 Versión móvil |
+| ------------------------------------------------------------ | --------------- |
+| ![Desktop](https://github.com/mariarosete/portafolio/blob/main/screenshots/1.png?raw=true) | ![Mobile]()     |
 
 
 ---
@@ -110,4 +110,8 @@ Este proyecto puede desplegarse fácilmente con **[Vercel](https://vercel.com)**
 ---
 
 <p align="center">Desarrollado con ❤️ por <b>María Rosete</b> </p>
+
+
+
+
 
