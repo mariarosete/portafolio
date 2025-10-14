@@ -5,24 +5,27 @@ import { ArrowUpRight, FileDown } from "lucide-react";
 const Hero: React.FC = () => (
   <section id="inicio" className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 pt-14 pb-8">
     <div className="rounded-3xl overflow-hidden border bg-white">
-      {/* Banner */}
-      <div className="relative w-full aspect-[16/9] md:aspect-[21/6]">
+      {/* Banner responsive */}
+      <div className="relative w-full overflow-hidden rounded-t-3xl
+                h-44 xs:h-52 sm:h-60 md:h-auto md:aspect-[21/6]">
         <img
           src={PROFILE.banner}
           alt="Banner principal"
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ objectPosition: "50% 40%" }}
+          className="absolute inset-0 w-full h-full
+               object-contain md:object-cover
+               md:[object-position:50%_40%]"
           loading="eager"
           decoding="async"
         />
       </div>
 
+
       {/* Card */}
       <div className="p-4 sm:p-6 md:p-8">
         <div className="relative rounded-[22px] p-[2px] bg-gradient-to-br from-rose-300/60 via-rose-200/55 to-amber-200/60 shadow-[0_20px_60px_-20px_rgba(244,63,94,.25)]">
           <div className="rounded-[20px] bg-white/90 backdrop-blur-[2px] ring-1 ring-white/70 px-4 py-5 sm:px-6 sm:py-6 md:px-8 md:py-7">
-              <div className="grid gap-5 md:grid-cols-[1fr_auto] md:gap-6 items-start">
-              
+            <div className="grid gap-5 md:grid-cols-[1fr_auto] md:gap-6 items-start">
+
               {/* FOTO */}
               <div className="order-1 md:order-2 justify-self-center md:justify-self-end">
                 <div className="relative inline-block">
@@ -51,7 +54,7 @@ const Hero: React.FC = () => (
                   {PROFILE.about}
                 </p>
 
-               
+
                 <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-3">
                   <a
                     href="#proyectos"
