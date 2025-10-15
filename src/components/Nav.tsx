@@ -8,7 +8,13 @@ const Nav: React.FC = () => {
   const [open, setOpen] = useState(false);
 
   const active = useScrollSpy([
-    "inicio", "sobre-mi", "educacion", "certificados", "experiencia", "proyectos", "tecnologias", 
+    "inicio",
+    "sobre-mi",
+    "educacion",
+    "certificados",
+    "experiencia",
+    "proyectos",
+    "tecnologias",
   ]);
 
   useEffect(() => {
@@ -18,6 +24,7 @@ const Nav: React.FC = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Bloquea el scroll del body cuando el panel está abierto (correcto).
   useEffect(() => {
     const prev = document.body.style.overflow;
     document.body.style.overflow = open ? "hidden" : "";
@@ -31,28 +38,38 @@ const Nav: React.FC = () => {
   }, []);
 
   const LinkAccent = ({
-    href, children,
-  }: { href: `#${string}`; children: React.ReactNode }) => {
+    href,
+    children,
+  }: {
+    href: `#${string}`;
+    children: React.ReactNode;
+  }) => {
     const id = href.slice(1);
     const isActive = active === id;
     return (
       <a
         href={href}
-        className={`relative px-3 py-2 rounded-xl text-sm font-medium transition group ${isActive ? "text-slate-900" : "text-slate-800 hover:text-slate-900"
-          }`}
+        className={`relative px-3 py-2 rounded-xl text-sm font-medium transition group ${
+          isActive ? "text-slate-900" : "text-slate-800 hover:text-slate-900"
+        }`}
       >
         <span className="relative z-10">{children}</span>
         <span
-          className={`absolute left-2 right-2 -bottom-0.5 h-[3px] rounded-full transition-opacity bg-gradient-to-r from-rose-500 to-amber-400 ${isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-            }`}
+          className={`absolute left-2 right-2 -bottom-0.5 h-[3px] rounded-full transition-opacity bg-gradient-to-r from-rose-500 to-amber-400 ${
+            isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+          }`}
         />
       </a>
     );
   };
 
   const MobileLink = ({
-    href, children,
-  }: { href: `#${string}`; children: React.ReactNode }) => (
+    href,
+    children,
+  }: {
+    href: `#${string}`;
+    children: React.ReactNode;
+  }) => (
     <a
       href={href}
       onClick={() => setOpen(false)}
@@ -64,14 +81,24 @@ const Nav: React.FC = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all backdrop-blur-md ${scrolled
+      className={`sticky top-0 z-50 transition-all backdrop-blur-md ${
+        scrolled
           ? "bg-gradient-to-r from-rose-300/95 via-rose-200/95 to-amber-200/95 border-b border-rose-200/70 shadow-[0_6px_18px_-4px_rgba(244,63,94,.35)]"
           : "bg-gradient-to-r from-rose-200/95 via-rose-100/95 to-amber-100/95"
-        }`}
+      }`}
     >
       <nav className="max-w-[1440px] mx-auto h-14 px-4 md:px-6 flex items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-2 font-semibold tracking-tight text-slate-900 shrink-0">
-          <img src="/favicon.svg" alt="Logo MR" className="h-5 w-5 rounded-md" loading="lazy" decoding="async" />
+        <a
+          href="#inicio"
+          className="flex items-center gap-2 font-semibold tracking-tight text-slate-900 shrink-0"
+        >
+          <img
+            src="/favicon.svg"
+            alt="Logo MR"
+            className="h-5 w-5 rounded-md"
+            loading="lazy"
+            decoding="async"
+          />
           <span className="whitespace-nowrap">María Rosete</span>
         </a>
 
@@ -109,7 +136,7 @@ const Nav: React.FC = () => {
           <a aria-label="LinkedIn" href={PROFILE.socials.linkedin} target="_blank" rel="noreferrer" className="p-2 rounded-lg hover:bg-white/30">
             <Linkedin className="w-5 h-5 text-slate-800" />
           </a>
-          <a aria-label="Email" href={PROFILE.socials.email} className="p-2 rounded-lg hover:bg-white/30">
+          <a aria-label="Email" href={PROFILE.socials.email} className="p-2 rounded-lg hover:bg白/30">
             <Mail className="w-5 h-5 text-slate-800" />
           </a>
 
@@ -125,24 +152,17 @@ const Nav: React.FC = () => {
 
       {open && (
         <div className="hidden max-[1125px]:block">
+          <div className="fixed inset-0 z-40 bg-black/30" onClick={() => setOpen(false)} />
           <div
-            className="fixed inset-0 z-40 bg-black/30"
-            onClick={() => setOpen(false)}
-          />
-         
-          <div
-            className="fixed z-50 inset-x-0 top-14 bottom-[env(safe-area-inset-bottom,0px)] mx-4
-                 rounded-2xl p-[2px]
-                 bg-gradient-to-r from-rose-300 via-rose-200 to-amber-200
-                 shadow-[0_20px_60px_-20px_rgba(0,0,0,.35)]"
+            className="fixed top-14 inset-x-0 z-50 mx-4 rounded-2xl p-[2px]
+                       bg-gradient-to-r from-rose-300 via-rose-200 to-amber-200
+                       shadow-[0_20px_60px_-20px_rgba(0,0,0,.35)]"
             role="dialog"
             aria-modal="true"
           >
-            {/* Contenedor scrollable */}
-            <div className="h-full rounded-2xl bg-white/90 ring-1 ring-white/70 backdrop-blur-[2px]
-                      overflow-y-auto overscroll-contain">
-              <div className="sticky top-0 z-10 flex items-center justify-between px-4 py-3
-                        bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70">
+            {/* Cambios: max-h + flex col para que el cuerpo pueda hacer overflow-y-auto */}
+            <div className="rounded-2xl bg-white/90 ring-1 ring-white/70 backdrop-blur-[2px] flex flex-col max-h-[calc(100dvh-5rem)]">
+              <div className="flex items-center justify-between px-4 py-3">
                 <span className="font-semibold text-slate-900">Menú</span>
                 <button
                   aria-label="Cerrar menú"
@@ -153,7 +173,8 @@ const Nav: React.FC = () => {
                 </button>
               </div>
 
-              <div className="px-2 pb-4 space-y-1">
+              {/* Cambios: overflow-y-auto para permitir scroll interno en horizontal */}
+              <div className="px-2 pb-3 space-y-1 overflow-y-auto">
                 <MobileLink href="#sobre-mi">Sobre mí</MobileLink>
                 <MobileLink href="#educacion">Educación</MobileLink>
                 <MobileLink href="#certificados">Certificados</MobileLink>
@@ -168,7 +189,7 @@ const Nav: React.FC = () => {
                     href="#contacto"
                     onClick={() => setOpen(false)}
                     className="inline-flex h-10 items-center justify-center gap-2 rounded-xl px-4 text-white
-                         bg-gradient-to-r from-rose-500 to-amber-400 hover:brightness-110"
+                               bg-gradient-to-r from-rose-500 to-amber-400 hover:brightness-110"
                   >
                     <Mail className="w-4 h-4" /> Contacto
                   </a>
@@ -178,17 +199,19 @@ const Nav: React.FC = () => {
                     rel="noopener"
                     onClick={() => setOpen(false)}
                     className="inline-flex h-10 items-center justify-center gap-2 rounded-xl px-4 text-white
-                         bg-gradient-to-r from-rose-500 to-amber-400 hover:brightness-110"
+                               bg-gradient-to-r from-rose-500 to-amber-400 hover:brightness-110"
                   >
                     <FileDown className="w-4 h-4" /> Descargar CV
                   </a>
                 </div>
+
+                {/* Pequeño padding seguro por si hay notch/barra */}
+                <div className="pb-[env(safe-area-inset-bottom)]" />
               </div>
             </div>
           </div>
         </div>
       )}
-
     </header>
   );
 };
