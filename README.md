@@ -111,7 +111,7 @@ Luego abre en tu navegador:
 ---
 
 
-##  Despliegue en línea
+## 💻  Despliegue en línea
 
 Proyecto desplegado en **Vercel**:  
 **https://portafolio-indol-alpha.vercel.app**
