@@ -94,21 +94,26 @@ Luego abre en tu navegador:
 
 | 📱 Menú lateral | 🏠 Inicio |
 |----------------|-----------|
-| ![Menu](https://github.com/mariarosete/portafolio/blob/main/screenshots/menu.png?raw=true) | ![Movil 1](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil1.png?raw=true) |
+| ![Menu](https://github.com/mariarosete/portafolio/blob/main/screenshots/menu.png?raw=true) | ![Inicio](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil1.png?raw=true) |
 
 | 💼 Sobre mí | 🎓 Educación |
 |-------------|-------------|
-| ![Movil 2](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil2.png?raw=true) | ![Movil 3](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil3.png?raw=true) |
+| ![Sobre mí](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil2.png?raw=true) | ![Educación](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil3.png?raw=true) |
 
-| 💼 Experiencia | 🚀 Proyectos |
-|----------------|-------------|
-| ![Movil 4](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil4.png?raw=true) | ![Movil 5](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil5.png?raw=true) |
+| 📜 Certificados | 💼 Experiencia |
+|-----------------|----------------|
+| ![Certificados](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil4.png?raw=true) | ![Experiencia](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil5.png?raw=true) |
 
-| 🧠 Tecnologías | 📩 Contacto |
-|----------------|-------------|
-| ![Movil 6](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil6.png?raw=true) | ![Movil 7](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil7.png?raw=true) |
+| 🚀 Proyectos | 🧠 Tecnologías |
+|--------------|----------------|
+| ![Proyectos](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil6.png?raw=true) | ![Tecnologías](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil7.png?raw=true) |
+
+| 📩 Contacto |  |
+|-------------|--|
+| ![Contacto](https://github.com/mariarosete/portafolio/blob/main/screenshots/movil8.png?raw=true) |  |
 
 ---
+
 
 
 ## 💻  Despliegue en línea
