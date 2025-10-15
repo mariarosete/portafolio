@@ -1,16 +1,21 @@
 import React from "react";
 import { Loader2, Send, CheckCircle2 } from "lucide-react";
+import { FORM_ENDPOINT } from "../config/forms"; 
 
-const FORM_ENDPOINT = "https://getform.io/f/bejedjoa";
-
-
+// Estados de envío:
+/********************************************************************************************************** */
+//"idle" : estado inicial, el usuario todavía no ha enviado nada.
+//"sending" : el formulario se está enviando (mostramos “Enviando…” y deshabilitamos el botón).
+//"sent" : el formulario ya fue enviado correctamente (mostramos “Enviado” y el botón queda deshabilitado).
 type Status = "idle" | "sending" | "sent";
 
 export default function ContactForm() {
   const [status, setStatus] = React.useState<Status>("idle");
 
+  // Manejador de envío del formulario
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    // Evita envíos repetidos mientras está enviando o ya enviado
     if (status === "sending" || status === "sent") return;
 
     setStatus("sending");
@@ -24,10 +29,10 @@ export default function ContactForm() {
         body: data,
       });
 
-      
-      (e.currentTarget as HTMLFormElement).reset();
+      // Limpia los campos 
+      e.currentTarget.reset();
     } finally {
-      setStatus("sent");
+       setStatus("sent");
     }
   }
 
@@ -41,6 +46,7 @@ export default function ContactForm() {
         aria-busy={isSending}
         className="rounded-3xl bg-white/90 backdrop-blur-[2px] ring-1 ring-white/70 p-5 md:p-6 space-y-4"
       >
+        {/* Fila: nombre y email */}
         <div className="grid md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-slate-700">Nombre</label>
@@ -68,6 +74,7 @@ export default function ContactForm() {
           </div>
         </div>
 
+        {/* Mensaje */}
         <div>
           <label className="block text-sm font-medium text-slate-700">Mensaje *</label>
           <textarea
@@ -81,14 +88,16 @@ export default function ContactForm() {
           />
         </div>
 
+        {/* Honeypot anti-bots (Getform lo ignora si está vacío) */}
         <input type="text" name="_gotcha" className="hidden" aria-hidden="true" />
 
+        {/* Pie: aviso y botón de enviar */}
         <div className="flex items-center justify-between gap-3">
           <p className="text-xs text-slate-500">* Campos obligatorios.</p>
 
           <button
             type="submit"
-            disabled={isSending || isSent}
+            disabled={isSending || isSent} // Deshabilita mientras envía y después
             className={[
               "rounded-2xl px-4 inline-flex items-center gap-2 text-white",
               "bg-gradient-to-r from-rose-500 to-amber-400",

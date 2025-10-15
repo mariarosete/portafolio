@@ -2,8 +2,8 @@ import pokedexBanner from "../assets/Pokedex.jpg";
 import servidor from "../assets/Servidor Archivos.jpg";
 import asgard from "../assets/ASGARD GYM.jpg";
 import skilltech from "../assets/SkillTech.jpg";
-
 export type FitMode = "cover" | "contain";
+export type ModoAjuste = FitMode; 
 export type Project = {
   title: string;
   banner: string;
@@ -14,13 +14,18 @@ export type Project = {
   position?: string;
   award?: string;
 };
+export type Proyecto = Project; 
 
-export const PROFILE = {
+// ─────────────────────────────────────────────────────────────
+// Perfil (datos generales)
+// ─────────────────────────────────────────────────────────────
+export const PERFIL = {
   name: "María Rosete Suárez",
   role: "Desarrolladora Full Stack Junior",
   about:
     "Desarrolladora Full Stack Junior con base en ASI y especialización en Aplicaciones Web y Multiplataforma. He trabajado en proyectos reales con ASP.NET Core + React (Clarcat) y con Node.js + Vue.js (Ticmedia), creando APIs REST documentadas con Swagger y UIs accesibles con React, Vite y Tailwind. Me mueven la calidad del código, el aprendizaje continuo y aportar valor desde el primer día en equipos ágiles.",
-  banner: "https://github.com/mariarosete/mariarosete/blob/main/Banner.jpg?raw=true",
+  banner:
+    "https://github.com/mariarosete/mariarosete/blob/main/Banner.jpg?raw=true",
   photo: "/maria.jpg",
   socials: {
     email: "mailto:marlarosete89@gmail.com",
@@ -30,46 +35,161 @@ export const PROFILE = {
   cv: "https://github.com/mariarosete/mariarosete/raw/main/assets/cv/CV_MRS.pdf",
 };
 
-const CERT_LOGO_BASE =
+export const PROFILE = PERFIL;
+
+// ─────────────────────────────────────────────────────────────
+// Logos de certificaciones 
+// ─────────────────────────────────────────────────────────────
+const RUTA_LOGOS_CERT =
   "https://github.com/mariarosete/mariarosete/blob/main/assets/certifications/";
-const certLogo = (file: string) => `${CERT_LOGO_BASE}${file}?raw=true`;
+const logoCert = (file: string) => `${RUTA_LOGOS_CERT}${file}?raw=true`;
 
-export const CERT_LOGO = {
-  openwebinars: certLogo("openwebinars.png"),
-  sap: certLogo("sap.png"),
-  coursera: certLogo("coursera.png"),
-  ecdl: certLogo("ecdl.png"),
-  asata: certLogo("asata.png"),
-  dicampus: certLogo("dicampus.png"),
-  salesforce: certLogo("salesforce.png"),
+// Mapa de logos
+export const LOGO_CERT = {
+  openwebinars: logoCert("openwebinars.png"),
+  sap: logoCert("sap.png"),
+  coursera: logoCert("coursera.png"),
+  ecdl: logoCert("ecdl.png"),
+  asata: logoCert("asata.png"),
+  dicampus: logoCert("dicampus.png"),
+  salesforce: logoCert("salesforce.png"),
 };
+export const CERT_LOGO = LOGO_CERT; 
 
-export const EDUCATION = [
-  { title: "CFGS Desarrollo de Aplicaciones Multiplataforma", center: "IES Número 1 Gijón", period: "sept. 2024 – jun. 2025" },
-  { title: "CFGS Desarrollo de Aplicaciones Web", center: "CIFP La Laboral", period: "sept. 2022 – jun. 2024" },
-  { title: "CFGS Administración de Sistemas Informáticos", center: "IES Número 1 Gijón", period: "sept. 2009 – jun. 2011" },
+// ─────────────────────────────────────────────────────────────
+// Educación (línea de tiempo)
+// ─────────────────────────────────────────────────────────────
+export const EDUCACION = [
+  {
+    title: "CFGS Desarrollo de Aplicaciones Multiplataforma",
+    center: "IES Número 1 Gijón",
+    period: "sept. 2024 – jun. 2025",
+  },
+  {
+    title: "CFGS Desarrollo de Aplicaciones Web",
+    center: "CIFP La Laboral",
+    period: "sept. 2022 – jun. 2024",
+  },
+  {
+    title: "CFGS Administración de Sistemas Informáticos",
+    center: "IES Número 1 Gijón",
+    period: "sept. 2009 – jun. 2011",
+  },
 ];
 
-export const CERTS = [
-  { title: "Curso de Angular: Ampliando Conceptos", org: "OpenWebinars", date: "Jul. 2025", link: "https://openwebinars.net/cert/62se", logo: CERT_LOGO.openwebinars },
-  { title: ".NET Framework", org: "OpenWebinars", date: "Jul. 2025", link: "https://openwebinars.net/cert/lWvO", logo: CERT_LOGO.openwebinars },
-  { title: "Fundamentos de React", org: "OpenWebinars", date: "Jul. 2025", link: "https://openwebinars.net/cert/q9Yr", logo: CERT_LOGO.openwebinars },
-  { title: "MongoDB: Creación y gestión de bases de datos NoSQL", org: "OpenWebinars", date: "Mar. 2025", link: "https://openwebinars.net/certificacion/0QCj1YwR", logo: CERT_LOGO.openwebinars },
-  { title: "Learning the Basics of ABAP Programming on SAP BTP", org: "SAP", date: "Ene. 2025", link: "https://www.credly.com/badges/0d749aff-8745-4737-abb0-90058a1ca0bb", logo: CERT_LOGO.sap },
-  { title: "Perfil Trailhead de Salesforce – Insignias y Rutas", org: "Salesforce", date: "Ene. 2025", link: "https://www.salesforce.com/trailblazer/dvpl9jhprurtdm3g7i", logo: CERT_LOGO.salesforce },
-  { title: "Servidor Web Apache 2.4", org: "OpenWebinars", date: "Nov. 2023", link: "https://openwebinars.net/cert/PuCz", logo: CERT_LOGO.openwebinars },
-  { title: "Certificado profesional en Soporte de Tecnologías de la Información de Google", org: "Coursera", date: "Ago. 2022", link: "https://www.coursera.org/account/accomplishments/professional-cert/WU7LEUWZ8FLE", logo: CERT_LOGO.coursera },
-  { title: 'Certificado de profesionalidad nivel 3 “Seguridad Informática”', org: 'ASATA', date: 'Dic. 2018', credId: '03/18/00004962/IFCT0109', logo: CERT_LOGO.asata },
-  { title: 'Acreditación de competencias digitales europeas ECDL', org: 'ECDL Spain', date: 'Dic. 2017', credId: 'ES004660', logo: CERT_LOGO.ecdl },
-  { title: 'Curso de Seguridad Informática en la Gestión Empresarial', org: 'Dicampus', date: '2017', credId: 'PLF 2017/165', logo: CERT_LOGO.dicampus },
+export const EDUCATION = EDUCACION;
+
+// ─────────────────────────────────────────────────────────────
+// Certificados
+// ─────────────────────────────────────────────────────────────
+export const CERTIFICADOS = [
+  {
+    title: "Curso de Angular: Ampliando Conceptos",
+    org: "OpenWebinars",
+    date: "Jul. 2025",
+    link: "https://openwebinars.net/cert/62se",
+    logo: LOGO_CERT.openwebinars,
+  },
+  {
+    title: ".NET Framework",
+    org: "OpenWebinars",
+    date: "Jul. 2025",
+    link: "https://openwebinars.net/cert/lWvO",
+    logo: LOGO_CERT.openwebinars,
+  },
+  {
+    title: "Fundamentos de React",
+    org: "OpenWebinars",
+    date: "Jul. 2025",
+    link: "https://openwebinars.net/cert/q9Yr",
+    logo: LOGO_CERT.openwebinars,
+  },
+  {
+    title: "MongoDB: Creación y gestión de bases de datos NoSQL",
+    org: "OpenWebinars",
+    date: "Mar. 2025",
+    link: "https://openwebinars.net/certificacion/0QCj1YwR",
+    logo: LOGO_CERT.openwebinars,
+  },
+  {
+    title: "Learning the Basics of ABAP Programming on SAP BTP",
+    org: "SAP",
+    date: "Ene. 2025",
+    link: "https://www.credly.com/badges/0d749aff-8745-4737-abb0-90058a1ca0bb",
+    logo: LOGO_CERT.sap,
+  },
+  {
+    title: "Perfil Trailhead de Salesforce – Insignias y Rutas",
+    org: "Salesforce",
+    date: "Ene. 2025",
+    link: "https://www.salesforce.com/trailblazer/dvpl9jhprurtdm3g7i",
+    logo: LOGO_CERT.salesforce,
+  },
+  {
+    title: "Servidor Web Apache 2.4",
+    org: "OpenWebinars",
+    date: "Nov. 2023",
+    link: "https://openwebinars.net/cert/PuCz",
+    logo: LOGO_CERT.openwebinars,
+  },
+  {
+    title:
+      "Certificado profesional en Soporte de Tecnologías de la Información de Google",
+    org: "Coursera",
+    date: "Ago. 2022",
+    link:
+      "https://www.coursera.org/account/accomplishments/professional-cert/WU7LEUWZ8FLE",
+    logo: LOGO_CERT.coursera,
+  },
+  {
+    title:
+      'Certificado de profesionalidad nivel 3 “Seguridad Informática”',
+    org: "ASATA",
+    date: "Dic. 2018",
+    credId: "03/18/00004962/IFCT0109",
+    logo: LOGO_CERT.asata,
+  },
+  {
+    title:
+      "Acreditación de competencias digitales europeas ECDL",
+    org: "ECDL Spain",
+    date: "Dic. 2017",
+    credId: "ES004660",
+    logo: LOGO_CERT.ecdl,
+  },
+  {
+    title:
+      "Curso de Seguridad Informática en la Gestión Empresarial",
+    org: "Dicampus",
+    date: "2017",
+    credId: "PLF 2017/165",
+    logo: LOGO_CERT.dicampus,
+  },
 ];
 
-export const EXPERIENCE = [
+export const CERTS = CERTIFICADOS;
+
+// ─────────────────────────────────────────────────────────────
+// Experiencia profesional
+// ─────────────────────────────────────────────────────────────
+export const EXPERIENCIA = [
   {
     company: "Clarcat",
-    role: "Full Stack ASP.NET Core (.NET 9) + React (Vite + Tailwind CSS)",
+    role:
+      "Full Stack ASP.NET Core (.NET 9) + React (Vite + Tailwind CSS)",
     period: "mar. 2025 – jun. 2025",
-    techs: [".NET 9","ASP.NET Core","Entity Framework","MySQL","React","Vite","Tailwind CSS","MSTest","Azure DevOps","Git"],
+    techs: [
+      ".NET 9",
+      "ASP.NET Core",
+      "Entity Framework",
+      "MySQL",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "MSTest",
+      "Azure DevOps",
+      "Git",
+    ],
     points: [
       "Backend: Desarrollé y optimicé una API REST en .NET 9 / ASP.NET Core, asegurando escalabilidad y mantenibilidad del sistema.",
       "Frontend: Implementé interfaces modernas y responsive con React, Vite y Tailwind CSS, mejorando la usabilidad y la experiencia de usuario.",
@@ -82,7 +202,16 @@ export const EXPERIENCE = [
     company: "Ticmedia",
     role: "Node.js + Vue.js",
     period: "abr. 2024 – jun. 2024",
-    techs: ["Node.js","Express","JWT","Vue.js","Quasar","MongoDB","Mongoose","GitHub"],
+    techs: [
+      "Node.js",
+      "Express",
+      "JWT",
+      "Vue.js",
+      "Quasar",
+      "MongoDB",
+      "Mongoose",
+      "GitHub",
+    ],
     points: [
       "Backend: Desarrollé un backend con Node.js + Express.js, implementando API REST con autenticación JWT para un sistema de gestión interna.",
       "Frontend: Construí una interfaz dinámica y modular con Vue.js + Quasar Framework, optimizando la experiencia del usuario y mejorando la mantenibilidad del código.",
@@ -93,7 +222,12 @@ export const EXPERIENCE = [
   },
 ];
 
-export const PROJECTS: Project[] = [
+export const EXPERIENCE = EXPERIENCIA;
+
+// ─────────────────────────────────────────────────────────────
+// Proyectos
+// ─────────────────────────────────────────────────────────────
+export const PROYECTOS: Proyecto[] = [
   {
     title: "Asgard Gym – App móvil para gimnasios",
     banner: asgard,
@@ -137,3 +271,5 @@ export const PROJECTS: Project[] = [
     position: "center",
   },
 ];
+
+export const PROJECTS: Project[] = PROYECTOS;
