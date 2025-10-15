@@ -40,25 +40,25 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
 ### 🚀 Instrucciones de instalación
 
-# 1. Clona este repositorio:
+ 1. Clona este repositorio:
 
  ```bash
    git clone https://github.com/mariarosete/portafolio.git
  ```
 
-# 2. Acceder a la carpeta del proyecto
+ 2. Acceder a la carpeta del proyecto
 
  ```bash
    cd portafolio
  ```
 
-# 3. Instalar dependencias
+ 3. Instalar dependencias
 
  ```bash
    npm install
  ```
 
-# 4. Ejecutar en modo desarrollo
+ 4. Ejecutar en modo desarrollo
 
  ```bash
    npm run dev
@@ -111,7 +111,7 @@ Luego abre en tu navegador:
 ---
 
 
-## 📬 Despliegue en línea
+##  Despliegue en línea
 
 Proyecto desplegado en **Vercel**:  
 **https://portafolio-indol-alpha.vercel.app**
