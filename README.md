@@ -119,7 +119,7 @@ Luego abre en tu navegador:
 ## 💻  Despliegue en línea
 
 Proyecto desplegado en **Vercel**:  
-**https://portafolio-indol-alpha.vercel.app**
+**https://mariarosete.vercel.app/**
 
 > Cada `git push` a `main` actualiza automáticamente el sitio en producción.
 
