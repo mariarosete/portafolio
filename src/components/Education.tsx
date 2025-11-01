@@ -17,7 +17,7 @@ const Educacion: React.FC = () => (
     "
   >
     {/* Título */}
-    <SectionTitle id="educacion" icon={<GraduationCap className="w-7 h-7" />}>
+    <SectionTitle id="educacion" icon={<GraduationCap className="w-7 h-7 text-rose-600" />}>
       Educación
     </SectionTitle>
 

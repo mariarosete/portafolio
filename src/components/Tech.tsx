@@ -9,6 +9,7 @@ import {
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { FaJava } from "react-icons/fa6";
+import { Layers } from "lucide-react";
 
 /**
  * Sección "Tecnologías":
@@ -67,7 +68,12 @@ const Tecnologias: React.FC = () => {
       className="scroll-mt-20 max-w-[1440px] mx-auto px-4 md:px-6 pt-10 pb-6"
     >
       {/* Título */}
-      <SectionTitle id="tecnologias">Stack tecnológico</SectionTitle>
+      <SectionTitle
+        id="tecnologias"
+        icon={<Layers className="w-7 h-7 text-rose-600" />}
+      >
+        Stack tecnológico
+      </SectionTitle>
 
       {/* Tarjeta  */}
       <div className="rounded-3xl border bg-white p-6 md:p-10">

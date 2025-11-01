@@ -14,7 +14,7 @@ const Experiencia: React.FC = () => (
     className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 pt-10 pb-6"
   >
     {/* Título */}
-    <SectionTitle id="experiencia" icon={<Briefcase className="w-7 h-7" />}>
+    <SectionTitle id="experiencia" icon={<Briefcase className="w-7 h-7 text-rose-600" />}>
       Experiencia profesional reciente
     </SectionTitle>
     

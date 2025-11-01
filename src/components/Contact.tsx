@@ -12,8 +12,13 @@ import { PROFILE as PERFIL } from "../data/profile";
 const Contacto: React.FC = () => (
   // Contenedor de sección 
   <section id="contacto" className="max-w-[1440px] mx-auto px-4 md:px-6 pt-10 pb-6">
-    {/* Título */}
-    <SectionTitle id="contacto">Contacto</SectionTitle>
+  {/* Título */}
+  <SectionTitle
+    id="contacto"
+    icon={<Mail className="w-7 h-7 text-rose-600" />}
+  >
+    Contacto
+  </SectionTitle>
 
     {/*
       Tarjeta superior con borde degradado:

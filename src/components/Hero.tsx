@@ -67,7 +67,7 @@ const Hero: React.FC = () => (
                   {PERFIL.name}
                 </h1>
                 {/* Rol / titular */}
-                <h2 className="text-base sm:text-lg md:text-xl text-slate-700 mt-1">
+                <h2 className="mt-1 text-base sm:text-lg md:text-xl font-semibold bg-gradient-to-r from-fuchsia-600 to-amber-500 bg-clip-text text-transparent">
                   {PERFIL.role}
                 </h2>
                 {/* Descripción */}

@@ -23,7 +23,7 @@ export const PERFIL = {
   name: "María Rosete Suárez",
   role: "Desarrolladora Full Stack Junior",
   about:
-    "Desarrolladora Full Stack Junior con base en ASI y especialización en Aplicaciones Web y Multiplataforma. He trabajado en proyectos reales con ASP.NET Core + React (Clarcat) y con Node.js + Vue.js (Ticmedia), creando APIs REST documentadas con Swagger y UIs accesibles con React, Vite y Tailwind. Me mueven la calidad del código, el aprendizaje continuo y aportar valor desde el primer día en equipos ágiles.",
+    "Soy Desarrolladora Full Stack Junior con base en ASI y especialización en Aplicaciones Web y Multiplataforma. Creo aplicaciones escalables y seguras: backend con .NET y Node.js y frontend con React o Vue.js, Vite y Tailwind. También tengo base en Java/Spring Boot y trabajo con Git y Azure DevOps para colaboración y control de versiones. Aprendo rápido y cuido el detalle con un enfoque analítico y centrado en el usuario.",
   banner:
     "https://github.com/mariarosete/mariarosete/blob/main/Banner.jpg?raw=true",
   photo: "/maria.jpg",
@@ -174,7 +174,7 @@ export const CERTS = CERTIFICADOS;
 // ─────────────────────────────────────────────────────────────
 export const EXPERIENCIA = [
   {
-    company: "Clarcat",
+    company: "Clarcat Cantábrico S.L. Gijón",
     role:
       "Full Stack ASP.NET Core (.NET 9) + React (Vite + Tailwind CSS)",
     period: "mar. 2025 – jun. 2025",
@@ -199,8 +199,8 @@ export const EXPERIENCIA = [
     ],
   },
   {
-    company: "Ticmedia",
-    role: "Node.js + Vue.js",
+    company: "Ticmedia Soluciones Profesionales, S.L. Gijón",
+    role: "Full Stack Node.js + Vue.js",
     period: "abr. 2024 – jun. 2024",
     techs: [
       "Node.js",

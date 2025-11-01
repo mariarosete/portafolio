@@ -12,7 +12,7 @@ const Certificados: React.FC = () => (
   // Contenedor principal de la sección
   <section id="certificados" className="max-w-[1440px] mx-auto px-4 md:px-6 pt-10 pb-6">
     {/* Título de sección con icono */}
-    <SectionTitle id="certificados" icon={<BadgeCheck className="w-7 h-7" />}>
+    <SectionTitle id="certificados" icon={<BadgeCheck className="w-7 h-7 text-rose-600" />}>
       Certificados
     </SectionTitle>
 

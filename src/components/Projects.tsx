@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import SectionTitle from "./ui/SectionTitle";
 import { ArrowUpRight, Trophy } from "lucide-react";
 import { PROJECTS as PROYECTOS } from "../data/profile";
+import { Code2 } from "lucide-react";
 
 /**
  * Sección de Proyectos destacados:
@@ -15,7 +16,12 @@ const Proyectos: React.FC = () => (
     className="max-w-[1440px] mx-auto px-4 md:px-6 pt-10 pb-6"
   >
     {/* Título */}
-    <SectionTitle id="proyectos">Proyectos destacados</SectionTitle>
+    <SectionTitle
+    id="proyectos"
+    icon={<Code2 className="w-7 h-7 text-rose-600" />}
+  >
+    Proyectos destacados
+  </SectionTitle>
 
     {/* Grid responsiva: 1 columna en móvil, 2 en md+ */}
     <div className="grid md:grid-cols-2 gap-6">

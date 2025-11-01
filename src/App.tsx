@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import Tech from "./components/Tech";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { UserCircle2 } from "lucide-react";
 
 /**
  * App (layout principal):
@@ -38,8 +39,13 @@ export default function App() {
           id="sobre-mi"
           className="max-w-[1440px] mx-auto px-4 md:px-6 pt-10 pb-6"
         >
-          {/* Título de sección  */}
-          <SectionTitle id="sobre-mi">Sobre mí</SectionTitle>
+          {/* Título de sección con icono */}
+          <SectionTitle
+            id="sobre-mi"
+            icon={<UserCircle2 className="w-7 h-7 text-rose-600" />}
+          >
+            Sobre mí
+          </SectionTitle>
 
           {/* Tarjeta con borde degradado + contenido */}
           <div className="rounded-2xl p-[2px] bg-gradient-to-r from-rose-300/60 via-rose-200/55 to-amber-200/60">
@@ -49,6 +55,7 @@ export default function App() {
                 {[
                   "ASP.NET Core/.NET",
                   "Node.js (Express)",
+                  "Vue.js",
                   "React",
                   "Vite",
                   "Tailwind CSS",
@@ -67,35 +74,25 @@ export default function App() {
                   </span>
                 ))}
               </div>
-
               {/* Texto de presentación */}
               <div className="space-y-3 text-slate-700 leading-relaxed">
                 <p>
-                  Soy María Rosete Suárez,{" "}
-                  <strong>Desarrolladora Full Stack Junior</strong>.<br />
-                  <strong>Backend:</strong> diseño <strong>APIs REST</strong> con{" "}
-                  <strong>ASP.NET Core/.NET</strong> y{" "}
-                  <strong>Node.js (Express)</strong>, documentadas con{" "}
-                  <strong>Swagger</strong> y con enfoque a pruebas.<br />
-                  <strong>Frontend:</strong> interfaces accesibles y responsive con{" "}
-                  <strong>React + Vite + Tailwind</strong>; también he trabajado con{" "}
-                  <strong>Angular</strong> y <strong>Vue.js</strong>.
+                  Soy María Rosete Suárez, desarrolladora Full Stack Junior.
+                  <strong> Backend:</strong> desarrollo <strong>APIs REST</strong> con <strong>ASP.NET Core/.NET</strong> y <strong>Node.js (Express)</strong>, documentadas con <strong>Swagger</strong> y con enfoque en pruebas.
+                  <strong> Frontend:</strong> diseño interfaces accesibles y rápidas con <strong>React + Vite + Tailwind</strong>, y experiencia también con <strong>Angular</strong> y <strong>Vue.js</strong>.
                 </p>
 
                 <p>
-                  He participado en proyectos reales (Clarcat: ASP.NET Core + React + MySQL;
-                  Ticmedia: Node.js + Vue.js + MongoDB) colaborando en equipos ágiles con{" "}
-                  <strong>Git</strong> y <strong>Azure DevOps</strong>. En proyectos académicos
-                  como <strong>SkillTech</strong> (plataforma con{" "}
-                  <strong>Spring Boot</strong> + MySQL) y <strong>Asgard Gym</strong> (app{" "}
-                  <strong>Android/Kotlin</strong>) apliqué buenas prácticas y enfoque a producto.
+                  He trabajado en proyectos reales en Clarcat Cantábrico S.L. (ASP.NET Core + React + MySQL) y Ticmedia Soluciones Profesionales, S.L. (Node.js + Vue.js + MongoDB), en equipos ágiles con <strong>Git</strong> y <strong>Azure DevOps</strong>.
+                  En proyectos académicos como <strong>SkillTech</strong> (plataforma con <strong>Spring Boot</strong> + MySQL) y <strong>Asgard Gym</strong> (app <strong>Android/Kotlin</strong>) apliqué buenas prácticas y foco en producto.
                 </p>
 
                 <p>
-                  <strong>Me considero organizada y resolutiva.</strong> Busco un equipo donde
-                  aportar desde el primer día, seguir aprendiendo y construir software con impacto real.
+                  <strong>Organizada y resolutiva</strong>, con atención al detalle, pensamiento analítico y orientación al usuario.
+                  Busco un equipo donde aportar desde el primer día y seguir creciendo como profesional.
                 </p>
               </div>
+
             </div>
           </div>
         </section>
