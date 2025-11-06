@@ -2,6 +2,8 @@ import pokedexBanner from "../assets/Pokedex.jpg";
 import servidor from "../assets/Servidor Archivos.jpg";
 import asgard from "../assets/ASGARD GYM.jpg";
 import skilltech from "../assets/SkillTech.jpg";
+import agenda from "../assets/Agenda.jpg";
+import portafolio from "../assets/Portafolio.jpg";
 export type FitMode = "cover" | "contain";
 export type ModoAjuste = FitMode; 
 export type Project = {
@@ -270,6 +272,33 @@ export const PROYECTOS: Proyecto[] = [
     fit: "contain",
     position: "center",
   },
+  {
+    title: "Portafolio – React + Vite + TailwindCSS",
+    banner:
+      typeof portafolio !== "undefined"
+        ? portafolio
+        : "https://github.com/mariarosete/portafolio/blob/main/bannerPortafolio.png?raw=true",
+    repo: "https://github.com/mariarosete/portafolio",
+    description:
+      "Portafolio personal con React + Vite y TailwindCSS. Diseño moderno, animaciones con Framer Motion, responsive completo y sección de contacto funcional con validación.",
+    tech: ["React", "Vite", "TailwindCSS", "TypeScript", "Framer Motion"],
+    fit: "contain",
+    position: "center",
+  },
+  {
+    title: "Agenda de Contactos – Node.js + JavaScript + HTML + CSS",
+    banner:
+      typeof agenda !== "undefined"
+        ? agenda
+        : "https://github.com/mariarosete/agenda-contactos/blob/main/images/bannerAgenda.png?raw=true",
+    repo: "https://github.com/mariarosete/agenda-contactos",
+    description:
+      "Agenda web de contactos con Node.js (backend) y JavaScript (frontend). Incluye CRUD con modales, ordenación, búsqueda, favoritos, paginación en cliente y gráficos con Chart.js. Proyecto 100% sin frameworks CSS, accesible y con .env de ejemplo.",
+    tech: ["Node.js", "JavaScript", "HTML5", "CSS3", "Chart.js"],
+    fit: "contain",
+    position: "center",
+  },
+  
 ];
 
 export const PROJECTS: Project[] = PROYECTOS;
