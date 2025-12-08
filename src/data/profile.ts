@@ -203,7 +203,7 @@ export const EXPERIENCIA = [
   {
     company: "Ticmedia Soluciones Profesionales, S.L. Gijón",
     role: "Full Stack Node.js + Vue.js",
-    period: "abr. 2024 – jun. 2024",
+    period: "mar. 2024 – jun. 2024",
     techs: [
       "Node.js",
       "Express",
