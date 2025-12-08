@@ -4,6 +4,9 @@ import asgard from "../assets/ASGARD GYM.jpg";
 import skilltech from "../assets/SkillTech.jpg";
 import agenda from "../assets/Agenda.jpg";
 import portafolio from "../assets/Portafolio.jpg";
+import skillTechVideo from "../assets/skillTech.mp4";
+import pokedexVideo from "../assets/Pokedex.mp4";
+import agendaVideo from "../assets/agenda.mp4";
 export type FitMode = "cover" | "contain";
 export type ModoAjuste = FitMode; 
 export type Project = {
@@ -15,6 +18,7 @@ export type Project = {
   fit?: FitMode;
   position?: string;
   award?: string;
+  demo?: string;
 };
 export type Proyecto = Project; 
 
@@ -251,6 +255,7 @@ export const PROYECTOS: Proyecto[] = [
     fit: "contain",
     position: "center",
     award: "Mención honorífica · TFG DAW",
+    demo: skillTechVideo,
   },
   {
     title: "Pokedex – Aplicación web Angular",
@@ -261,6 +266,7 @@ export const PROYECTOS: Proyecto[] = [
     tech: ["Angular", "NgRx", "RxJS", "Angular Material", "TypeScript"],
     fit: "contain",
     position: "center",
+    demo: pokedexVideo,
   },
   {
     title: "Servidor de Archivos – Cliente Android + Servidor TCP",
@@ -297,6 +303,7 @@ export const PROYECTOS: Proyecto[] = [
     tech: ["Node.js", "JavaScript", "HTML5", "CSS3", "Chart.js"],
     fit: "contain",
     position: "center",
+    demo: agendaVideo,
   },
   
 ];

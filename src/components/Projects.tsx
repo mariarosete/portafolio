@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import SectionTitle from "./ui/SectionTitle";
 import { ArrowUpRight, Trophy } from "lucide-react";
 import { PROJECTS as PROYECTOS } from "../data/profile";
-import { Code2 } from "lucide-react";
+import { Code2, PlayCircle } from "lucide-react";
 
 /**
  * Sección de Proyectos destacados:
@@ -17,21 +17,21 @@ const Proyectos: React.FC = () => (
   >
     {/* Título */}
     <SectionTitle
-    id="proyectos"
-    icon={<Code2 className="w-7 h-7 text-rose-600" />}
-  >
-    Proyectos destacados
-  </SectionTitle>
+      id="proyectos"
+      icon={<Code2 className="w-7 h-7 text-rose-600" />}
+    >
+      Proyectos destacados
+    </SectionTitle>
 
     {/* Grid responsiva: 1 columna en móvil, 2 en md+ */}
     <div className="grid md:grid-cols-2 gap-6">
       {PROYECTOS.map((proyecto) => {
-          const usarContain = proyecto.fit === "contain";
+        const usarContain = proyecto.fit === "contain";
 
         return (
           <motion.div
             key={proyecto.title}
-           
+
             whileHover={{ y: -6, rotateX: 0.5, rotateY: -0.5 }}
             whileTap={{ scale: 0.995 }}
             transition={{ type: "spring", stiffness: 260, damping: 18 }}
@@ -108,20 +108,27 @@ const Proyectos: React.FC = () => (
                   ))}
                 </ul>
 
-                {/* Botones: ver proyecto */}
-                <div className="mt-4">
+                {/* Botones: ver proyecto + demo */}
+                <div className="mt-4 flex flex-wrap gap-3">
                   <a
                     href={proyecto.repo}
                     target="_blank"
                     rel="noreferrer"
-                    className="
-                      inline-flex items-center gap-2 rounded-2xl px-4 py-2 text-white
-                      bg-gradient-to-r from-rose-500 to-amber-400 shadow
-                      hover:brightness-110 transition
-                    "
+                    className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 text-white bg-gradient-to-r from-rose-500 to-amber-400 shadow hover:brightness-110 transition"
                   >
-                    Ver proyecto <ArrowUpRight className="w-4 h-4" />
+                    Repositorio GitHub <ArrowUpRight className="w-4 h-4" />
                   </a>
+
+                  {proyecto.demo && (
+                    <a
+                      href={proyecto.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 text-white bg-gradient-to-r from-rose-500 to-amber-400 shadow hover:brightness-110 transition"
+                    >
+                      Ver demo <PlayCircle className="w-4 h-4" />
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
