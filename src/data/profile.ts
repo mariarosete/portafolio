@@ -4,9 +4,12 @@ import asgard from "../assets/ASGARD GYM.jpg";
 import skilltech from "../assets/SkillTech.jpg";
 import agenda from "../assets/Agenda.jpg";
 import portafolio from "../assets/Portafolio.jpg";
+import pasteleria from "../assets/pasteleriaCreativa.jpg"
+
 import skillTechVideo from "../assets/skillTech.mp4";
 import pokedexVideo from "../assets/Pokedex.mp4";
 import agendaVideo from "../assets/agenda.mp4";
+import pasteleriaVideo from "../assets/pasteleria.mp4"
 export type FitMode = "cover" | "contain";
 export type ModoAjuste = FitMode; 
 export type Project = {
@@ -280,10 +283,7 @@ export const PROYECTOS: Proyecto[] = [
   },
   {
     title: "Portafolio – React + Vite + TailwindCSS",
-    banner:
-      typeof portafolio !== "undefined"
-        ? portafolio
-        : "https://github.com/mariarosete/portafolio/blob/main/bannerPortafolio.png?raw=true",
+    banner: portafolio,
     repo: "https://github.com/mariarosete/portafolio",
     description:
       "Portafolio personal con React + Vite y TailwindCSS. Diseño moderno, animaciones con Framer Motion, responsive completo y sección de contacto funcional con validación.",
@@ -293,10 +293,7 @@ export const PROYECTOS: Proyecto[] = [
   },
   {
     title: "Agenda de Contactos – Node.js + JavaScript + HTML + CSS",
-    banner:
-      typeof agenda !== "undefined"
-        ? agenda
-        : "https://github.com/mariarosete/agenda-contactos/blob/main/images/bannerAgenda.png?raw=true",
+    banner: agenda,
     repo: "https://github.com/mariarosete/agenda-contactos",
     description:
       "Agenda web de contactos con Node.js (backend) y JavaScript (frontend). Incluye CRUD con modales, ordenación, búsqueda, favoritos, paginación en cliente y gráficos con Chart.js. Proyecto 100% sin frameworks CSS, accesible y con .env de ejemplo.",
@@ -305,6 +302,19 @@ export const PROYECTOS: Proyecto[] = [
     position: "center",
     demo: agendaVideo,
   },
+
+  {
+    title: "Pastelería Creativa – Aplicación de escritorio en Java Swing",
+    banner: pasteleria, 
+    repo: "https://github.com/mariarosete/pasteleriaCreativa",
+    description:
+      "Aplicación de escritorio desarrollada en Java Swing para crear y gestionar recetas de repostería. Permite definir postres, añadir ingredientes, guardar y cargar recetas desde archivos de texto, personalizar colores y acceder a una ayuda integrada con JavaHelp.",
+    tech: ["Java", "Swing", "JavaHelp"],
+    fit: "contain",
+    position: "center",
+    demo: pasteleriaVideo, 
+  },
+  
   
 ];
 
