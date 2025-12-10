@@ -10,6 +10,7 @@ import skillTechVideo from "../assets/skillTech.mp4";
 import pokedexVideo from "../assets/Pokedex.mp4";
 import agendaVideo from "../assets/agenda.mp4";
 import pasteleriaVideo from "../assets/pasteleria.mp4"
+import asgardGym from "../assets/AsgardGym.mp4"
 export type FitMode = "cover" | "contain";
 export type ModoAjuste = FitMode; 
 export type Project = {
@@ -247,6 +248,7 @@ export const PROYECTOS: Proyecto[] = [
     fit: "contain",
     position: "center",
     award: "Mención honorífica · TFG DAM",
+    demo: asgardGym,
   },
   {
     title: "SkillTech – Plataforma web educativa",
