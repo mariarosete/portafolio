@@ -11,6 +11,7 @@ import pokedexVideo from "../assets/Pokedex.mp4";
 import agendaVideo from "../assets/agenda.mp4";
 import pasteleriaVideo from "../assets/pasteleria.mp4"
 import asgardGym from "../assets/AsgardGym.mp4"
+import servidorVideo from "../assets/Servidor.mp4"
 export type FitMode = "cover" | "contain";
 export type ModoAjuste = FitMode; 
 export type Project = {
@@ -282,6 +283,7 @@ export const PROYECTOS: Proyecto[] = [
     tech: ["Kotlin", "Java", "Sockets TCP"],
     fit: "contain",
     position: "center",
+    demo: servidorVideo,
   },
   {
     title: "Portafolio – React + Vite + TailwindCSS",
