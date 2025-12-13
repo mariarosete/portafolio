@@ -12,6 +12,7 @@ import agendaVideo from "../assets/agenda.mp4";
 import pasteleriaVideo from "../assets/pasteleria.mp4"
 import asgardGym from "../assets/AsgardGym.mp4"
 import servidorVideo from "../assets/Servidor.mp4"
+import portafolioVideo from "../assets/portafolio.mp4"
 export type FitMode = "cover" | "contain";
 export type ModoAjuste = FitMode; 
 export type Project = {
@@ -294,6 +295,7 @@ export const PROYECTOS: Proyecto[] = [
     tech: ["React", "Vite", "TailwindCSS", "TypeScript", "Framer Motion"],
     fit: "contain",
     position: "center",
+    demo: portafolioVideo,
   },
   {
     title: "Agenda de Contactos – Node.js + JavaScript + HTML + CSS",
