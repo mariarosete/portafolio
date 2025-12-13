@@ -6,6 +6,7 @@ import agenda from "../assets/Agenda.jpg";
 import portafolio from "../assets/Portafolio.jpg";
 import pasteleria from "../assets/pasteleriaCreativa.jpg"
 import flowDocument from "../assets/pasteleria.jpg"
+import disney from "../assets/disney.jpg"
 
 import skillTechVideo from "../assets/skillTech.mp4";
 import pokedexVideo from "../assets/Pokedex.mp4";
@@ -15,6 +16,7 @@ import asgardGym from "../assets/AsgardGym.mp4"
 import servidorVideo from "../assets/Servidor.mp4"
 import portafolioVideo from "../assets/portafolio.mp4"
 import flowDocumentVideo from "../assets/flowDocument.mp4"
+import disneyVideo from "../assets/disney.mp4"
 export type FitMode = "cover" | "contain";
 export type ModoAjuste = FitMode; 
 export type Project = {
@@ -335,6 +337,18 @@ export const PROYECTOS: Proyecto[] = [
     demo: flowDocumentVideo,
     
   },
+  {
+    title: "¿Quién es este personaje de Disney? – Drag & Drop Game",
+    banner: disney,
+    repo: "https://github.com/mariarosete/disney-drag-drop",
+    description:
+      "Proyecto frontend desarrollado con HTML, CSS y JavaScript (Vanilla). Consiste en un juego interactivo de Drag & Drop donde el usuario debe asociar correctamente personajes de Disney con sus nombres, con validación visual inmediata, lógica de juego, carga dinámica de datos desde JSON y una sección informativa con fichas animadas de personajes.",
+    tech: ["HTML", "CSS", "JavaScript", "Drag & Drop API", "JSON"],
+    fit: "cover",
+    position: "center",
+    demo: disneyVideo,
+  }
+  
   
   
   
