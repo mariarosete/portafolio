@@ -5,6 +5,7 @@ import skilltech from "../assets/SkillTech.jpg";
 import agenda from "../assets/Agenda.jpg";
 import portafolio from "../assets/Portafolio.jpg";
 import pasteleria from "../assets/pasteleriaCreativa.jpg"
+import flowDocument from "../assets/pasteleria.jpg"
 
 import skillTechVideo from "../assets/skillTech.mp4";
 import pokedexVideo from "../assets/Pokedex.mp4";
@@ -13,6 +14,7 @@ import pasteleriaVideo from "../assets/pasteleria.mp4"
 import asgardGym from "../assets/AsgardGym.mp4"
 import servidorVideo from "../assets/Servidor.mp4"
 import portafolioVideo from "../assets/portafolio.mp4"
+import flowDocumentVideo from "../assets/flowDocument.mp4"
 export type FitMode = "cover" | "contain";
 export type ModoAjuste = FitMode; 
 export type Project = {
@@ -320,6 +322,20 @@ export const PROYECTOS: Proyecto[] = [
     position: "center",
     demo: pasteleriaVideo, 
   },
+
+  {
+    title: "Pastelería Creativa – FlowDocument + DataGrid (WPF)",
+    banner: flowDocument, 
+    repo: "https://github.com/mariarosete/pasteleria",
+    description:
+      "Proyecto en WPF (C#) orientado al mundo de la pastelería creativa. Incluye un FlowDocument interactivo con secciones formateadas e imágenes, y un módulo de acceso a datos con DataGrid y operaciones CRUD conectado a una base de datos Microsoft Access (recetas.accdb).",
+    tech: ["C#", "WPF", ".NET", "XAML", "FlowDocument", "DataGrid", "Microsoft Access"],
+    fit: "contain",
+    position: "center",
+    demo: flowDocumentVideo,
+    
+  },
+  
   
   
 ];
