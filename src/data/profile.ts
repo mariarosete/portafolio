@@ -7,6 +7,7 @@ import portafolio from "../assets/Portafolio.jpg";
 import pasteleria from "../assets/pasteleriaCreativa.jpg"
 import flowDocument from "../assets/pasteleria.jpg"
 import disney from "../assets/disney.jpg"
+import pizarra from "../assets/pizarra.jpg"
 
 import skillTechVideo from "../assets/skillTech.mp4";
 import pokedexVideo from "../assets/Pokedex.mp4";
@@ -16,6 +17,7 @@ import asgardGym from "../assets/AsgardGym.mp4"
 import servidorVideo from "../assets/Servidor.mp4"
 import portafolioVideo from "../assets/portafolio.mp4"
 import flowDocumentVideo from "../assets/flowDocument.mp4"
+import pizarraVideo from "../assets/pizarra.mp4"
 import disneyVideo from "../assets/disney.mp4"
 export type FitMode = "cover" | "contain";
 export type ModoAjuste = FitMode; 
@@ -347,6 +349,17 @@ export const PROYECTOS: Proyecto[] = [
     fit: "cover",
     position: "center",
     demo: disneyVideo,
+  },
+  {
+    title: "DigiDraw – Pizarra interactiva (Canvas)",
+    banner: pizarra, 
+    repo: "https://github.com/mariarosete/digidraw-pizarra",
+    description:
+      "Proyecto frontend desarrollado con HTML, CSS y JavaScript (Vanilla) que simula una pizarra digital en canvas. Permite dibujar a mano alzada, cambiar color y grosor del rotulador, usar goma de borrar, limpiar el lienzo, insertar imágenes desde el equipo y añadir texto directamente sobre la pizarra.",
+    tech: ["HTML", "CSS", "JavaScript", "Canvas API", "FileReader"],
+    fit: "cover",
+    position: "center",
+    demo: pizarraVideo,
   }
   
   
