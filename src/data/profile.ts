@@ -39,9 +39,9 @@ export type Proyecto = Project;
 // ─────────────────────────────────────────────────────────────
 export const PERFIL = {
   name: "María Rosete Suárez",
-  role: "Desarrolladora Full Stack Junior",
+  role: "Desarrolladora Full Stack Junior especializada en .NET y React",
   about:
-    "Soy Desarrolladora Full Stack Junior con base en ASI y especialización en Aplicaciones Web y Multiplataforma. Creo aplicaciones escalables y seguras: backend con .NET y Node.js y frontend con React o Vue.js, Vite y Tailwind. También tengo base en Java/Spring Boot y trabajo con Git y Azure DevOps para colaboración y control de versiones. Aprendo rápido y cuido el detalle con un enfoque analítico y centrado en el usuario.",
+    "Desarrollo aplicaciones web escalables y seguras. Tengo experiencia adicional con Node.js, Spring Boot y frameworks frontend como Angular y Vue.js, trabajando con buenas prácticas, testing y control de versiones.",
   banner:
     "https://github.com/mariarosete/mariarosete/blob/main/Banner.jpg?raw=true",
   photo: "/maria.jpg",
@@ -71,6 +71,7 @@ export const LOGO_CERT = {
   asata: logoCert("asata.png"),
   dicampus: logoCert("dicampus.png"),
   salesforce: logoCert("salesforce.png"),
+  freecodecamp: logoCert("freecodecamp.png"),
 };
 export const CERT_LOGO = LOGO_CERT; 
 
@@ -101,6 +102,14 @@ export const EDUCATION = EDUCACION;
 // Certificados
 // ─────────────────────────────────────────────────────────────
 export const CERTIFICADOS = [
+  {
+    title: "Foundational C# with Microsoft",
+    org: "freeCodeCamp",
+    date: "dic. 2025",
+    link: "https://freecodecamp.org/certification/fcc-8f71be83-65d7-40d2-95e3-e4bca09cd50a/foundational-c-sharp-with-microsoft",
+    logo: LOGO_CERT.freecodecamp,
+  },
+  
   {
     title: "Curso de Angular: Ampliando Conceptos",
     org: "OpenWebinars",
