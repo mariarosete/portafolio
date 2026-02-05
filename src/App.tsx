@@ -77,22 +77,22 @@ export default function App() {
               {/* Texto de presentación */}
               <div className="space-y-3 text-slate-700 leading-relaxed">
                 <p>
-                  Soy María Rosete Suárez, <strong>desarrolladora Full Stack Junior especializada en .NET y React</strong>.<br></br>
+                  Soy María Rosete Suárez, desarrolladora Full Stack Junior especializada en <strong> .NET y React</strong>.<br></br>
                   <strong> Backend:</strong> desarrollo <strong>APIs REST</strong> con <strong>ASP.NET Core/.NET</strong>, documentadas con <strong>Swagger</strong> y con enfoque en pruebas.
                   Cuento además con experiencia complementaria en <strong>Node.js</strong>.<br></br>
                   <strong> Frontend:</strong> diseño interfaces accesibles y rápidas con <strong>React + Vite + Tailwind</strong>, y experiencia adicional con <strong>Angular</strong> y <strong>Vue.js</strong>.
                 </p>
 
                 <p>
-                  He trabajado en proyectos reales en <strong>Clarcat Cantábrico S.L.</strong> (ASP.NET Core + React + MySQL) y
-                  <strong> Ticmedia Soluciones Profesionales, S.L.</strong> (Node.js + Vue.js + MongoDB), formando parte de equipos ágiles
+                  He trabajado en proyectos reales en Clarcat Cantábrico S.L. <strong>(ASP.NET Core + React + MySQL)</strong> y
+                  Ticmedia Soluciones Profesionales, S.L. <strong> (Node.js + Vue.js + MongoDB) </strong>, formando parte de equipos ágiles
                   y colaborando con <strong>Git</strong> y <strong>Azure DevOps</strong>.<br></br>
                   En proyectos académicos como SkillTech <strong>(Spring Boot + MySQL) </strong> y
                   Asgard Gym (app <strong>Android/Kotlin</strong>) apliqué buenas prácticas y un enfoque orientado a producto.
                 </p>
 
                 <p>
-                  <strong>Organizada y resolutiva</strong>, con atención al detalle, pensamiento analítico y orientación al usuario.
+                  Organizada y resolutiva, con atención al detalle, pensamiento analítico y orientación al usuario.
                   Busco un equipo donde aportar desde el primer día y seguir creciendo como profesional.
                 </p>
               </div>
