@@ -43,7 +43,7 @@ export const PERFIL = {
   about:
     "Desarrollo aplicaciones web escalables y seguras. Tengo experiencia adicional con Node.js, Spring Boot y frameworks frontend como Angular y Vue.js, trabajando con buenas prácticas, testing y control de versiones.",
   banner:
-    "https://github.com/mariarosete/mariarosete/blob/main/Banner.jpg?raw=true",
+    "https://github.com/mariarosete/mariarosete/blob/main/Portada.png?raw=true",
   photo: "/maria.jpg",
   socials: {
     email: "mailto:marlarosete89@gmail.com",
