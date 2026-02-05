@@ -30,6 +30,7 @@ import {
   SiEslint,
   SiPrettier,
   SiWebpack,
+  
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { FaJava } from "react-icons/fa6";
@@ -69,11 +70,13 @@ const Tecnologias: React.FC = () => {
 
   // Bases de datos
   const BASES_DATOS_SQL = [
-    { Icono: SiSqlite, etiqueta: "SQLite", ring: "ring-[#cbdde8]", bg: "bg-[#f3f9ff] text-[#003B57]" },
+    { Icono: Database, etiqueta: "SQL Server", ring: "ring-[#ffd0d0]", bg: "bg-[#fff5f5] text-[#CC2927]" },
     { Icono: SiMysql, etiqueta: "MySQL", ring: "ring-[#cfe8f0]", bg: "bg-[#f4fbff] text-[#00758F]" },
     { Icono: SiPostgresql, etiqueta: "PostgreSQL", ring: "ring-[#d6ddfd]", bg: "bg-[#f5f7ff] text-[#4169E1]" },
     { Icono: SiOracle, etiqueta: "Oracle", ring: "ring-[#ffd0d0]", bg: "bg-[#fff5f5] text-[#F80000]" },
+    { Icono: SiSqlite, etiqueta: "SQLite", ring: "ring-[#cbdde8]", bg: "bg-[#f3f9ff] text-[#003B57]" },
   ];
+
 
   const BASES_DATOS_NOSQL = [
     { Icono: SiMongodb, etiqueta: "MongoDB", ring: "ring-[#cfead1]", bg: "bg-[#f3fff3] text-[#47A248]" },
