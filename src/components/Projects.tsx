@@ -62,6 +62,7 @@ const Proyectos: React.FC = () => {
                     ].join(" ")}
                   />
 
+                  {/* Insignia si tiene premio/mención */}
                   {proyecto.award && (
                     <div className="absolute left-3 top-3">
                       <span
@@ -81,6 +82,7 @@ const Proyectos: React.FC = () => {
                   )}
                 </div>
 
+                {/* Contenido */}
                 <div className="p-4 sm:p-5">
                   <div className="flex items-start justify-between gap-3">
                     <h3 className="font-semibold text-[16px] sm:text-lg leading-snug">
@@ -88,6 +90,7 @@ const Proyectos: React.FC = () => {
                     </h3>
                   </div>
 
+                  {/* Descripción: clamp + ver más SOLO móvil */}
                   <p
                     className={[
                       "mt-2 text-slate-600 text-[13.5px] sm:text-[15px] leading-relaxed",
@@ -97,7 +100,7 @@ const Proyectos: React.FC = () => {
                     {proyecto.description}
                   </p>
 
-                  {/* Botón ver más/menos*/}
+                  {/* Ver más/menos (solo móvil) */}
                   <div className="mt-2 sm:hidden">
                     <button
                       type="button"
@@ -111,66 +114,69 @@ const Proyectos: React.FC = () => {
                       {isOpen ? "Ver menos" : "Ver más"}
                     </button>
                   </div>
-                 
-                  <ul className="mt-3 flex flex-wrap gap-2">
-                    {proyecto.tech.map((tecno) => {
-                      const badge = getTechBadge(tecno);
-                      const Icon = badge?.Icono;
-                 
-                      if (!badge || !Icon) {
+                  
+                  <div className="mt-3 -mx-1 px-1 overflow-x-auto sm:overflow-visible">
+                    <ul className="flex flex-nowrap sm:flex-wrap gap-2 pb-1 sm:pb-0">
+                      {proyecto.tech.map((tecno) => {
+                        const badge = getTechBadge(tecno);
+                        const Icon = badge?.Icono;
+                        
+                        if (!badge || !Icon) {
+                          return (
+                            <li key={tecno} className="shrink-0">
+                              <span
+                                className="
+                                  inline-flex items-center rounded-full
+                                  px-2.5 py-1
+                                  text-[10.5px] sm:text-[11px]
+                                  font-medium text-slate-700
+                                  bg-gradient-to-r from-rose-50 to-amber-50
+                                  ring-1 ring-rose-200/60
+                                  shadow-[inset_0_0_0_1px_rgba(244,63,94,.08)]
+                                  whitespace-nowrap
+                                "
+                                title={tecno}
+                              >
+                                {tecno}
+                              </span>
+                            </li>
+                          );
+                        }
+
                         return (
-                          <li key={tecno}>
+                          <li key={tecno} className="shrink-0">
                             <span
-                              className="
-                                inline-flex items-center rounded-full
-                                px-2.5 py-1
-                                text-[10.5px] sm:text-[11px]
-                                font-medium text-slate-700
-                                bg-gradient-to-r from-rose-50 to-amber-50
-                                ring-1 ring-rose-200/60
-                                shadow-[inset_0_0_0_1px_rgba(244,63,94,.08)]
-                                whitespace-nowrap
-                              "
+                              className={[
+                                "inline-flex items-center gap-2 rounded-full",
+                                "px-2.5 py-1",
+                                "text-[10.5px] sm:text-[11px] font-medium",
+                                "ring-1 shadow-[inset_0_0_0_1px_rgba(0,0,0,.04)]",
+                                "whitespace-nowrap",
+                                badge.ring,
+                                badge.bg,
+                              ].join(" ")}
+                              title={tecno}
                             >
+                              <span
+                                className="
+                                  inline-flex items-center justify-center
+                                  h-5 w-5 rounded-full
+                                  bg-white/70 ring-1 ring-black/5
+                                "
+                                aria-hidden="true"
+                              >
+                                <Icon className="h-3.5 w-3.5" />
+                              </span>
+
                               {tecno}
                             </span>
                           </li>
                         );
-                      }
+                      })}
+                    </ul>
+                  </div>
 
-                      return (
-                        <li key={tecno}>
-                          <span
-                            className={[
-                              "inline-flex items-center gap-2 rounded-full",
-                              "px-2.5 py-1",
-                              "text-[10.5px] sm:text-[11px] font-medium",
-                              "ring-1 shadow-[inset_0_0_0_1px_rgba(0,0,0,.04)]",
-                              "whitespace-nowrap",
-                              badge.ring,
-                              badge.bg,
-                            ].join(" ")}
-                            title={tecno}
-                          >
-                           
-                            <span
-                              className="
-                                inline-flex items-center justify-center
-                                h-5 w-5 rounded-full
-                                bg-white/70 ring-1 ring-black/5
-                              "
-                              aria-hidden="true"
-                            >
-                              <Icon className="h-3.5 w-3.5" />
-                            </span>
-
-                            {tecno}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-              
+                  {/* Botones */}
                   <div className="mt-4 flex flex-col sm:flex-row gap-2 sm:gap-3">
                     <a
                       href={proyecto.repo}
