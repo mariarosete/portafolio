@@ -19,8 +19,8 @@ import portafolioVideo from "../assets/portafolio.mp4";
 import flowDocumentVideo from "../assets/flowDocument.mp4";
 import pizarraVideo from "../assets/pizarra.mp4";
 import disneyVideo from "../assets/disney.mp4";
-
 import type { IconType } from "react-icons";
+
 import {
   SiDotnet,
   SiReact,
@@ -36,8 +36,18 @@ import {
   SiGithub,
   SiJsonwebtokens,
   SiQuasar,
-  
+  SiAndroid,
+  SiSqlite,
+  SiSpringboot,
+  SiAngular,
+  SiTypescript,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
 } from "react-icons/si";
+
+import { TbBrandCSharp } from "react-icons/tb";
+import { FaJava } from "react-icons/fa6";
 
 export type FitMode = "cover" | "contain";
 export type ModoAjuste = FitMode;
@@ -56,7 +66,7 @@ export type Project = {
 export type Proyecto = Project;
 
 // ─────────────────────────────────────────────────────────────
-// Chips con iconos (para Experiencia) 
+// Chips con iconos (para Experiencia / Proyectos)
 // ─────────────────────────────────────────────────────────────
 export type TechBadgeCfg = {
   Icono: IconType;
@@ -81,17 +91,17 @@ export const TECH_BADGE_MAP: Record<string, TechBadgeCfg> = {
     ring: "ring-[#e1d6ff]",
     bg: "bg-[#f8f6ff] text-[#512BD4]",
   },
-  "MySQL": {
+  MySQL: {
     Icono: SiMysql,
     ring: "ring-[#cfe8f0]",
     bg: "bg-[#f4fbff] text-[#00758F]",
   },
-  "React": {
+  React: {
     Icono: SiReact,
     ring: "ring-[#cfefff]",
     bg: "bg-[#f0fcff] text-[#61DAFB]",
   },
-  "Vite": {
+  Vite: {
     Icono: SiVite,
     ring: "ring-[#dcdfff]",
     bg: "bg-[#f6f7ff] text-[#646CFF]",
@@ -101,30 +111,29 @@ export const TECH_BADGE_MAP: Record<string, TechBadgeCfg> = {
     ring: "ring-[#cfefff]",
     bg: "bg-[#f0fcff] text-[#06B6D4]",
   },
-  "Swagger": {
+  Swagger: {
     Icono: SiSwagger,
     ring: "ring-[#e2f6bf]",
     bg: "bg-[#f7ffea] text-[#85EA2D]",
   },
-  "Git": {
+  Git: {
     Icono: SiGit,
     ring: "ring-[#ffd7c8]",
     bg: "bg-[#fff5f1] text-[#F05032]",
   },
 
-  
   // Ticmedia
   "Node.js": {
     Icono: SiNodedotjs,
     ring: "ring-[#d5f0d1]",
     bg: "bg-[#f6fff6] text-[#339933]",
   },
-  "Express": {
+  Express: {
     Icono: SiExpress,
     ring: "ring-slate-200",
     bg: "bg-white text-slate-900",
   },
-  "JWT": {
+  JWT: {
     Icono: SiJsonwebtokens,
     ring: "ring-[#ffe6e2]",
     bg: "bg-[#fff7f5] text-[#EA2D2E]",
@@ -134,27 +143,152 @@ export const TECH_BADGE_MAP: Record<string, TechBadgeCfg> = {
     ring: "ring-[#cfeadf]",
     bg: "bg-[#f3fff7] text-[#42B883]",
   },
-  "Quasar": {
+  Quasar: {
     Icono: SiQuasar,
     ring: "ring-[#d7e8fb]",
     bg: "bg-[#f4f9ff] text-[#1976D2]",
   },
-  "MongoDB": {
+  MongoDB: {
     Icono: SiMongodb,
     ring: "ring-[#cfead1]",
     bg: "bg-[#f3fff3] text-[#47A248]",
   },
-  "Mongoose": {
+  Mongoose: {
     Icono: SiMongodb,
     ring: "ring-[#cfead1]",
     bg: "bg-[#f3fff3] text-[#47A248]",
   },
-  "GitHub": {
+  GitHub: {
     Icono: SiGithub,
     ring: "ring-slate-200",
     bg: "bg-white text-[#181717]",
   },
 };
+
+// ─────────────────────────────────────────────────────────────
+// Chips con iconos (para Proyectos)
+// ─────────────────────────────────────────────────────────────
+export const PROJECT_BADGE_MAP: Record<string, TechBadgeCfg> = {
+  Kotlin: {
+    Icono: SiAndroid,
+    ring: "ring-[#dacfff]",
+    bg: "bg-[#f7f5ff] text-[#7F52FF]",
+  },
+  SQLite: {
+    Icono: SiSqlite,
+    ring: "ring-[#cbdde8]",
+    bg: "bg-[#f3f9ff] text-[#003B57]",
+  },
+  "Material Design": {
+    Icono: SiAndroid,
+    ring: "ring-[#dcecff]",
+    bg: "bg-[#f6fbff] text-[#3DDC84]",
+  },
+
+  Java: {
+    Icono: FaJava as unknown as IconType,
+    ring: "ring-[#f5c7c7]",
+    bg: "bg-[#fff5f5] text-[#EA2D2E]",
+  },
+  Swing: {
+    Icono: FaJava as unknown as IconType,
+    ring: "ring-[#f5c7c7]",
+    bg: "bg-[#fff5f5] text-[#EA2D2E]",
+  },
+  JavaHelp: {
+    Icono: FaJava as unknown as IconType,
+    ring: "ring-[#f5c7c7]",
+    bg: "bg-[#fff5f5] text-[#EA2D2E]",
+  },
+
+  "Spring Boot": {
+    Icono: SiSpringboot,
+    ring: "ring-[#def5c2]",
+    bg: "bg-[#f8fff0] text-[#6DB33F]",
+  },
+
+  Angular: {
+    Icono: SiAngular,
+    ring: "ring-[#ffd3d9]",
+    bg: "bg-[#fff1f3] text-[#DD0031]",
+  },
+  NgRx: {
+    Icono: SiAngular,
+    ring: "ring-[#ffd3d9]",
+    bg: "bg-[#fff1f3] text-[#DD0031]",
+  },
+  RxJS: {
+    Icono: SiAngular,
+    ring: "ring-[#ffd3d9]",
+    bg: "bg-[#fff1f3] text-[#DD0031]",
+  },
+  "Angular Material": {
+    Icono: SiAngular,
+    ring: "ring-[#ffd3d9]",
+    bg: "bg-[#fff1f3] text-[#DD0031]",
+  },
+
+  TypeScript: {
+    Icono: SiTypescript,
+    ring: "ring-[#d9e9ff]",
+    bg: "bg-[#f4f9ff] text-[#3178C6]",
+  },
+
+  JavaScript: {
+    Icono: SiJavascript,
+    ring: "ring-[#ffefb3]",
+    bg: "bg-[#fffbed] text-[#F7DF1E]",
+  },
+  HTML: {
+    Icono: SiHtml5,
+    ring: "ring-[#ffdcd1]",
+    bg: "bg-[#fff5f1] text-[#E34F26]",
+  },
+  HTML5: {
+    Icono: SiHtml5,
+    ring: "ring-[#ffdcd1]",
+    bg: "bg-[#fff5f1] text-[#E34F26]",
+  },
+  CSS: {
+    Icono: SiCss3,
+    ring: "ring-[#dcecff]",
+    bg: "bg-[#f6fbff] text-[#1572B6]",
+  },
+  CSS3: {
+    Icono: SiCss3,
+    ring: "ring-[#dcecff]",
+    bg: "bg-[#f6fbff] text-[#1572B6]",
+  },
+
+  "C#": {
+    Icono: TbBrandCSharp as unknown as IconType,
+    ring: "ring-[#cdebd6]",
+    bg: "bg-[#f4fff6] text-[#239120]",
+  },
+  ".NET": {
+    Icono: SiDotnet,
+    ring: "ring-[#e1d6ff]",
+    bg: "bg-[#f8f6ff] text-[#512BD4]",
+  },
+
+  // Reutiliza los del mapa base
+  React: TECH_BADGE_MAP.React,
+  Vite: TECH_BADGE_MAP.Vite,
+  "TailwindCSS": TECH_BADGE_MAP["Tailwind CSS"],
+  "Tailwind CSS": TECH_BADGE_MAP["Tailwind CSS"],
+  Git: TECH_BADGE_MAP.Git,
+  MySQL: TECH_BADGE_MAP.MySQL,
+  JWT: TECH_BADGE_MAP.JWT,
+ 
+  "JS/HTML/CSS": {
+    Icono: SiJavascript,
+    ring: "ring-[#ffefb3]",
+    bg: "bg-[#fffbed] text-[#F7DF1E]",
+  },
+};
+
+export const getTechBadge = (tech: string): TechBadgeCfg | null =>
+  PROJECT_BADGE_MAP[tech] ?? TECH_BADGE_MAP[tech] ?? null;
 
 // ─────────────────────────────────────────────────────────────
 // Perfil (datos generales)
@@ -283,8 +417,7 @@ export const CERTIFICADOS = [
       "Certificado profesional en Soporte de Tecnologías de la Información de Google",
     org: "Coursera",
     date: "Ago. 2022",
-    link:
-      "https://www.coursera.org/account/accomplishments/professional-cert/WU7LEUWZ8FLE",
+    link: "https://www.coursera.org/account/accomplishments/professional-cert/WU7LEUWZ8FLE",
     logo: LOGO_CERT.coursera,
   },
   {
