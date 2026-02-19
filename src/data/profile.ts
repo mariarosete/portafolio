@@ -4,23 +4,44 @@ import asgard from "../assets/ASGARD GYM.jpg";
 import skilltech from "../assets/SkillTech.jpg";
 import agenda from "../assets/Agenda.jpg";
 import portafolio from "../assets/Portafolio.jpg";
-import pasteleria from "../assets/pasteleriaCreativa.jpg"
-import flowDocument from "../assets/pasteleria.jpg"
-import disney from "../assets/disney.jpg"
-import pizarra from "../assets/pizarra.jpg"
+import pasteleria from "../assets/pasteleriaCreativa.jpg";
+import flowDocument from "../assets/pasteleria.jpg";
+import disney from "../assets/disney.jpg";
+import pizarra from "../assets/pizarra.jpg";
 
 import skillTechVideo from "../assets/skillTech.mp4";
 import pokedexVideo from "../assets/Pokedex.mp4";
 import agendaVideo from "../assets/agenda.mp4";
-import pasteleriaVideo from "../assets/pasteleria.mp4"
-import asgardGym from "../assets/AsgardGym.mp4"
-import servidorVideo from "../assets/Servidor.mp4"
-import portafolioVideo from "../assets/portafolio.mp4"
-import flowDocumentVideo from "../assets/flowDocument.mp4"
-import pizarraVideo from "../assets/pizarra.mp4"
-import disneyVideo from "../assets/disney.mp4"
+import pasteleriaVideo from "../assets/pasteleria.mp4";
+import asgardGym from "../assets/AsgardGym.mp4";
+import servidorVideo from "../assets/Servidor.mp4";
+import portafolioVideo from "../assets/portafolio.mp4";
+import flowDocumentVideo from "../assets/flowDocument.mp4";
+import pizarraVideo from "../assets/pizarra.mp4";
+import disneyVideo from "../assets/disney.mp4";
+
+import type { IconType } from "react-icons";
+import {
+  SiDotnet,
+  SiReact,
+  SiVite,
+  SiTailwindcss,
+  SiMysql,
+  SiGit,
+  SiSwagger,
+  SiNodedotjs,
+  SiExpress,
+  SiVuedotjs,
+  SiMongodb,
+  SiGithub,
+  SiJsonwebtokens,
+  SiQuasar,
+  
+} from "react-icons/si";
+
 export type FitMode = "cover" | "contain";
-export type ModoAjuste = FitMode; 
+export type ModoAjuste = FitMode;
+
 export type Project = {
   title: string;
   banner: string;
@@ -32,7 +53,108 @@ export type Project = {
   award?: string;
   demo?: string;
 };
-export type Proyecto = Project; 
+export type Proyecto = Project;
+
+// ─────────────────────────────────────────────────────────────
+// Chips con iconos (para Experiencia) 
+// ─────────────────────────────────────────────────────────────
+export type TechBadgeCfg = {
+  Icono: IconType;
+  ring: string;
+  bg: string;
+};
+
+export const TECH_BADGE_MAP: Record<string, TechBadgeCfg> = {
+  // Clarcat
+  ".NET 9": {
+    Icono: SiDotnet,
+    ring: "ring-[#e1d6ff]",
+    bg: "bg-[#f8f6ff] text-[#512BD4]",
+  },
+  "ASP.NET Core": {
+    Icono: SiDotnet,
+    ring: "ring-[#e1d6ff]",
+    bg: "bg-[#f8f6ff] text-[#512BD4]",
+  },
+  "Entity Framework": {
+    Icono: SiDotnet,
+    ring: "ring-[#e1d6ff]",
+    bg: "bg-[#f8f6ff] text-[#512BD4]",
+  },
+  "MySQL": {
+    Icono: SiMysql,
+    ring: "ring-[#cfe8f0]",
+    bg: "bg-[#f4fbff] text-[#00758F]",
+  },
+  "React": {
+    Icono: SiReact,
+    ring: "ring-[#cfefff]",
+    bg: "bg-[#f0fcff] text-[#61DAFB]",
+  },
+  "Vite": {
+    Icono: SiVite,
+    ring: "ring-[#dcdfff]",
+    bg: "bg-[#f6f7ff] text-[#646CFF]",
+  },
+  "Tailwind CSS": {
+    Icono: SiTailwindcss,
+    ring: "ring-[#cfefff]",
+    bg: "bg-[#f0fcff] text-[#06B6D4]",
+  },
+  "Swagger": {
+    Icono: SiSwagger,
+    ring: "ring-[#e2f6bf]",
+    bg: "bg-[#f7ffea] text-[#85EA2D]",
+  },
+  "Git": {
+    Icono: SiGit,
+    ring: "ring-[#ffd7c8]",
+    bg: "bg-[#fff5f1] text-[#F05032]",
+  },
+
+  
+  // Ticmedia
+  "Node.js": {
+    Icono: SiNodedotjs,
+    ring: "ring-[#d5f0d1]",
+    bg: "bg-[#f6fff6] text-[#339933]",
+  },
+  "Express": {
+    Icono: SiExpress,
+    ring: "ring-slate-200",
+    bg: "bg-white text-slate-900",
+  },
+  "JWT": {
+    Icono: SiJsonwebtokens,
+    ring: "ring-[#ffe6e2]",
+    bg: "bg-[#fff7f5] text-[#EA2D2E]",
+  },
+  "Vue.js": {
+    Icono: SiVuedotjs,
+    ring: "ring-[#cfeadf]",
+    bg: "bg-[#f3fff7] text-[#42B883]",
+  },
+  "Quasar": {
+    Icono: SiQuasar,
+    ring: "ring-[#d7e8fb]",
+    bg: "bg-[#f4f9ff] text-[#1976D2]",
+  },
+  "MongoDB": {
+    Icono: SiMongodb,
+    ring: "ring-[#cfead1]",
+    bg: "bg-[#f3fff3] text-[#47A248]",
+  },
+  "Mongoose": {
+    Icono: SiMongodb,
+    ring: "ring-[#cfead1]",
+    bg: "bg-[#f3fff3] text-[#47A248]",
+  },
+  "GitHub": {
+    Icono: SiGithub,
+    ring: "ring-slate-200",
+    bg: "bg-white text-[#181717]",
+  },
+};
 
 // ─────────────────────────────────────────────────────────────
 // Perfil (datos generales)
@@ -56,13 +178,12 @@ export const PERFIL = {
 export const PROFILE = PERFIL;
 
 // ─────────────────────────────────────────────────────────────
-// Logos de certificaciones 
+// Logos de certificaciones
 // ─────────────────────────────────────────────────────────────
 const RUTA_LOGOS_CERT =
   "https://github.com/mariarosete/mariarosete/blob/main/assets/certifications/";
 const logoCert = (file: string) => `${RUTA_LOGOS_CERT}${file}?raw=true`;
 
-// Mapa de logos
 export const LOGO_CERT = {
   openwebinars: logoCert("openwebinars.png"),
   sap: logoCert("sap.png"),
@@ -73,10 +194,10 @@ export const LOGO_CERT = {
   salesforce: logoCert("salesforce.png"),
   freecodecamp: logoCert("freecodecamp.png"),
 };
-export const CERT_LOGO = LOGO_CERT; 
+export const CERT_LOGO = LOGO_CERT;
 
 // ─────────────────────────────────────────────────────────────
-// Educación (línea de tiempo)
+// Educación
 // ─────────────────────────────────────────────────────────────
 export const EDUCACION = [
   {
@@ -95,7 +216,6 @@ export const EDUCACION = [
     period: "sept. 2009 – jun. 2011",
   },
 ];
-
 export const EDUCATION = EDUCACION;
 
 // ─────────────────────────────────────────────────────────────
@@ -109,7 +229,6 @@ export const CERTIFICADOS = [
     link: "https://freecodecamp.org/certification/fcc-8f71be83-65d7-40d2-95e3-e4bca09cd50a/foundational-c-sharp-with-microsoft",
     logo: LOGO_CERT.freecodecamp,
   },
-  
   {
     title: "Curso de Angular: Ampliando Conceptos",
     org: "OpenWebinars",
@@ -169,31 +288,27 @@ export const CERTIFICADOS = [
     logo: LOGO_CERT.coursera,
   },
   {
-    title:
-      'Certificado de profesionalidad nivel 3 “Seguridad Informática”',
+    title: 'Certificado de profesionalidad nivel 3 “Seguridad Informática”',
     org: "ASATA",
     date: "Dic. 2018",
     credId: "03/18/00004962/IFCT0109",
     logo: LOGO_CERT.asata,
   },
   {
-    title:
-      "Acreditación de competencias digitales europeas ECDL",
+    title: "Acreditación de competencias digitales europeas ECDL",
     org: "ECDL Spain",
     date: "Dic. 2017",
     credId: "ES004660",
     logo: LOGO_CERT.ecdl,
   },
   {
-    title:
-      "Curso de Seguridad Informática en la Gestión Empresarial",
+    title: "Curso de Seguridad Informática en la Gestión Empresarial",
     org: "Dicampus",
     date: "2017",
     credId: "PLF 2017/165",
     logo: LOGO_CERT.dicampus,
   },
 ];
-
 export const CERTS = CERTIFICADOS;
 
 // ─────────────────────────────────────────────────────────────
@@ -202,8 +317,7 @@ export const CERTS = CERTIFICADOS;
 export const EXPERIENCIA = [
   {
     company: "Clarcat Cantábrico S.L. Gijón",
-    role:
-      "Full Stack ASP.NET Core (.NET 9) + React (Vite + Tailwind CSS)",
+    role: "Full Stack ASP.NET Core (.NET 9) + React (Vite + Tailwind CSS)",
     period: "mar. 2025 – jun. 2025",
     techs: [
       ".NET 9",
@@ -213,8 +327,6 @@ export const EXPERIENCIA = [
       "React",
       "Vite",
       "Tailwind CSS",
-      "MSTest",
-      "Azure DevOps",
       "Git",
     ],
     points: [
@@ -229,16 +341,7 @@ export const EXPERIENCIA = [
     company: "Ticmedia Soluciones Profesionales, S.L. Gijón",
     role: "Full Stack Node.js + Vue.js",
     period: "mar. 2024 – jun. 2024",
-    techs: [
-      "Node.js",
-      "Express",
-      "JWT",
-      "Vue.js",
-      "Quasar",
-      "MongoDB",
-      "Mongoose",
-      "GitHub",
-    ],
+    techs: ["Node.js", "Express", "JWT", "Vue.js", "Quasar", "MongoDB", "Mongoose", "GitHub"],
     points: [
       "Backend: Desarrollé un backend con Node.js + Express.js, implementando API REST con autenticación JWT para un sistema de gestión interna.",
       "Frontend: Construí una interfaz dinámica y modular con Vue.js + Quasar Framework, optimizando la experiencia del usuario y mejorando la mantenibilidad del código.",
@@ -248,7 +351,6 @@ export const EXPERIENCIA = [
     ],
   },
 ];
-
 export const EXPERIENCE = EXPERIENCIA;
 
 // ─────────────────────────────────────────────────────────────
@@ -323,22 +425,20 @@ export const PROYECTOS: Proyecto[] = [
     position: "center",
     demo: agendaVideo,
   },
-
   {
     title: "Pastelería Creativa – Aplicación de escritorio en Java Swing",
-    banner: pasteleria, 
+    banner: pasteleria,
     repo: "https://github.com/mariarosete/pasteleriaCreativa",
     description:
       "Aplicación de escritorio desarrollada en Java Swing para crear y gestionar recetas de repostería. Permite definir postres, añadir ingredientes, guardar y cargar recetas desde archivos de texto, personalizar colores y acceder a una ayuda integrada con JavaHelp.",
     tech: ["Java", "Swing", "JavaHelp"],
     fit: "contain",
     position: "center",
-    demo: pasteleriaVideo, 
+    demo: pasteleriaVideo,
   },
-
   {
     title: "Pastelería Creativa – FlowDocument + DataGrid (WPF)",
-    banner: flowDocument, 
+    banner: flowDocument,
     repo: "https://github.com/mariarosete/pasteleria",
     description:
       "Proyecto en WPF (C#) orientado al mundo de la pastelería creativa. Incluye un FlowDocument interactivo con secciones formateadas e imágenes, y un módulo de acceso a datos con DataGrid y operaciones CRUD conectado a una base de datos Microsoft Access (recetas.accdb).",
@@ -346,7 +446,6 @@ export const PROYECTOS: Proyecto[] = [
     fit: "contain",
     position: "center",
     demo: flowDocumentVideo,
-    
   },
   {
     title: "¿Quién es este personaje de Disney? – Drag & Drop Game",
@@ -361,7 +460,7 @@ export const PROYECTOS: Proyecto[] = [
   },
   {
     title: "DigiDraw – Pizarra interactiva (Canvas)",
-    banner: pizarra, 
+    banner: pizarra,
     repo: "https://github.com/mariarosete/digidraw-pizarra",
     description:
       "Proyecto frontend desarrollado con HTML, CSS y JavaScript (Vanilla) que simula una pizarra digital en canvas. Permite dibujar a mano alzada, cambiar color y grosor del rotulador, usar goma de borrar, limpiar el lienzo, insertar imágenes desde el equipo y añadir texto directamente sobre la pizarra.",
@@ -369,11 +468,7 @@ export const PROYECTOS: Proyecto[] = [
     fit: "cover",
     position: "center",
     demo: pizarraVideo,
-  }
-  
-  
-  
-  
+  },
 ];
 
 export const PROJECTS: Project[] = PROYECTOS;

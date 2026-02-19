@@ -10,14 +10,87 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { UserCircle2 } from "lucide-react";
 
-/**
- * App (layout principal):
- * - Fondo con degradados
- * - Cabecera de navegación fija
- * - Secciones: Hero, Sobre mí, Educación, Certificados, Experiencia, Proyectos, Tech, Contacto
- * - Footer
- */
+import {
+  SiDotnet,
+  SiNodedotjs,
+  SiVuedotjs,
+  SiReact,
+  SiVite,
+  SiTailwindcss,
+  SiSwagger,
+  SiGit,
+  SiMysql,
+
+} from "react-icons/si";
+import type { IconType } from "react-icons";
+
+
+type Chip = {
+  Icono: IconType;
+  etiqueta: string;
+  ring: string;
+  bg: string;
+};
+
 export default function App() {
+  const CHIPS_SOBRE_MI: Chip[] = [
+    {
+      Icono: SiDotnet,
+      etiqueta: "ASP.NET Core / .NET",
+      ring: "ring-[#e1d6ff]",
+      bg: "bg-[#f8f6ff] text-[#512BD4]",
+    },
+    {
+      Icono: SiNodedotjs,
+      etiqueta: "Node.js",
+      ring: "ring-[#d5f0d1]",
+      bg: "bg-[#f6fff6] text-[#339933]",
+    },
+    {
+      Icono: SiReact,
+      etiqueta: "React",
+      ring: "ring-[#cfefff]",
+      bg: "bg-[#f0fcff] text-[#61DAFB]",
+    },
+    {
+      Icono: SiVuedotjs,
+      etiqueta: "Vue.js",
+      ring: "ring-[#cfeadf]",
+      bg: "bg-[#f3fff7] text-[#42B883]",
+    },
+    {
+      Icono: SiVite,
+      etiqueta: "Vite",
+      ring: "ring-[#dcdfff]",
+      bg: "bg-[#f6f7ff] text-[#646CFF]",
+    },
+    {
+      Icono: SiTailwindcss,
+      etiqueta: "Tailwind CSS",
+      ring: "ring-[#cfefff]",
+      bg: "bg-[#f0fcff] text-[#06B6D4]",
+    },
+    {
+      Icono: SiSwagger,
+      etiqueta: "Swagger",
+      ring: "ring-[#e2f6bf]",
+      bg: "bg-[#f7ffea] text-[#85EA2D]",
+    },
+    {
+      Icono: SiGit,
+      etiqueta: "Git",
+      ring: "ring-[#ffd7c8]",
+      bg: "bg-[#fff5f1] text-[#F05032]",
+    },
+    {
+      Icono: SiMysql,
+      etiqueta: "MySQL",
+      ring: "ring-[#cfe8f0]",
+      bg: "bg-[#f4fbff] text-[#00758F]",
+    },
+  ];
+
+
   return (
     <div
       className="
@@ -26,12 +99,9 @@ export default function App() {
         bg-gradient-to-b from-rose-50 via-rose-100/60 to-amber-50
       "
     >
-      {/* Barra de navegación fija */}
       <Nav />
 
-      {/* Contenido principal */}
       <main role="main">
-        {/* Sección hero / portada */}
         <Hero />
 
         {/* Sección: Sobre mí */}
@@ -39,7 +109,6 @@ export default function App() {
           id="sobre-mi"
           className="max-w-[1440px] mx-auto px-4 md:px-6 pt-10 pb-6"
         >
-          {/* Título de sección con icono */}
           <SectionTitle
             id="sobre-mi"
             icon={<UserCircle2 className="w-7 h-7 text-rose-600" />}
@@ -47,62 +116,74 @@ export default function App() {
             Sobre mí
           </SectionTitle>
 
-          {/* Tarjeta con borde degradado + contenido */}
           <div className="rounded-2xl p-[2px] bg-gradient-to-r from-rose-300/60 via-rose-200/55 to-amber-200/60">
-            <div className="rounded-2xl bg-white/90 backdrop-blur-[2px] ring-1 ring-white/70 p-6 md:p-7">
-              {/* Chips de tecnologías clave */}
-              <div className="mb-4 flex flex-wrap gap-2">
-                {[
-                  "ASP.NET Core/.NET",
-                  "Node.js (Express)",
-                  "Vue.js",
-                  "React",
-                  "Vite",
-                  "Tailwind CSS",
-                  "Swagger",
-                  "Azure DevOps",
-                  "Git",
-                  "MySQL",
-                  "MSTest",
-                ].map((tecno) => (
-                  <span
-                    key={tecno}
-                    className="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-medium text-slate-700 bg-gradient-to-r from-rose-50 to-amber-50 ring-1 ring-rose-200/50 shadow-[inset_0_0_0_1px_rgba(244,63,94,.08)]"
-                    title={tecno}
-                  >
-                    {tecno}
-                  </span>
-                ))}
-              </div>
-              {/* Texto de presentación */}
-              <div className="space-y-3 text-slate-700 leading-relaxed">
-                <p>
-                  Soy María Rosete Suárez, desarrolladora Full Stack Junior especializada en <strong> .NET y React</strong>.<br></br>
-                  <strong> Backend:</strong> desarrollo <strong>APIs REST</strong> con <strong>ASP.NET Core/.NET</strong>, documentadas con <strong>Swagger</strong> y con enfoque en pruebas.
-                  Cuento además con experiencia complementaria en <strong>Node.js</strong>.<br></br>
-                  <strong> Frontend:</strong> diseño interfaces accesibles y rápidas con <strong>React + Vite + Tailwind</strong>, y experiencia adicional con <strong>Angular</strong> y <strong>Vue.js</strong>.
-                </p>
-
-                <p>
-                  He trabajado en proyectos reales en Clarcat Cantábrico S.L. <strong>(ASP.NET Core + React + MySQL)</strong> y
-                  Ticmedia Soluciones Profesionales, S.L. <strong> (Node.js + Vue.js + MongoDB) </strong>, formando parte de equipos ágiles
-                  y colaborando con <strong>Git</strong> y <strong>Azure DevOps</strong>.<br></br>
-                  En proyectos académicos como SkillTech <strong>(Spring Boot + MySQL) </strong> y
-                  Asgard Gym (app <strong>Android/Kotlin</strong>) apliqué buenas prácticas y un enfoque orientado a producto.
-                </p>
-
-                <p>
-                  Organizada y resolutiva, con atención al detalle, pensamiento analítico y orientación al usuario.
-                  Busco un equipo donde aportar desde el primer día y seguir creciendo como profesional.
-                </p>
+            <div className="rounded-2xl bg-white/90 backdrop-blur-[2px] ring-1 ring-white/70 p-4 sm:p-6 md:p-7">
+              {/* Chips con iconos*/}
+              <div className="mb-4 -mx-1 px-1 overflow-x-auto">
+                <div className="flex flex-nowrap gap-2 pb-2">
+                  {CHIPS_SOBRE_MI.map(({ Icono, etiqueta, ring, bg }) => (
+                    <span
+                      key={etiqueta}
+                      title={etiqueta}
+                      className="
+                        shrink-0 inline-flex items-center gap-2
+                        rounded-full px-3 py-1.5
+                        text-[12px] text-slate-800
+                        bg-white/95
+                        ring-1 ring-rose-200/70
+                        shadow-sm
+                        hover:shadow-md hover:-translate-y-[1px]
+                        transition
+                      "
+                    >
+                      <span
+                        className={`
+                          grid place-items-center
+                          w-7 h-7 rounded-2xl
+                          ring-1 ${ring}
+                          ${bg}
+                        `}
+                        aria-hidden="true"
+                      >
+                        <Icono className="w-4 h-4" />
+                      </span>
+                      {etiqueta}
+                    </span>
+                  ))}
+                </div>
               </div>
 
+              {/* Texto*/}
+              <div className="text-slate-700 leading-6 sm:leading-relaxed text-sm sm:text-[15px] space-y-3">
+                <p>
+                  Soy María Rosete Suárez, desarrolladora Full Stack Junior
+                  especializada en .NET y React. Desarrollo APIs REST con
+                  ASP.NET Core/.NET, documentadas con Swagger y con enfoque en
+                  pruebas, y también tengo experiencia con Node.js.
+                </p>
 
+                <p>
+                  En frontend diseño interfaces rápidas y accesibles con React +
+                  Vite + Tailwind, y tengo experiencia adicional con Angular y
+                  Vue.js. He trabajado en Clarcat Cantábrico S.L. (ASP.NET Core +
+                  React + MySQL) y Ticmedia Soluciones Profesionales, S.L.
+                  (Node.js + Vue.js + MongoDB), colaborando con Git y Azure
+                  DevOps. En proyectos académicos como SkillTech (Spring Boot +
+                  MySQL) y Asgard Gym (Android/Kotlin) apliqué buenas prácticas y
+                  un enfoque orientado a producto.
+                </p>
+
+                <p>
+                  Organizada y resolutiva, con atención al detalle, pensamiento
+                  analítico y orientación al usuario. Busco un equipo donde
+                  aportar desde el primer día y seguir creciendo como
+                  profesional.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Secciones con sus propios componentes */}
         <Education />
         <Certificates />
         <Experience />
@@ -111,7 +192,6 @@ export default function App() {
         <Contact />
       </main>
 
-      {/* Pie de página */}
       <Footer />
     </div>
   );
