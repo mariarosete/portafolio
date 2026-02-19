@@ -23,29 +23,31 @@ function TechChip({ tech }: { tech: string }) {
     <span
       title={tech}
       className="
-        shrink-0 inline-flex items-center gap-2
-        rounded-full px-3 py-1.5
-        text-[12px] text-slate-800
+        inline-flex items-center gap-2
+        rounded-full
+        px-2.5 py-1
+        text-[11px] sm:text-[12px]
+        text-slate-800
         bg-white
         ring-1 ring-rose-200/70
         shadow-sm
-        hover:shadow-md hover:-translate-y-[1px]
         transition
       "
     >
       <span
         className={`
           grid place-items-center
-          w-6 h-6 rounded-full
+          w-5 h-5 sm:w-6 sm:h-6
+          rounded-full
           ring-1 ${ring}
           ${bg}
         `}
         aria-hidden="true"
       >
         {Icono ? (
-          <Icono className="w-3.5 h-3.5" />
+          <Icono className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
         ) : (
-          <span className="text-[11px]">•</span>
+          <span className="text-[10px]">•</span>
         )}
       </span>
       {tech}
@@ -55,7 +57,6 @@ function TechChip({ tech }: { tech: string }) {
 
 /**
  * Sección de Experiencia profesional.
- * 
  */
 const Experiencia: React.FC = () => {
   const items = (EXPERIENCIA as ExperienceItem[]) ?? [];
@@ -117,13 +118,17 @@ const Experiencia: React.FC = () => {
                     <p className="text-slate-700 mt-1 text-[13.5px] sm:text-[14.5px] leading-snug">
                       {experiencia.role}
                     </p>
-                   
+
+                    {/* ✅ SIN SCROLL: wrap desde móvil */}
                     {Array.isArray(experiencia.techs) &&
                       experiencia.techs.length > 0 && (
-                        <div className="mt-3 -mx-1 px-1 overflow-x-auto md:overflow-visible">
-                          <div className="flex flex-nowrap gap-2 pb-2 md:flex-wrap md:pb-0">
+                        <div className="mt-3">
+                          <div className="flex flex-wrap gap-2">
                             {experiencia.techs.map((tecno) => (
-                              <TechChip key={`${experiencia.key}-${tecno}`} tech={tecno} />
+                              <TechChip
+                                key={`${experiencia.key}-${tecno}`}
+                                tech={tecno}
+                              />
                             ))}
                           </div>
                         </div>
@@ -147,7 +152,6 @@ const Experiencia: React.FC = () => {
                   </span>
                 </div>
 
-                
                 <ul className="mt-4 space-y-2 text-slate-600 text-[13.5px] sm:text-[15px] leading-relaxed">
                   {visiblePoints.map((punto) => (
                     <li key={punto} className="flex gap-3">
@@ -157,14 +161,11 @@ const Experiencia: React.FC = () => {
                   ))}
                 </ul>
 
-         
                 {hasMore && (
                   <div className="mt-3 sm:hidden">
                     <button
                       type="button"
-                      onClick={() =>
-                        setOpenKey(isOpen ? null : experiencia.key)
-                      }
+                      onClick={() => setOpenKey(isOpen ? null : experiencia.key)}
                       className="
                         inline-flex items-center
                         text-rose-700 text-sm

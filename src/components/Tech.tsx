@@ -257,7 +257,7 @@ const Tecnologias: React.FC = () => {
         mt-3
         grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5
         gap-3 sm:gap-6
-        [@media(max-width:640px)]:scale-[0.92]
+        [@media(max-width:640px)]:scale-[0.88]
         [@media(max-width:640px)]:origin-top-left
       "
     >
