@@ -327,6 +327,7 @@ export const LOGO_CERT = {
   dicampus: logoCert("dicampus.png"),
   salesforce: logoCert("salesforce.png"),
   freecodecamp: logoCert("freecodecamp.png"),
+  servicenow: logoCert("ServiceNow.avif"),
 };
 export const CERT_LOGO = LOGO_CERT;
 
@@ -356,10 +357,19 @@ export const EDUCATION = EDUCACION;
 // Certificados
 // ─────────────────────────────────────────────────────────────
 export const CERTIFICADOS = [
+  
+  {
+    title: "Micro-Certification – Welcome to ServiceNow",
+    org: "ServiceNow",
+    date: "Feb. 2026",
+    link: "https://www.linkedin.com/in/mariarosetesuarez/overlay/1771586252483/single-media-viewer/?profileId=ACoAAEr-PaoBY5xohXS4VTc50eGRdX1PM-ImnOo",
+    logo: LOGO_CERT.servicenow,
+  },
+  
   {
     title: "Foundational C# with Microsoft",
     org: "freeCodeCamp",
-    date: "dic. 2025",
+    date: "Dic. 2025",
     link: "https://freecodecamp.org/certification/fcc-8f71be83-65d7-40d2-95e3-e4bca09cd50a/foundational-c-sharp-with-microsoft",
     logo: LOGO_CERT.freecodecamp,
   },
