@@ -133,11 +133,9 @@ export default function App() {
       <main role="main">
         <Hero />
 
-        {/* transición  */}
         <div className="h-12 md:h-20 bg-gradient-to-b from-transparent to-[#0b0415]" />
 
         <div className="relative bg-[linear-gradient(180deg,#0b0415_0%,#0d0418_35%,#10061b_100%)]">
-          {/* glows decorativos */}
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
             <div className="absolute left-[-100px] top-[120px] h-[240px] w-[240px] rounded-full bg-rose-500/10 blur-[120px]" />
             <div className="absolute right-[-80px] top-[220px] h-[260px] w-[260px] rounded-full bg-fuchsia-500/10 blur-[130px]" />
@@ -194,8 +192,6 @@ export default function App() {
                         la claridad del código, las buenas prácticas y la mantenibilidad. Además, cuento con experiencia en Node.js, Vue.js, MySQL, Git y
                         tecnologías actuales del ecosistema frontend.
                       </p>
-
-
                     </div>
                   </div>
 
@@ -205,25 +201,26 @@ export default function App() {
                       Tecnologías principales
                     </h4>
 
-                    <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3">
+                    <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-2 sm:gap-3">
                       {CHIPS_SOBRE_MI.map(({ Icono, etiqueta, color, bg, border }) => (
                         <div
                           key={etiqueta}
                           className={`
-                            flex items-center gap-3 rounded-2xl border ${border}
-                            ${bg} px-4 py-3
+                            flex items-center gap-2 sm:gap-3 rounded-xl sm:rounded-2xl border ${border}
+                            ${bg} px-3 py-2.5 sm:px-4 sm:py-3
                             transition hover:-translate-y-[1px] hover:bg-white/[0.07]
                           `}
                         >
                           <div
                             className={`
-                              grid h-10 w-10 shrink-0 place-items-center rounded-xl
+                              grid h-8 w-8 sm:h-10 sm:w-10 shrink-0 place-items-center rounded-lg sm:rounded-xl
                               border border-white/10 bg-black/10 ${color}
                             `}
                           >
-                            <Icono className="h-4 w-4" />
+                            <Icono className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                           </div>
-                          <span className="text-sm text-white/82 leading-5">
+
+                          <span className="text-[12px] sm:text-sm text-white/82 leading-4 sm:leading-5 break-words">
                             {etiqueta}
                           </span>
                         </div>
