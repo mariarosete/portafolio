@@ -1,42 +1,64 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translate3d(0, -10px, 0);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@keyframes floatMedium {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0);
   }
 }
 
-.card {
-  padding: 2em;
+@keyframes floatSlowReverse {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 10px, 0);
+  }
 }
 
-.read-the-docs {
-  color: #888;
+@keyframes floatMediumReverse {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 12px, 0);
+  }
+}
+
+@keyframes floatFast {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 4.8s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: floatMedium 4s ease-in-out infinite;
+}
+
+.animate-float-slow-reverse {
+  animation: floatSlowReverse 5.2s ease-in-out infinite;
+}
+
+.animate-float-medium-reverse {
+  animation: floatMediumReverse 4.4s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: floatFast 3.6s ease-in-out infinite;
 }

@@ -1,6 +1,5 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
-import SectionTitle from "./components/ui/SectionTitle";
 import Education from "./components/Education";
 import Certificates from "./components/Certificates";
 import Experience from "./components/Experience";
@@ -8,7 +7,7 @@ import Projects from "./components/Projects";
 import Tech from "./components/Tech";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import { UserCircle2 } from "lucide-react";
+import { UserCircle2, Code2, Briefcase, BrainCircuit } from "lucide-react";
 
 import {
   SiDotnet,
@@ -20,83 +19,113 @@ import {
   SiSwagger,
   SiGit,
   SiMysql,
-
 } from "react-icons/si";
 import type { IconType } from "react-icons";
-
 
 type Chip = {
   Icono: IconType;
   etiqueta: string;
-  ring: string;
+  color: string;
   bg: string;
+  border: string;
+};
+
+type Highlight = {
+  icon: React.ReactNode;
+  title: string;
+  text: string;
 };
 
 export default function App() {
   const CHIPS_SOBRE_MI: Chip[] = [
     {
       Icono: SiDotnet,
-      etiqueta: "ASP.NET Core / .NET",
-      ring: "ring-[#e1d6ff]",
-      bg: "bg-[#f8f6ff] text-[#512BD4]",
-    },
-    {
-      Icono: SiNodedotjs,
-      etiqueta: "Node.js",
-      ring: "ring-[#d5f0d1]",
-      bg: "bg-[#f6fff6] text-[#339933]",
+      etiqueta: ".NET / ASP.NET Core",
+      color: "text-[#a78bfa]",
+      bg: "bg-[#151125]",
+      border: "border-[#2d214b]",
     },
     {
       Icono: SiReact,
       etiqueta: "React",
-      ring: "ring-[#cfefff]",
-      bg: "bg-[#f0fcff] text-[#61DAFB]",
+      color: "text-[#61DAFB]",
+      bg: "bg-[#0d1820]",
+      border: "border-[#1f3745]",
+    },
+    {
+      Icono: SiNodedotjs,
+      etiqueta: "Node.js",
+      color: "text-[#67c46a]",
+      bg: "bg-[#101912]",
+      border: "border-[#233626]",
     },
     {
       Icono: SiVuedotjs,
       etiqueta: "Vue.js",
-      ring: "ring-[#cfeadf]",
-      bg: "bg-[#f3fff7] text-[#42B883]",
+      color: "text-[#42B883]",
+      bg: "bg-[#101913]",
+      border: "border-[#1e3528]",
     },
     {
       Icono: SiVite,
       etiqueta: "Vite",
-      ring: "ring-[#dcdfff]",
-      bg: "bg-[#f6f7ff] text-[#646CFF]",
+      color: "text-[#8b92ff]",
+      bg: "bg-[#141626]",
+      border: "border-[#2b2f55]",
     },
     {
       Icono: SiTailwindcss,
       etiqueta: "Tailwind CSS",
-      ring: "ring-[#cfefff]",
-      bg: "bg-[#f0fcff] text-[#06B6D4]",
+      color: "text-[#38bdf8]",
+      bg: "bg-[#0c171d]",
+      border: "border-[#1b3944]",
     },
     {
       Icono: SiSwagger,
       etiqueta: "Swagger",
-      ring: "ring-[#e2f6bf]",
-      bg: "bg-[#f7ffea] text-[#85EA2D]",
+      color: "text-[#a3e635]",
+      bg: "bg-[#171b0e]",
+      border: "border-[#384019]",
     },
     {
       Icono: SiGit,
       etiqueta: "Git",
-      ring: "ring-[#ffd7c8]",
-      bg: "bg-[#fff5f1] text-[#F05032]",
+      color: "text-[#F05032]",
+      bg: "bg-[#1d110d]",
+      border: "border-[#4b2319]",
     },
     {
       Icono: SiMysql,
       etiqueta: "MySQL",
-      ring: "ring-[#cfe8f0]",
-      bg: "bg-[#f4fbff] text-[#00758F]",
+      color: "text-[#4fc3e8]",
+      bg: "bg-[#0d171c]",
+      border: "border-[#1f3b47]",
     },
   ];
 
+  const HIGHLIGHTS: Highlight[] = [
+    {
+      icon: <Code2 className="h-5 w-5" />,
+      title: "Full Stack",
+      text: "Desarrollo aplicaciones web con .NET, React y una base sólida en backend y frontend.",
+    },
+    {
+      icon: <Briefcase className="h-5 w-5" />,
+      title: "Experiencia real",
+      text: "He trabajado en proyectos profesionales y académicos orientados a producto y usuario.",
+    },
+    {
+      icon: <BrainCircuit className="h-5 w-5" />,
+      title: "Mentalidad",
+      text: "Me gusta construir soluciones limpias, útiles y bien pensadas, cuidando cada detalle.",
+    },
+  ];
 
   return (
     <div
       className="
-        min-h-screen text-slate-900
-        bg-[radial-gradient(60%_40%_at_50%_0%,rgba(255,182,193,0.25),transparent)]
-        bg-gradient-to-b from-rose-50 via-rose-100/60 to-amber-50
+        min-h-screen text-white bg-[#070312]
+        bg-[radial-gradient(40%_30%_at_50%_0%,rgba(244,63,94,0.10),transparent),radial-gradient(30%_25%_at_85%_10%,rgba(168,85,247,0.08),transparent)]
       "
     >
       <Nav />
@@ -104,92 +133,152 @@ export default function App() {
       <main role="main">
         <Hero />
 
-        {/* Sección: Sobre mí */}
-        <section
-          id="sobre-mi"
-          className="max-w-[1440px] mx-auto px-4 md:px-6 pt-10 pb-6"
-        >
-          <SectionTitle
-            id="sobre-mi"
-            icon={<UserCircle2 className="w-7 h-7 text-rose-600" />}
-          >
-            Sobre mí
-          </SectionTitle>
+        {/* transición  */}
+        <div className="h-12 md:h-20 bg-gradient-to-b from-transparent to-[#0b0415]" />
 
-          <div className="rounded-2xl p-[2px] bg-gradient-to-r from-rose-300/60 via-rose-200/55 to-amber-200/60">
-            <div className="rounded-2xl bg-white/90 backdrop-blur-[2px] ring-1 ring-white/70 p-4 sm:p-6 md:p-7">
-              {/* Chips con iconos*/}
-              <div className="mb-4 -mx-1 px-1 overflow-x-auto">
-                <div className="flex flex-nowrap gap-2 pb-2">
-                  {CHIPS_SOBRE_MI.map(({ Icono, etiqueta, ring, bg }) => (
-                    <span
-                      key={etiqueta}
-                      title={etiqueta}
-                      className="
-                        shrink-0 inline-flex items-center gap-2
-                        rounded-full px-3 py-1.5
-                        text-[12px] text-slate-800
-                        bg-white/95
-                        ring-1 ring-rose-200/70
-                        shadow-sm
-                        hover:shadow-md hover:-translate-y-[1px]
-                        transition
-                      "
-                    >
-                      <span
-                        className={`
-                          grid place-items-center
-                          w-7 h-7 rounded-2xl
-                          ring-1 ${ring}
-                          ${bg}
-                        `}
-                        aria-hidden="true"
-                      >
-                        <Icono className="w-4 h-4" />
-                      </span>
-                      {etiqueta}
+        <div className="relative bg-[linear-gradient(180deg,#0b0415_0%,#0d0418_35%,#10061b_100%)]">
+          {/* glows decorativos */}
+          <div className="pointer-events-none absolute inset-0 overflow-hidden">
+            <div className="absolute left-[-100px] top-[120px] h-[240px] w-[240px] rounded-full bg-rose-500/10 blur-[120px]" />
+            <div className="absolute right-[-80px] top-[220px] h-[260px] w-[260px] rounded-full bg-fuchsia-500/10 blur-[130px]" />
+          </div>
+
+          {/* SOBRE MÍ */}
+          <section
+            id="sobre-mi"
+            className="relative max-w-[1440px] mx-auto px-4 md:px-6 pt-16 md:pt-24 pb-14 md:pb-20"
+          >
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 text-rose-400 text-[11px] sm:text-xs uppercase tracking-[0.28em]">
+                <UserCircle2 className="w-4 h-4" />
+                <span>Perfil profesional</span>
+              </div>
+
+              <h2 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-black leading-[0.95] tracking-tight">
+                <span className="text-white/70">Construyendo</span>
+                <span className="block bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-600 bg-clip-text text-transparent">
+                  Soluciones Reales
+                </span>
+              </h2>
+
+              <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
+                Desarrollo web full stack con foco en producto y claridad técnica.
+              </p>
+            </div>
+
+            <div className="mt-10 md:mt-12 grid gap-8 xl:grid-cols-[1.25fr_0.75fr] items-start">
+              {/* COLUMNA IZQUIERDA */}
+              <div className="rounded-[30px] p-[1px] bg-gradient-to-br from-rose-500/25 via-fuchsia-500/10 to-amber-300/15 shadow-[0_20px_80px_-35px_rgba(0,0,0,0.55)]">
+                <div className="rounded-[30px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] backdrop-blur-xl p-6 sm:p-8 md:p-10">
+                  <div className="max-w-3xl">
+                    <span className="inline-flex items-center rounded-full border border-rose-500/20 bg-rose-500/10 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-rose-300">
+                      Especialización
                     </span>
-                  ))}
+
+                    <h3 className="mt-5 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
+                      Desarrollo soluciones web modernas,
+                      <span className="block bg-gradient-to-r from-rose-400 via-pink-400 to-fuchsia-400 bg-clip-text text-transparent">
+                        claras y escalables
+                      </span>
+                    </h3>
+
+                    <div className="mt-6 space-y-4 text-[15px] sm:text-base leading-8 text-white/72">
+                      <p>
+                        Soy María Rosete Suárez, desarrolladora Full Stack especializada en{" "}
+                        <strong className="text-white font-semibold">.NET</strong> y{" "}
+                        <strong className="text-white font-semibold">React</strong>.
+                      </p>
+
+                      <p>
+                        Desarrollo APIs REST e interfaces web modernas, con especial atención a
+                        la claridad del código, las buenas prácticas y la mantenibilidad. Además, cuento con experiencia en Node.js, Vue.js, MySQL, Git y
+                        tecnologías actuales del ecosistema frontend.
+                      </p>
+
+
+                    </div>
+                  </div>
+
+                  {/* Tecnologías en grid */}
+                  <div className="mt-8">
+                    <h4 className="text-sm font-semibold uppercase tracking-[0.22em] text-white/45">
+                      Tecnologías principales
+                    </h4>
+
+                    <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3">
+                      {CHIPS_SOBRE_MI.map(({ Icono, etiqueta, color, bg, border }) => (
+                        <div
+                          key={etiqueta}
+                          className={`
+                            flex items-center gap-3 rounded-2xl border ${border}
+                            ${bg} px-4 py-3
+                            transition hover:-translate-y-[1px] hover:bg-white/[0.07]
+                          `}
+                        >
+                          <div
+                            className={`
+                              grid h-10 w-10 shrink-0 place-items-center rounded-xl
+                              border border-white/10 bg-black/10 ${color}
+                            `}
+                          >
+                            <Icono className="h-4 w-4" />
+                          </div>
+                          <span className="text-sm text-white/82 leading-5">
+                            {etiqueta}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Texto*/}
-              <div className="text-slate-700 leading-6 sm:leading-relaxed text-sm sm:text-[15px] space-y-3">
-                <p>
-                  Soy María Rosete Suárez, desarrolladora Full Stack Junior
-                  especializada en .NET y React. Desarrollo APIs REST con
-                  ASP.NET Core/.NET, documentadas con Swagger y con enfoque en
-                  pruebas, y también tengo experiencia con Node.js.
-                </p>
+              {/* COLUMNA DERECHA */}
+              <div className="rounded-[30px] p-[1px] bg-gradient-to-br from-white/10 via-white/5 to-transparent shadow-[0_20px_80px_-35px_rgba(0,0,0,0.7)]">
+                <div className="rounded-[30px] border border-white/10 bg-[#0b0818]/95 backdrop-blur-xl p-5 sm:p-6">
+                  <div className="space-y-4">
+                    {HIGHLIGHTS.map((item) => (
+                      <div
+                        key={item.title}
+                        className="rounded-2xl border border-white/8 bg-white/[0.03] p-4 sm:p-5"
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-white/10 bg-white/5 text-rose-400">
+                            {item.icon}
+                          </div>
 
-                <p>
-                  En frontend diseño interfaces rápidas y accesibles con React +
-                  Vite + Tailwind, y tengo experiencia adicional con Angular y
-                  Vue.js. He trabajado en Clarcat Cantábrico S.L. (ASP.NET Core +
-                  React + MySQL) y Ticmedia Soluciones Profesionales, S.L.
-                  (Node.js + Vue.js + MongoDB), colaborando con Git y Azure
-                  DevOps. En proyectos académicos como SkillTech (Spring Boot +
-                  MySQL) y Asgard Gym (Android/Kotlin) apliqué buenas prácticas y
-                  un enfoque orientado a producto.
-                </p>
+                          <div>
+                            <h3 className="text-xl font-semibold text-white">
+                              {item.title}
+                            </h3>
+                            <p className="mt-2 text-sm leading-7 text-white/55">
+                              {item.text}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
 
-                <p>
-                  Organizada y resolutiva, con atención al detalle, pensamiento
-                  analítico y orientación al usuario. Busco un equipo donde
-                  aportar desde el primer día y seguir creciendo como
-                  profesional.
-                </p>
+                  <div className="mt-6 rounded-2xl border border-white/8 bg-gradient-to-r from-rose-500/10 to-fuchsia-500/5 p-5">
+                    <p className="text-sm sm:text-[15px] leading-7 text-white/70">
+                      Me interesa formar parte de proyectos donde pueda seguir creciendo,
+                      aportar valor desde el primer día y construir producto con criterio
+                      técnico y visual.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <Education />
-        <Certificates />
-        <Experience />
-        <Projects />
-        <Tech />
-        <Contact />
+          <Education />
+          <Certificates />
+          <Experience />
+          <Projects />
+          <Tech />
+          <Contact />
+        </div>
       </main>
 
       <Footer />

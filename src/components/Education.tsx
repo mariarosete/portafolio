@@ -1,73 +1,91 @@
 import React from "react";
 import { motion } from "framer-motion";
-import SectionTitle from "./ui/SectionTitle";
 import { EDUCATION as EDUCACION } from "../data/profile";
-import { GraduationCap } from "lucide-react";
+import {
+  GraduationCap,
+  BookOpen,
+  CalendarDays,
+  FileText,
+} from "lucide-react";
 
 /**
- * Sección de Educación con línea de tiempo.
- * Cada hito aparece con una pequeña animación al entrar en el viewport.
+ * Sección de Educación
  */
 const Educacion: React.FC = () => (
   <section
     id="educacion"
-    className="
-      max-w-[1440px] mx-auto px-4 md:px-6 pt-10 pb-6
-      bg-gradient-to-b from-rose-50/40 to-amber-50/40 rounded-3xl
-    "
+    className="relative max-w-[1440px] mx-auto px-4 md:px-6 pt-16 md:pt-24 pb-14 md:pb-20"
   >
-    {/* Título */}
-    <SectionTitle id="educacion" icon={<GraduationCap className="w-7 h-7 text-rose-600" />}>
-      Educación
-    </SectionTitle>
+    {/* encabezado */}
+    <div className="max-w-3xl">
+      <div className="inline-flex items-center gap-2 text-rose-400 text-[11px] sm:text-xs uppercase tracking-[0.28em]">
+        <GraduationCap className="w-4 h-4" />
+        <span>Formación académica</span>
+      </div>
 
-    {/*
-      Contenedor de la línea de tiempo:
-      - padding-left para separar el contenido del “raíl”
-      - pseudo-elemento 'before' dibuja la línea vertical degradada
-    */}
-    <div className="relative pl-6 before:absolute before:left-3 before:top-0 before:h-full before:w-px before:bg-gradient-to-b before:from-rose-300 before:to-amber-300">
-      {EDUCACION.map((estudio) => (
-        // Tarjeta animada: se eleva y aparece suavemente al entrar
-        <motion.div
-          key={estudio.title}
-          initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.35 }}
-          className="relative pl-6 pb-6"
-        >
-          {/* Nodo circular sobre el raíl (marca de la línea de tiempo) */}
-          <span className="absolute left-[-4px] top-4 h-4 w-4 rounded-full bg-gradient-to-br from-rose-400 to-amber-400">
-            <span className="block m-[3px] h-[10px] w-[10px] rounded-full bg-white" />
-          </span>
+      <h2 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-black leading-[0.95] tracking-tight">
+        <span className="text-white/80">Base técnica,</span>
+        <span className="block bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-600 bg-clip-text text-transparent">
+          evolución constante
+        </span>
+      </h2>
 
-          {/*
-            Tarjeta del hito:
-            - borde izquierdo con degradado
-            - sombra ligera en hover
-          */}
-          <div className="relative rounded-2xl bg-white p-4 shadow-sm transition hover:shadow-md hover:-translate-y-[1px]">
-            <span className="pointer-events-none absolute left-0 top-0 h-full w-[3px] rounded-l-2xl bg-gradient-to-b from-rose-400 to-amber-400" />
+      <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
+        Estudios y formación que refuerzan mi perfil como desarrolladora y mi
+        capacidad para construir soluciones sólidas.
+      </p>
+    </div>
 
-            {/* Título del estudio */}
-            <h3 className="font-semibold">{estudio.title}</h3>
+    <div className="relative mt-12 md:mt-14">
+      <div className="absolute left-[15px] top-2 bottom-2 hidden md:block w-px bg-gradient-to-b from-rose-500/50 via-fuchsia-500/20 to-transparent" />
 
-            {/* Centro educativo */}
-            <p className="text-slate-600">{estudio.center}</p>
-
-            {/* Periodo */}
-            <div className="mt-2">
-              <span className="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium text-white bg-gradient-to-r from-rose-500 to-amber-400 whitespace-nowrap leading-none">
-                {estudio.period}
-              </span>
+      <div className="space-y-6 md:space-y-7">
+        {EDUCACION.map((estudio, index) => (
+          <motion.article
+            key={`${estudio.title}-${estudio.period}`}
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.4, delay: index * 0.05 }}
+            className="relative md:pl-14"
+          >
+            {/* nodo */}
+            <div className="absolute left-[1px] top-8 z-10 hidden md:flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-rose-500 via-pink-500 to-fuchsia-600 shadow-[0_0_24px_rgba(244,63,94,0.35)]">
+              <div className="h-3 w-3 rounded-full bg-[#0b0818]" />
             </div>
-          </div>
-        </motion.div>
-      ))}
+
+            {/* card */}
+            <div className="max-w-4xl rounded-[24px] p-[1px] bg-gradient-to-br from-rose-500/18 via-fuchsia-500/8 to-amber-300/8 shadow-[0_16px_55px_-32px_rgba(0,0,0,0.65)]">
+              <div className="rounded-[24px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl px-5 py-4 sm:px-6 sm:py-5 md:px-6 md:py-5 transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#171126]/85">
+                <div className="flex flex-col gap-4 sm:gap-5">
+                  {/* cabecera */}
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <div className="min-w-0">
+                      
+                      <h3 className="mt-3 text-lg sm:text-xl md:text-[22px] font-bold leading-tight text-white">
+                        {estudio.title}
+                      </h3>
+
+                      <p className="mt-1.5 text-white/68 text-sm sm:text-[15px]">
+                        {estudio.center}
+                      </p>
+                    </div>
+
+                    <div className="shrink-0">
+                      <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-white/78">
+                        <CalendarDays className="h-4 w-4 text-rose-400" />
+                        {estudio.period}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.article>
+        ))}
+      </div>
     </div>
   </section>
 );
 
 export default Educacion;
-

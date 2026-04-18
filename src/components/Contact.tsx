@@ -1,81 +1,156 @@
 import React from "react";
-import SectionTitle from "./ui/SectionTitle";
 import ContactForm from "./ContactForm";
-import { Github, Linkedin, Mail } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Send,
+} from "lucide-react";
 import { PROFILE as PERFIL } from "../data/profile";
 
 /**
- * Sección de contacto:
- * - Muestra botones a redes (GitHub, LinkedIn, Email)
- * - Incluye el formulario de contacto
+ * Sección de contacto 
  */
 const Contacto: React.FC = () => (
-  // Contenedor de sección 
-  <section id="contacto" className="max-w-[1440px] mx-auto px-4 md:px-6 pt-10 pb-6">
-  {/* Título */}
-  <SectionTitle
+  <section
     id="contacto"
-    icon={<Mail className="w-7 h-7 text-rose-600" />}
+    className="relative max-w-[1440px] mx-auto px-4 md:px-6 pt-16 md:pt-24 pb-14 md:pb-20"
   >
-    Contacto
-  </SectionTitle>
+    <div className="grid gap-10 xl:grid-cols-[0.9fr_1.1fr] items-start">
+      {/* COLUMNA IZQUIERDA */}
+      <div className="max-w-2xl">
+        <div className="inline-flex items-center gap-2 text-rose-400 text-[11px] sm:text-xs uppercase tracking-[0.28em]">
+          <Mail className="w-4 h-4" />
+          <span>Contacto</span>
+        </div>
 
-    {/*
-      Tarjeta superior con borde degradado:
-      - .group nos permite coordinar efectos hover entre padre e hijos
-      - Sombra suave y blur sutil 
-    */}
-    <div className="group rounded-3xl p-[2px] bg-gradient-to-r from-rose-300/50 via-rose-200/45 to-amber-200/55 shadow-[0_20px_60px_-20px_rgba(244,63,94,.25)]">
-      <div className="rounded-3xl bg-white/90 backdrop-blur-[2px] ring-1 ring-white/70 p-5 md:p-6">
-        {/* Botones de redes alineada a la derecha */}
-        <div className="ml-auto flex items-center justify-end gap-3">
-          {/*
-            Lista de acciones sociales.
-            - Abrimos en nueva pestaña salvo el email 
-            - Iconos de Lucide ajustados a 20px (w-5 h-5)
-          */}
-          {[
-            { Icono: Github,   href: PERFIL.socials.github,   etiqueta: "GitHub"   },
-            { Icono: Linkedin, href: PERFIL.socials.linkedin, etiqueta: "LinkedIn" },
-            { Icono: Mail,     href: PERFIL.socials.email,    etiqueta: "Email"    },
-          ].map(({ Icono, href, etiqueta }) => (
-            <a
-              key={etiqueta}
-              aria-label={etiqueta}
-              title={etiqueta}
-              href={href}
-              // Email no necesita nueva pestaña
-              target={etiqueta === "Email" ? undefined : "_blank"}
-              rel={etiqueta === "Email" ? undefined : "noreferrer"}
-              className="
-                relative inline-flex items-center justify-center h-11 w-11
-                rounded-xl text-white bg-amber-400
-                shadow-[0_10px_25px_-10px_rgba(245,158,11,.55)]
-                ring-1 ring-amber-300/50
-                transition-all duration-200
-                hover:bg-[length:100%_100%] hover:bg-gradient-to-r hover:from-rose-500 hover:to-amber-400 hover:brightness-110
-                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300
-              "
-            >
-             
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-200 group-hover:opacity-100 bg-gradient-to-r from-rose-400/20 to-amber-400/20"
-              />
-             
-              <Icono className="w-5 h-5 relative z-[1]" />
-            </a>
-          ))}
+        <h2 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-black leading-[0.95] tracking-tight">
+          <span className="text-white/85">Hablemos de</span>
+          <span className="block bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-600 bg-clip-text text-transparent italic">
+            tu próximo paso
+          </span>
+        </h2>
+
+        <p className="mt-6 max-w-xl text-white/58 text-base sm:text-lg leading-8">
+          Estoy abierta a oportunidades, colaboraciones y proyectos donde pueda
+          aportar valor desde desarrollo frontend, backend o producto digital.
+        </p>
+
+        {/* Bloque destacado */}
+        <div className="mt-8 rounded-[28px] p-[1px] bg-gradient-to-br from-rose-500/16 via-fuchsia-500/8 to-amber-300/8 shadow-[0_16px_55px_-30px_rgba(0,0,0,0.65)]">
+          <div className="rounded-[28px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl p-5 sm:p-6">
+            <p className="text-[11px] uppercase tracking-[0.28em] text-rose-400">
+              Disponibilidad
+            </p>
+            <p className="mt-4 text-white text-xl sm:text-2xl font-bold leading-tight">
+              Lista para nuevos retos
+            </p>
+            <p className="mt-3 text-white/62 text-sm sm:text-[15px] leading-7">
+              Si crees que mi perfil puede encajar en tu equipo o proyecto,
+              estaré encantada de hablar contigo.
+            </p>
+          </div>
+        </div>
+
+        {/* Datos de contacto */}
+        <div className="mt-8">
+          <div className="max-w-[420px] rounded-[24px] p-[1px] bg-gradient-to-br from-rose-500/14 via-fuchsia-500/8 to-amber-300/8">
+            <div className="rounded-[24px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl p-4">
+              <div className="flex items-start gap-3">
+                <div className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl border border-rose-500/20 bg-rose-500/10 text-rose-400">
+                  <Mail className="w-5 h-5" />
+                </div>
+
+                <div className="min-w-0">
+                  <p className="text-[11px] uppercase tracking-[0.24em] text-white/40">
+                    Email
+                  </p>
+
+                  <a
+                    href="mailto:marlarosete89@gmail.com"
+                    className="mt-2 block break-all text-white font-medium hover:text-rose-300 transition"
+                  >
+                    marlarosete89@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Redes */}
+        <div className="mt-8">
+          <p className="text-[11px] uppercase tracking-[0.26em] text-white/35">
+            También puedes encontrarme en
+          </p>
+
+          <div className="mt-4 flex flex-wrap gap-3">
+            {[
+              {
+                Icono: Github,
+                href: PERFIL.socials.github,
+                etiqueta: "GitHub",
+              },
+              {
+                Icono: Linkedin,
+                href: PERFIL.socials.linkedin,
+                etiqueta: "LinkedIn",
+              }
+            ].map(({ Icono, href, etiqueta }) => (
+              <a
+                key={etiqueta}
+                aria-label={etiqueta}
+                title={etiqueta}
+                href={href}
+                target={etiqueta === "Email" ? undefined : "_blank"}
+                rel={etiqueta === "Email" ? undefined : "noreferrer"}
+                className="
+                  inline-flex items-center justify-center gap-2
+                  rounded-2xl px-4 py-3
+                  text-sm font-semibold text-white/90
+                  border border-white/10 bg-white/5
+                  backdrop-blur-xl
+                  transition-all duration-300
+                  hover:bg-white/10 hover:-translate-y-[1px]
+                "
+              >
+                <Icono className="w-4 h-4" />
+                {etiqueta}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
 
-    {/* Formulario de contacto */}
-    <div className="mt-6">
-      <ContactForm />
+      {/* COLUMNA DERECHA */}
+      <div className="rounded-[32px] p-[1px] bg-gradient-to-br from-rose-500/18 via-fuchsia-500/8 to-amber-300/8 shadow-[0_20px_70px_-35px_rgba(0,0,0,0.7)]">
+        <div className="rounded-[32px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl p-5 sm:p-6 md:p-8">
+          <div className="flex items-center gap-3">
+            <div className="grid h-11 w-11 place-items-center rounded-2xl border border-rose-500/20 bg-rose-500/10 text-rose-400">
+              <Send className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.24em] text-white/40">
+                Formulario
+              </p>
+              <h3 className="text-white text-xl font-bold">
+                Envíame un mensaje
+              </h3>
+            </div>
+          </div>
+
+          <p className="mt-4 text-white/58 text-sm sm:text-[15px] leading-7">
+            Cuéntame brevemente tu idea, propuesta o interés, y te responderé
+            lo antes posible.
+          </p>
+
+          <div className="mt-6">
+            <ContactForm />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 );
 
 export default Contacto;
-

@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import SectionTitle from "./ui/SectionTitle";
 import { CERTS as CERTIFICADOS } from "../data/profile";
-import { BadgeCheck, ExternalLink } from "lucide-react";
+import { BadgeCheck, ExternalLink, Award, CalendarDays } from "lucide-react";
+
 
 const Certificados: React.FC = () => {
   const items = useMemo(() => CERTIFICADOS ?? [], []);
@@ -14,16 +14,30 @@ const Certificados: React.FC = () => {
   return (
     <section
       id="certificados"
-      className="max-w-[1440px] mx-auto px-4 md:px-6 pt-10 pb-6"
+      className="relative max-w-[1440px] mx-auto px-4 md:px-6 pt-16 md:pt-24 pb-14 md:pb-20"
     >
-      <SectionTitle
-        id="certificados"
-        icon={<BadgeCheck className="w-7 h-7 text-rose-600" />}
-      >
-        Certificados
-      </SectionTitle>
+      {/* Encabezado */}
+      <div className="max-w-3xl">
+        <div className="inline-flex items-center gap-2 text-rose-400 text-[11px] sm:text-xs uppercase tracking-[0.28em]">
+          <BadgeCheck className="w-4 h-4" />
+          <span>Certificaciones</span>
+        </div>
 
-      <div className="grid md:grid-cols-2 gap-4">
+        <h2 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-black leading-[0.95] tracking-tight">
+          <span className="text-white/80">Aprendizaje validado,</span>
+          <span className="block bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-600 bg-clip-text text-transparent">
+            crecimiento continuo
+          </span>
+        </h2>
+
+        <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
+          Formación complementaria orientada a desarrollo, especialización
+          técnica y actualización constante.
+        </p>
+      </div>
+
+      {/* Grid */}
+      <div className="mt-10 md:mt-12 grid gap-5 md:gap-6 md:grid-cols-2 xl:grid-cols-3">
         {items.map((certificado, idx) => {
           const hideOnMobile = !showAll && idx >= MOBILE_LIMIT;
 
@@ -33,43 +47,63 @@ const Certificados: React.FC = () => {
               href={certificado.link}
               target="_blank"
               rel="noreferrer"
-              initial={{ opacity: 0, y: 8 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.35 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.35, delay: idx * 0.03 }}
               className={`group ${hideOnMobile ? "hidden md:block" : "block"}`}
             >
-              <div className="rounded-2xl p-[2px] bg-gradient-to-r from-rose-300/35 via-rose-200/30 to-amber-200/35 hover:from-rose-300/55 hover:via-rose-200/50 hover:to-amber-200/55 shadow-[0_16px_40px_-24px_rgba(244,63,94,.30)] transition">
-                <div className="rounded-[14px] ring-1 ring-white/70 bg-white/95 backdrop-blur-[2px] px-4 py-3 flex items-center gap-4">
-                  <div className="shrink-0 w-12 h-12 rounded-xl ring-1 ring-slate-200 bg-white p-1.5 flex items-center justify-center overflow-hidden">
-                    {certificado.logo && (
-                      <img
-                        src={certificado.logo}
-                        alt={`${certificado.org} logo`}
-                        title={certificado.org}
-                        className="w-full h-full object-contain"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    )}
-                  </div>
+              <div className="rounded-[24px] p-[1px] bg-gradient-to-br from-rose-500/18 via-fuchsia-500/8 to-amber-300/8 shadow-[0_16px_55px_-32px_rgba(0,0,0,0.65)] transition-all duration-300 group-hover:from-rose-500/28 group-hover:via-fuchsia-500/16 group-hover:to-amber-300/12 group-hover:-translate-y-[2px]">
+                <div className="rounded-[24px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl p-5 h-full transition-colors duration-300 group-hover:bg-[#171126]/85">
+                  <div className="h-full flex flex-col">
+                    {/* Fila superior */}
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex items-center gap-2.5 text-xs sm:text-sm leading-5 min-w-0">
+                        <span className="text-white/62 truncate">{certificado.org}</span>
+                        <span className="text-white/20">·</span>
+                        <CalendarDays className="h-3.5 w-3.5 text-rose-400 shrink-0" />
+                        <span className="text-white/45">{certificado.date}</span>
+                      </div>
 
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold leading-tight">
-                      {certificado.title}
-                    </h3>
-                    <p className="text-slate-600 text-sm">
-                      {certificado.org} · {certificado.date}
-                    </p>
+                      <ExternalLink className="mt-0.5 h-5 w-5 shrink-0 text-white/30 transition-all duration-300 group-hover:text-rose-400 group-hover:scale-110" />
+                    </div>
 
+                    {/* Contenido principal */}
+                    <div className="mt-4 flex items-start gap-4 flex-1">
+                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-2 overflow-hidden">
+                        {certificado.logo ? (
+                          <img
+                            src={certificado.logo}
+                            alt={`${certificado.org} logo`}
+                            title={certificado.org}
+                            className="h-full w-full object-contain"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        ) : (
+                          <Award className="h-6 w-6 text-rose-400" />
+                        )}
+                      </div>
+
+                      <div className="min-w-0 flex-1">
+                        <h3 className="text-lg sm:text-[19px] font-bold leading-snug text-white line-clamp-2">
+                          {certificado.title}
+                        </h3>
+                      </div>
+                    </div>
+
+                    {/* ID opcional */}
                     {"credId" in certificado && (certificado as any).credId && (
-                      <p className="text-xs text-slate-500 mt-0.5">
-                        ID: {(certificado as any).credId}
-                      </p>
+                      <div className="mt-4 rounded-2xl border border-white/8 bg-white/[0.03] px-3 py-2">
+                        <p className="text-[11px] uppercase tracking-[0.18em] text-white/35">
+                          Credential ID
+                        </p>
+                        <p className="mt-1 text-sm text-white/70 break-all">
+                          {(certificado as any).credId}
+                        </p>
+                      </div>
                     )}
                   </div>
-
-                  <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-slate-600 transition" />
                 </div>
               </div>
             </motion.a>
@@ -77,7 +111,7 @@ const Certificados: React.FC = () => {
         })}
       </div>
 
-      {/* Botón SOLO en móvil */}
+      {/* Botón solo móvil */}
       {hasMore && (
         <div className="mt-5 md:hidden">
           <button
@@ -85,13 +119,12 @@ const Certificados: React.FC = () => {
             onClick={() => setShowAll((v) => !v)}
             className="
               w-full inline-flex items-center justify-center
-              rounded-2xl px-4 py-2.5
-              text-sm font-semibold
-              text-rose-700 bg-white/90
-              ring-1 ring-rose-200/70
-              shadow-sm
-              hover:shadow-md hover:-translate-y-[1px]
-              transition
+              rounded-2xl px-4 py-3
+              text-sm font-semibold text-white/85
+              border border-white/10 bg-white/5
+              backdrop-blur-xl
+              transition-all duration-300
+              hover:bg-white/10
             "
           >
             {showAll ? "Ver menos" : `Ver todos (${items.length})`}

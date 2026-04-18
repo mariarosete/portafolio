@@ -431,7 +431,7 @@ export const CERTIFICADOS = [
     logo: LOGO_CERT.coursera,
   },
   {
-    title: 'Certificado de profesionalidad nivel 3 “Seguridad Informática”',
+    title: 'Certificado de profesionalidad de Seguridad Informática',
     org: "ASATA",
     date: "Dic. 2018",
     credId: "03/18/00004962/IFCT0109",

@@ -1,122 +1,217 @@
 import React from "react";
 import { PROFILE as PERFIL } from "../data/profile";
-import { ArrowUpRight, FileDown } from "lucide-react";
+import {
+  ArrowRight,
+  FileDown,
+  Github,
+  Linkedin,
+  Mail,
+} from "lucide-react";
+import {
+  SiDotnet,
+  SiReact,
+  SiMysql,
+  SiNodedotjs,
+  SiGit,
+  SiAngular,
+} from "react-icons/si";
+import type { IconType } from "react-icons";
 
-/**
- * Sección principal de la portada:
- * - Muestra un banner, la foto, el nombre, el rol y una breve descripción.
- * - Incluye botón para ver proyectos y descargar el CV.
- */
-const Hero: React.FC = () => (
-  <section
-    id="inicio"
-    className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 pt-14 pb-8"
-  >
-    {/* Contenedor principal en forma de tarjeta con borde */}
-    <div className="rounded-3xl overflow-hidden border bg-white">
-      {/* Banner responsive */}
-      <div
-        className="
-          relative w-full overflow-hidden rounded-t-3xl
-          h-44 xs:h-52 sm:h-60 md:h-auto md:aspect-[21/6]
-        "
-      >
-        <img
-          src={PERFIL.banner}
-          alt="Banner principal"
-          className="
-            absolute inset-0 w-full h-full
-            object-contain md:object-cover
-            md:[object-position:50%_40%]
-          "
-          loading="eager"
-          decoding="async"
-        />
+type FloatingTech = {
+  Icono: IconType;
+  label: string;
+  wrapperClassName: string;
+  bubbleClassName: string;
+  color: string;
+};
+
+const Hero: React.FC = () => {
+  const FLOATING_TECHS: FloatingTech[] = [
+    {
+      Icono: SiDotnet,
+      label: ".NET",
+      wrapperClassName:
+        "absolute left-[10%] top-[14%] sm:left-[11%] sm:top-[15%] lg:left-[10%] lg:top-[14%]",
+      bubbleClassName: "animate-float-slow [animation-delay:0s]",
+      color: "text-[#b794ff]",
+    },
+    {
+      Icono: SiMysql,
+      label: "MySQL",
+      wrapperClassName:
+        "absolute left-1/2 -translate-x-1/2 top-[-1%] sm:top-[0%] lg:top-[-1%]",
+      bubbleClassName: "animate-float-medium-reverse [animation-delay:1.8s]",
+      color: "text-[#4fc3e8]",
+    },
+    {
+      Icono: SiReact,
+      label: "React",
+      wrapperClassName:
+        "absolute right-[9%] top-[12%] sm:right-[10%] sm:top-[13%] lg:right-[9%] lg:top-[12%]",
+      bubbleClassName: "animate-float-medium [animation-delay:.6s]",
+      color: "text-[#61DAFB]",
+    },
+    {
+      Icono: SiAngular,
+      label: "Angular",
+      wrapperClassName:
+        "absolute right-[1%] top-1/2 -translate-y-1/2 sm:right-[2%] lg:right-[1%]",
+      bubbleClassName: "animate-float-slow-reverse [animation-delay:1.2s]",
+      color: "text-[#dd0031]",
+    },
+
+    {
+      Icono: SiGit,
+      label: "Git",
+      wrapperClassName:
+        "absolute left-1/2 -translate-x-1/2 bottom-[-1%] sm:bottom-[0%] lg:bottom-[-1%]",
+      bubbleClassName: "animate-float-fast [animation-delay:2.4s]",
+      color: "text-[#F05032]",
+    },
+    {
+      Icono: SiNodedotjs,
+      label: "Node.js",
+      wrapperClassName:
+        "absolute left-[1%] top-1/2 -translate-y-1/2 sm:left-[2%] lg:left-[1%]",
+      bubbleClassName: "animate-float-medium [animation-delay:3s]",
+      color: "text-[#67c46a]",
+    },
+  ];
+
+  return (
+    <section
+      id="inicio"
+      className="relative min-h-screen overflow-hidden bg-[#070312] text-white"
+    >
+      <div className="absolute inset-0">
+        <div className="absolute left-[-120px] top-[-120px] h-[320px] w-[320px] rounded-full bg-fuchsia-600/20 blur-[120px]" />
+        <div className="absolute right-[-100px] top-[120px] h-[300px] w-[300px] rounded-full bg-rose-500/20 blur-[120px]" />
+        <div className="absolute bottom-[-140px] left-[20%] h-[320px] w-[320px] rounded-full bg-amber-400/10 blur-[140px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_35%)]" />
       </div>
 
-      {/* Tarjeta interior con halo degradado y contenido */}
-      <div className="p-4 sm:p-6 md:p-8">
-        {/* Borde degradado fino */}
-        <div className="relative rounded-[22px] p-[2px] bg-gradient-to-br from-rose-300/60 via-rose-200/55 to-amber-200/60 shadow-[0_20px_60px_-20px_rgba(244,63,94,.25)]">
-          {/* Fondo translúcido con blur sutil */}
-          <div className="rounded-[20px] bg-white/90 backdrop-blur-[2px] ring-1 ring-white/70 px-4 py-5 sm:px-6 sm:py-6 md:px-8 md:py-7">
-            {/* Layout: en md+ separa texto (izq) y foto (dcha) */}
-            <div className="grid gap-5 md:grid-cols-[1fr_auto] md:gap-6 items-start">
-              {/* FOTO */}
-              <div className="order-1 md:order-2 justify-self-center md:justify-self-end">
-                <div className="relative inline-block">
-                  {/* Resplandor suave alrededor de la foto */}
-                  <div className="absolute -inset-3 rounded-[26px] bg-gradient-to-br from-rose-400/30 via-rose-300/20 to-amber-300/30 blur-xl" />
-                  {/* Marco con degradado y sombra */}
-                  <div className="relative p-1 rounded-[22px] bg-gradient-to-br from-rose-200 via-rose-300 to-amber-200 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.45)]">
-                    <img
-                      src={PERFIL.photo}
-                      alt={`Foto de ${PERFIL.name}`}
-                      loading="lazy"
-                      decoding="async"
-                      className="block w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 object-cover rounded-[18px] ring-1 ring-black/10 bg-white"
-                    />
+      <div className="relative flex min-h-screen items-center">
+        <div className="max-w-[1440px] mx-auto w-full px-6 sm:px-8 md:px-10 lg:px-16 pt-24 pb-12 md:pt-28 md:pb-16">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+            {/* IZQUIERDA */}
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] sm:text-xs font-medium uppercase tracking-[0.25em] text-white/80 backdrop-blur">
+                <span className="h-2 w-2 rounded-full bg-rose-500" />
+                Full Stack Developer
+              </div>
+
+              <h1 className="mt-6 text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight">
+                Hola, soy
+                <span className="block bg-gradient-to-r from-rose-400 via-pink-400 to-amber-300 bg-clip-text text-transparent">
+                  María Rosete
+                </span>
+              </h1>
+
+              <p className="mt-6 text-lg sm:text-xl text-white/75 leading-8 max-w-2xl">
+                {PERFIL.role}
+              </p>
+
+              <p className="mt-4 text-base sm:text-lg text-white/60 leading-8 max-w-xl">
+                {PERFIL.about}
+              </p>
+
+              <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-4">
+                <a
+                  href="#proyectos"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3.5 font-semibold text-white bg-gradient-to-r from-rose-500 to-pink-600 shadow-[0_15px_40px_-12px_rgba(244,63,94,.55)] transition hover:scale-[1.02] hover:brightness-110"
+                >
+                  Ver proyectos
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+
+                <a
+                  href={PERFIL.cv}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 py-3.5 font-semibold text-white/90 backdrop-blur transition hover:bg-white/10"
+                >
+                  Descargar CV
+                  <FileDown className="h-4 w-4" />
+                </a>
+              </div>
+
+              <div className="mt-8 flex items-center gap-4 text-white/60">
+                <a
+                  href="https://github.com/mariarosete"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-white/10 bg-white/5 p-3 transition hover:text-white hover:bg-white/10"
+                  aria-label="GitHub"
+                >
+                  <Github className="h-5 w-5" />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-white/10 bg-white/5 p-3 transition hover:text-white hover:bg-white/10"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+
+                <a
+                  href="mailto:marlarosete89@gmail.com"
+                  className="rounded-full border border-white/10 bg-white/5 p-3 transition hover:text-white hover:bg-white/10"
+                  aria-label="Email"
+                >
+                  <Mail className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
+
+            {/* DERECHA */}
+            {/* DERECHA */}
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-[640px] min-h-[520px] flex items-center justify-center">
+                <div className="absolute inset-0 rounded-[40px] bg-gradient-to-br from-rose-500/20 via-fuchsia-500/10 to-amber-300/20 blur-3xl scale-95" />
+
+                {/* Anillo orbital más grande */}
+                <div className="absolute inset-[3%] rounded-full border border-white/[0.04]" />
+
+                {FLOATING_TECHS.map(
+                  ({ Icono, label, wrapperClassName, bubbleClassName, color }) => (
+                    <div
+                      key={label}
+                      className={`${wrapperClassName} z-20 hidden sm:block`}
+                    >
+                      <div
+                        className={`${bubbleClassName} flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-xl shadow-[0_0_25px_-10px_rgba(255,255,255,0.18)] transition duration-300 hover:scale-110 hover:bg-white/[0.08] hover:shadow-[0_0_30px_-8px_rgba(255,255,255,0.28)]`}
+                      >
+                        <Icono className={`h-6 w-6 ${color}`} />
+                      </div>
+                    </div>
+                  )
+                )}
+
+                {/* Imagen más centrada y libre */}
+                <div className="relative z-10 inline-block rounded-[24px] p-[1px] bg-gradient-to-br from-rose-500/70 via-fuchsia-500/45 to-violet-500/55 shadow-[0_24px_60px_-28px_rgba(0,0,0,0.7)]">
+                  <div className="rounded-[24px] bg-[#12071f]/80 p-2 backdrop-blur-xl">
+                    <div className="overflow-hidden rounded-[18px] bg-gradient-to-br from-[#12071f] via-[#0b0818] to-[#14070d] p-2">
+                      <img
+                        src={PERFIL.photo}
+                        alt={`Foto de ${PERFIL.name}`}
+                        loading="eager"
+                        decoding="async"
+                        className="block max-h-[240px] sm:max-h-[280px] md:max-h-[320px] w-auto object-contain rounded-[16px] drop-shadow-[0_24px_40px_rgba(0,0,0,0.45)]"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-
-              {/* TEXTO */}
-              <div className="order-2 md:order-1">
-                {/* Nombre */}
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight">
-                  {PERFIL.name}
-                </h1>
-                {/* Rol / titular */}
-                <h2 className="mt-1 text-base sm:text-lg md:text-xl font-semibold bg-gradient-to-r from-fuchsia-600 to-amber-500 bg-clip-text text-transparent">
-                  {PERFIL.role}
-                </h2>
-                {/* Descripción */}
-                <p className="mt-4 text-slate-600 text-[15px] sm:text-base leading-7 max-w-prose">
-                  {PERFIL.about}
-                </p>
-
-                {/* Botones */}
-                <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-3">
-                  {/* Ir a proyectos */}
-                  <a
-                    href="#proyectos"
-                    className="
-                      inline-flex h-10 items-center justify-center gap-2
-                      rounded-2xl px-5 font-medium text-white
-                      bg-gradient-to-r from-rose-500 to-amber-400
-                      hover:brightness-110
-                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300
-                      w-full sm:w-auto
-                    "
-                  >
-                    Ver proyectos <ArrowUpRight className="w-4 h-4" />
-                  </a>
-
-                  {/* Descargar CV (abre en nueva pestaña) */}
-                  <a
-                    href={PERFIL.cv}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="
-                      inline-flex h-10 items-center justify-center gap-2
-                      rounded-2xl px-5 font-medium text-white
-                      bg-amber-400
-                      hover:bg-gradient-to-r hover:from-rose-500 hover:to-amber-400
-                      shadow-[0_10px_25px_-10px_rgba(245,158,11,.55)]
-                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300
-                      w-full sm:w-auto
-                    "
-                  >
-                    Descargar CV <FileDown className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
             </div>
+            {/* FIN DERECHA */}
           </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Hero;

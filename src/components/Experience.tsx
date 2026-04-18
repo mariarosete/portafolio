@@ -1,8 +1,10 @@
-import React, { useMemo, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import SectionTitle from "./ui/SectionTitle";
-import { EXPERIENCE as EXPERIENCIA, TECH_BADGE_MAP } from "../data/profile";
-import { Briefcase } from "lucide-react";
+import { EXPERIENCE as EXPERIENCIA, PROFILE as PERFIL } from "../data/profile";
+import {
+  Briefcase,
+  CalendarDays,
+} from "lucide-react";
 
 type ExperienceItem = {
   company: string;
@@ -12,174 +14,116 @@ type ExperienceItem = {
   points: string[];
 };
 
-function TechChip({ tech }: { tech: string }) {
-  const cfg = TECH_BADGE_MAP?.[tech];
-  const Icono = cfg?.Icono;
-
-  const ring = cfg?.ring ?? "ring-rose-200/70";
-  const bg = cfg?.bg ?? "bg-white text-slate-900";
-
-  return (
-    <span
-      title={tech}
-      className="
-        shrink-0 inline-flex items-center gap-2
-        rounded-full px-3 py-1.5
-        text-[12px] text-slate-800
-        bg-white
-        ring-1 ring-rose-200/70
-        shadow-sm
-        hover:shadow-md hover:-translate-y-[1px]
-        transition
-      "
-    >
-      <span
-        className={`
-          grid place-items-center
-          w-6 h-6 rounded-full
-          ring-1 ${ring}
-          ${bg}
-        `}
-        aria-hidden="true"
-      >
-        {Icono ? (
-          <Icono className="w-3.5 h-3.5" />
-        ) : (
-          <span className="text-[11px]">•</span>
-        )}
-      </span>
-      {tech}
-    </span>
-  );
-}
-
-/**
- * Sección de Experiencia profesional.
- * 
- */
 const Experiencia: React.FC = () => {
   const items = (EXPERIENCIA as ExperienceItem[]) ?? [];
-  const [openKey, setOpenKey] = useState<string | null>(null);
-
-  const keyed = useMemo(
-    () =>
-      items.map((e) => ({
-        ...e,
-        key: `${e.company}-${e.period}`,
-      })),
-    [items]
-  );
 
   return (
     <section
       id="experiencia"
-      className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 pt-10 pb-6"
+      className="relative max-w-[1440px] mx-auto px-4 md:px-6 pt-16 md:pt-24 pb-14 md:pb-20"
     >
-      <SectionTitle
-        id="experiencia"
-        icon={<Briefcase className="w-7 h-7 text-rose-600" />}
-      >
-        Experiencia profesional reciente
-      </SectionTitle>
+      {/* Encabezado */}
+      <div className="max-w-3xl">
+        <div className="inline-flex items-center gap-2 text-rose-400 text-[11px] sm:text-xs uppercase tracking-[0.28em]">
+          <Briefcase className="w-4 h-4" />
+          <span>Experiencia profesional reciente</span>
+        </div>
 
-      <div
-        className="
-          relative pl-4 sm:pl-6
-          before:absolute before:left-2.5 sm:before:left-3 before:top-0
-          before:h-full before:w-px before:bg-gradient-to-b from-rose-300 to-amber-300
-        "
-      >
-        {keyed.map((experiencia) => {
-          const isOpen = openKey === experiencia.key;
+        <h2 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-black leading-[0.95] tracking-tight">
+          <span className="text-white/80">Experiencia que</span>
+          <span className="block bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-600 bg-clip-text text-transparent">
+            aporta contexto real
+          </span>
+        </h2>
 
-          const points = experiencia.points ?? [];
-          const hasMore = points.length > 3;
-          const visiblePoints = isOpen ? points : points.slice(0, 3);
+        <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
+          Experiencia aplicada en entornos reales, con foco en desarrollo,
+          producto y mejora continua.
+        </p>
+      </div>
+
+      {/* Grid de experiencias */}
+      <div className="mt-12 md:mt-14 grid gap-6 md:grid-cols-2">
+        {items.map((experiencia, index) => {
+          const summaryPoints = experiencia.points?.slice(0, 2) ?? [];
 
           return (
-            <motion.div
-              key={experiencia.key}
-              initial={{ opacity: 0, y: 10 }}
+            <motion.article
+              key={`${experiencia.company}-${experiencia.period}`}
+              initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.35 }}
-              className="relative pl-5 sm:pl-6 pb-5 sm:pb-6"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="relative h-full"
             >
-              <span className="absolute left-[-1px] sm:left-[-2px] top-2 h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-white ring-4 ring-amber-200" />
+              {/* Card */}
+              <div className="h-full rounded-[24px] p-[1px] bg-gradient-to-br from-rose-500/18 via-fuchsia-500/8 to-amber-300/8 shadow-[0_16px_55px_-32px_rgba(0,0,0,0.65)]">
+                <div className="h-full rounded-[24px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl px-5 py-5 sm:px-6 sm:py-6 transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#171126]/85">
+                  <div className="flex h-full flex-col gap-5">
+                    {/* fila superior */}
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="inline-flex items-center gap-2 text-xs sm:text-sm text-white/60">
+                        <CalendarDays className="h-4 w-4 text-rose-400/80" />
+                        <span>{experiencia.period}</span>
+                      </div>
+                    </div>
 
-              <article className="rounded-2xl border bg-white/90 backdrop-blur-[2px] p-4 sm:p-5 transition hover:shadow-md hover:-translate-y-[1px]">
-                <div className="flex flex-col gap-2 sm:gap-3 sm:flex-row sm:items-start sm:justify-between">
-                  <div className="min-w-0">
-                    <h3 className="font-semibold text-[16px] sm:text-[17px] text-slate-900">
-                      {experiencia.company}
-                    </h3>
+                    {/* Cabecera principal */}
+                    <div>
+                      <h3 className="text-2xl sm:text-[30px] font-black italic leading-tight text-white">
+                        {experiencia.role}
+                      </h3>
 
-                    <p className="text-slate-700 mt-1 text-[13.5px] sm:text-[14.5px] leading-snug">
-                      {experiencia.role}
-                    </p>
-                   
-                    {Array.isArray(experiencia.techs) &&
-                      experiencia.techs.length > 0 && (
-                        <div className="mt-3 -mx-1 px-1 overflow-x-auto md:overflow-visible">
-                          <div className="flex flex-nowrap gap-2 pb-2 md:flex-wrap md:pb-0">
-                            {experiencia.techs.map((tecno) => (
-                              <TechChip key={`${experiencia.key}-${tecno}`} tech={tecno} />
-                            ))}
-                          </div>
-                        </div>
-                      )}
+                      <p className="mt-2 text-rose-500 font-semibold uppercase tracking-[0.08em] text-sm sm:text-base">
+                        {experiencia.company}
+                      </p>
+                    </div>
+
+                    {/* Resumen */}
+                    <ul className="space-y-3 text-white/72 text-sm sm:text-[15px] leading-7">
+                      {summaryPoints.map((punto) => (
+                        <li key={punto} className="flex gap-3">
+                          <span className="mt-[10px] h-1.5 w-1.5 rounded-full bg-rose-400/80 shrink-0" />
+                          <span>{punto}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-
-                  <span
-                    className="
-                      sm:ml-3 inline-flex self-start sm:self-auto items-center
-                      rounded-full px-2.5 py-1 text-xs font-semibold text-white
-                      bg-gradient-to-r from-rose-500 to-amber-400
-                      shadow-[0_8px_20px_-8px_rgba(244,63,94,.45)]
-                      whitespace-nowrap leading-none
-                      [@media(orientation:landscape)]:text-[11px]
-                      [@media(orientation:landscape)]:px-2
-                      [@media(orientation:landscape)]:py-0.5
-                    "
-                    title={experiencia.period}
-                  >
-                    {experiencia.period}
-                  </span>
                 </div>
-
-                
-                <ul className="mt-4 space-y-2 text-slate-600 text-[13.5px] sm:text-[15px] leading-relaxed">
-                  {visiblePoints.map((punto) => (
-                    <li key={punto} className="flex gap-3">
-                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-slate-500/70 shrink-0" />
-                      <span>{punto}</span>
-                    </li>
-                  ))}
-                </ul>
-
-         
-                {hasMore && (
-                  <div className="mt-3 sm:hidden">
-                    <button
-                      type="button"
-                      onClick={() =>
-                        setOpenKey(isOpen ? null : experiencia.key)
-                      }
-                      className="
-                        inline-flex items-center
-                        text-rose-700 text-sm
-                        underline underline-offset-4
-                        decoration-rose-300
-                      "
-                    >
-                      {isOpen ? "Ver menos" : "Ver más"}
-                    </button>
-                  </div>
-                )}
-              </article>
-            </motion.div>
+              </div>
+            </motion.article>
           );
         })}
+      </div>
+
+      <div className="mt-12 md:mt-16 md:col-span-2">
+        {/* línea */}
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+        {/* contenido */}
+        <div className="mt-6 text-center">
+          <p className="text-white/50 text-sm sm:text-[15px]">
+            Si quieres ver mi trayectoria con más detalle, puedes descargar mi CV completo.
+          </p>
+
+          <div className="mt-8">
+            <a
+              href={PERFIL.cv}
+              target="_blank"
+              rel="noreferrer"
+              className="
+          inline-flex items-center justify-center gap-2
+          rounded-2xl px-5 py-3
+          font-semibold text-white
+          bg-gradient-to-r from-rose-500 to-fuchsia-600
+          shadow-[0_15px_40px_-12px_rgba(244,63,94,.45)]
+          transition hover:brightness-110 hover:-translate-y-[1px]
+        "
+            >
+              Descargar CV
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
