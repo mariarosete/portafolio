@@ -244,6 +244,30 @@ const Tecnologias: React.FC = () => {
 
   const DESTACADAS: TechItem[] = [
     {
+      Icono: SiVuedotjs,
+      etiqueta: "Vue.js",
+      ring: "ring-[#cfeadf]",
+      bg: "bg-[#f3fff7] text-[#42B883]",
+    },
+    {
+      Icono: SiSpringboot,
+      etiqueta: "Spring Boot",
+      ring: "ring-[#def5c2]",
+      bg: "bg-[#f8fff0] text-[#6DB33F]",
+    },
+    {
+      Icono: SiAngular,
+      etiqueta: "Angular",
+      ring: "ring-[#cfe8f0]",
+      bg: "bg-[#f4fbff] text-[#00758F]",
+    },
+    {
+      Icono: SiNodedotjs,
+      etiqueta: "Node.js",
+      ring: "ring-[#d5f0d1]",
+      bg: "bg-[#f6fff6] text-[#339933]",
+    },
+    {
       Icono: SiReact,
       etiqueta: "React",
       ring: "ring-[#cfefff]",
@@ -256,38 +280,14 @@ const Tecnologias: React.FC = () => {
       bg: "bg-[#f8f6ff] text-[#512BD4]",
     },
     {
-      Icono: SiNodedotjs,
-      etiqueta: "Node.js",
-      ring: "ring-[#d5f0d1]",
-      bg: "bg-[#f6fff6] text-[#339933]",
-    },
-    {
-      Icono: SiMysql,
-      etiqueta: "MySQL",
-      ring: "ring-[#cfe8f0]",
-      bg: "bg-[#f4fbff] text-[#00758F]",
-    },
-    {
-      Icono: SiVuedotjs,
-      etiqueta: "Vue.js",
-      ring: "ring-[#cfeadf]",
-      bg: "bg-[#f3fff7] text-[#42B883]",
-    },
-    {
       Icono: SiTypescript,
       etiqueta: "TypeScript",
       ring: "ring-[#d9e9ff]",
       bg: "bg-[#f4f9ff] text-[#3178C6]",
     },
     {
-      Icono: SiSpringboot,
-      etiqueta: "Spring Boot",
-      ring: "ring-[#def5c2]",
-      bg: "bg-[#f8fff0] text-[#6DB33F]",
-    },
-    {
-      Icono: SiDocker,
-      etiqueta: "Docker",
+      Icono: SiMysql,
+      etiqueta: "MySQL",
       ring: "ring-[#cfe9ff]",
       bg: "bg-[#f4fbff] text-[#2496ED]",
     },
@@ -341,16 +341,16 @@ const Tecnologias: React.FC = () => {
   const TechPill: React.FC<{
     item: TechItem;
     compact?: boolean;
-    mobileTiny?: boolean;
-  }> = ({ item, compact = false, mobileTiny = false }) => {
+    radarMobile?: boolean;
+  }> = ({ item, compact = false, radarMobile = false }) => {
     const { Icono, etiqueta, ring, bg } = item;
 
     return (
       <span
         className={[
-          "inline-flex items-center rounded-full whitespace-nowrap ring-1 transition-all duration-300",
-          mobileTiny
-            ? "gap-1.5 px-2 py-0.5 text-[10px] font-medium sm:gap-2 sm:px-2.5 sm:py-1 sm:text-[11px]"
+          "inline-flex items-center whitespace-nowrap rounded-full ring-1 transition-all duration-300",
+          radarMobile
+            ? "gap-1 px-1.5 py-1 text-[9px] font-medium sm:gap-2 sm:px-3 sm:py-1.5 sm:text-[12px]"
             : compact
             ? "gap-2 px-2.5 py-1 text-[11px] font-medium"
             : "gap-2 px-3 py-1.5 text-[12px] font-medium",
@@ -362,8 +362,8 @@ const Tecnologias: React.FC = () => {
         <span
           className={[
             "inline-flex items-center justify-center rounded-full bg-white/70 ring-1 ring-black/5",
-            mobileTiny
-              ? "h-4 w-4 sm:h-5 sm:w-5"
+            radarMobile
+              ? "h-4 w-4 sm:h-6 sm:w-6"
               : compact
               ? "h-5 w-5"
               : "h-6 w-6",
@@ -371,8 +371,8 @@ const Tecnologias: React.FC = () => {
         >
           <Icono
             className={
-              mobileTiny
-                ? "h-2.5 w-2.5 sm:h-3 sm:w-3"
+              radarMobile
+                ? "h-2.5 w-2.5 sm:h-3.5 sm:w-3.5"
                 : compact
                 ? "h-3 w-3"
                 : "h-3.5 w-3.5"
@@ -411,9 +411,8 @@ const Tecnologias: React.FC = () => {
     >
       <div
         className={[
-          "relative rounded-[28px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl overflow-hidden",
+          "relative rounded-[28px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl p-5 sm:p-6 overflow-hidden",
           tall ? "h-full" : "",
-          "p-5 sm:p-6",
         ].join(" ")}
       >
         <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full border border-white/5 opacity-30" />
@@ -427,12 +426,7 @@ const Tecnologias: React.FC = () => {
 
         <div className="mt-5 flex flex-wrap gap-2">
           {items.map((item) => (
-            <TechPill
-              key={item.etiqueta}
-              item={item}
-              compact
-              mobileTiny
-            />
+            <TechPill key={item.etiqueta} item={item} compact />
           ))}
         </div>
       </div>
@@ -466,83 +460,59 @@ const Tecnologias: React.FC = () => {
           </p>
         </div>
 
-        {/* Radar móvil compacto */}
-        <div className="md:hidden rounded-[28px] p-[1px] bg-gradient-to-br from-rose-500/16 via-fuchsia-500/8 to-amber-300/8 shadow-[0_16px_55px_-30px_rgba(0,0,0,0.65)]">
-          <div className="rounded-[28px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl p-4">
-            <div className="mb-4 flex items-center gap-3">
-              <div className="grid h-10 w-10 place-items-center rounded-2xl border border-rose-500/20 bg-rose-500/10 text-rose-400">
-                <Cpu className="w-5 h-5" />
-              </div>
-              <div>
-                <p className="text-[10px] uppercase tracking-[0.22em] text-white/40">
-                  Núcleo técnico
-                </p>
-                <p className="text-white font-semibold">Frontend + Backend</p>
-              </div>
-            </div>
+        {/* Radar visual */}
+        <div className="relative min-h-[300px] sm:min-h-[420px] rounded-[32px] p-[1px] bg-gradient-to-br from-rose-500/18 via-fuchsia-500/8 to-amber-300/8 shadow-[0_16px_55px_-30px_rgba(0,0,0,0.65)]">
+          <div className="relative h-full min-h-[300px] sm:min-h-[420px] rounded-[32px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl overflow-hidden">
+            <div className="absolute left-1/2 top-1/2 h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(244,63,94,0.18),rgba(244,63,94,0.08),transparent_70%)] sm:h-[280px] sm:w-[280px]" />
+            <div className="absolute left-1/2 top-1/2 h-[255px] w-[255px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/5 sm:h-[340px] sm:w-[340px]" />
+            <div className="absolute left-1/2 top-1/2 h-[165px] w-[165px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/5 sm:h-[230px] sm:w-[230px]" />
 
-            <div className="flex flex-wrap gap-2">
-              {DESTACADAS.map((item) => (
-                <TechPill
-                  key={item.etiqueta}
-                  item={item}
-                  compact
-                  mobileTiny
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+            <div className="absolute left-1/2 top-1/2 h-[2px] w-[190px] -translate-x-1/2 -translate-y-1/2 bg-white/5 sm:w-[260px]" />
+            <div className="absolute left-1/2 top-1/2 h-[190px] w-[2px] -translate-x-1/2 -translate-y-1/2 bg-white/5 sm:h-[260px]" />
 
-        {/* Radar desktop/tablet */}
-        <div className="hidden md:block relative min-h-[360px] sm:min-h-[420px] rounded-[32px] p-[1px] bg-gradient-to-br from-rose-500/18 via-fuchsia-500/8 to-amber-300/8 shadow-[0_16px_55px_-30px_rgba(0,0,0,0.65)]">
-          <div className="relative h-full min-h-[360px] sm:min-h-[420px] rounded-[32px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl overflow-hidden">
-            <div className="absolute left-1/2 top-1/2 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(244,63,94,0.18),rgba(244,63,94,0.08),transparent_70%)]" />
-            <div className="absolute left-1/2 top-1/2 h-[340px] w-[340px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/5" />
-            <div className="absolute left-1/2 top-1/2 h-[230px] w-[230px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/5" />
-
-            <div className="absolute left-1/2 top-1/2 h-[2px] w-[260px] -translate-x-1/2 -translate-y-1/2 bg-white/5" />
-            <div className="absolute left-1/2 top-1/2 h-[260px] w-[2px] -translate-x-1/2 -translate-y-1/2 bg-white/5" />
-
+            {/* nodo central */}
             <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-              <div className="rounded-2xl border border-rose-500/20 bg-[#170d22]/95 px-4 py-3 shadow-[0_18px_45px_-18px_rgba(244,63,94,.45)]">
-                <div className="flex items-center gap-3">
-                  <div className="grid h-10 w-10 place-items-center rounded-xl bg-rose-500/12 text-rose-400 border border-rose-500/20">
-                    <Cpu className="w-5 h-5" />
+              <div className="rounded-2xl border border-rose-500/20 bg-[#170d22]/95 px-3 py-2 shadow-[0_18px_45px_-18px_rgba(244,63,94,.45)] sm:px-4 sm:py-3">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="grid h-8 w-8 place-items-center rounded-xl bg-rose-500/12 text-rose-400 border border-rose-500/20 sm:h-10 sm:w-10">
+                    <Cpu className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.22em] text-white/40">
+                    <p className="text-[8px] uppercase tracking-[0.22em] text-white/40 sm:text-[10px]">
                       Núcleo técnico
                     </p>
-                    <p className="text-white font-semibold">Frontend + Backend</p>
+                    <p className="text-sm text-white font-semibold sm:text-base">
+                      Frontend + Backend
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="absolute left-[8%] top-[16%]">
-              <TechPill item={DESTACADAS[0]} />
+            {/* pills flotantes */}
+            <div className="absolute left-[5%] top-[14%] sm:left-[8%] sm:top-[16%]">
+              <TechPill item={DESTACADAS[0]} radarMobile />
             </div>
-            <div className="absolute right-[10%] top-[14%]">
-              <TechPill item={DESTACADAS[1]} />
+            <div className="absolute right-[5%] top-[14%] sm:right-[10%] sm:top-[14%]">
+              <TechPill item={DESTACADAS[1]} radarMobile />
             </div>
-            <div className="absolute left-[8%] bottom-[20%]">
-              <TechPill item={DESTACADAS[2]} />
+            <div className="absolute left-[4%] bottom-[23%] sm:left-[8%] sm:bottom-[20%]">
+              <TechPill item={DESTACADAS[2]} radarMobile />
             </div>
-            <div className="absolute right-[10%] bottom-[18%]">
-              <TechPill item={DESTACADAS[3]} />
+            <div className="absolute right-[5%] bottom-[23%] sm:right-[10%] sm:bottom-[18%]">
+              <TechPill item={DESTACADAS[3]} radarMobile />
             </div>
-            <div className="absolute left-[22%] top-[52%]">
-              <TechPill item={DESTACADAS[4]} />
+            <div className="absolute left-[20%] top-[55%] sm:left-[22%] sm:top-[52%]">
+              <TechPill item={DESTACADAS[4]} radarMobile />
             </div>
-            <div className="absolute right-[18%] top-[52%]">
-              <TechPill item={DESTACADAS[5]} />
+            <div className="absolute right-[16%] top-[55%] sm:right-[18%] sm:top-[52%]">
+              <TechPill item={DESTACADAS[5]} radarMobile />
             </div>
-            <div className="absolute left-[30%] bottom-[8%]">
-              <TechPill item={DESTACADAS[6]} />
+            <div className="absolute left-[28%] bottom-[8%] sm:left-[30%] sm:bottom-[8%]">
+              <TechPill item={DESTACADAS[6]} radarMobile />
             </div>
-            <div className="absolute right-[24%] bottom-[8%]">
-              <TechPill item={DESTACADAS[7]} />
+            <div className="absolute right-[22%] bottom-[8%] sm:right-[24%] sm:bottom-[8%]">
+              <TechPill item={DESTACADAS[7]} radarMobile />
             </div>
           </div>
         </div>
@@ -586,7 +556,50 @@ const Tecnologias: React.FC = () => {
           icon={<Sparkles className="w-5 h-5" />}
           title="Soft Skills"
           description="Habilidades que aplico en proyectos reales para trabajar mejor en equipo, organizar el desarrollo y aportar soluciones de calidad."
-          items={SOFT_SKILLS}
+          items={[
+            {
+              Icono: Boxes,
+              etiqueta: "Organización",
+              ring: "ring-[#d9e9ff]",
+              bg: "bg-[#f4f9ff] text-[#3178C6]",
+            },
+            {
+              Icono: Boxes,
+              etiqueta: "Trabajo en equipo",
+              ring: "ring-[#ffd7c8]",
+              bg: "bg-[#fff5f1] text-[#F05032]",
+            },
+            {
+              Icono: Boxes,
+              etiqueta: "Pensamiento analítico",
+              ring: "ring-[#e2f6bf]",
+              bg: "bg-[#f7ffea] text-[#65a30d]",
+            },
+            {
+              Icono: Boxes,
+              etiqueta: "Resolución de problemas",
+              ring: "ring-[#ffe6e2]",
+              bg: "bg-[#fff7f5] text-[#EA2D2E]",
+            },
+            {
+              Icono: Boxes,
+              etiqueta: "Atención al detalle",
+              ring: "ring-[#ffe9c4]",
+              bg: "bg-[#fff9e9] text-[#F59E0B]",
+            },
+            {
+              Icono: Boxes,
+              etiqueta: "Adaptabilidad",
+              ring: "ring-[#cfe9ff]",
+              bg: "bg-[#f4fbff] text-[#2496ED]",
+            },
+            {
+              Icono: Boxes,
+              etiqueta: "Orientación al usuario",
+              ring: "ring-[#ffe9c4]",
+              bg: "bg-[#fff9e9] text-[#F59E0B]",
+            },
+          ]}
           tall
         />
       </div>
