@@ -59,7 +59,6 @@ const Hero: React.FC = () => {
       bubbleClassName: "animate-float-slow-reverse [animation-delay:1.2s]",
       color: "text-[#dd0031]",
     },
-
     {
       Icono: SiGit,
       label: "Git",
@@ -83,6 +82,7 @@ const Hero: React.FC = () => {
       id="inicio"
       className="relative min-h-screen overflow-hidden bg-[#070312] text-white"
     >
+      {/* Fondo */}
       <div className="absolute inset-0">
         <div className="absolute left-[-120px] top-[-120px] h-[320px] w-[320px] rounded-full bg-fuchsia-600/20 blur-[120px]" />
         <div className="absolute right-[-100px] top-[120px] h-[300px] w-[300px] rounded-full bg-rose-500/20 blur-[120px]" />
@@ -91,31 +91,31 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative flex min-h-screen items-center">
-        <div className="max-w-[1440px] mx-auto w-full px-6 sm:px-8 md:px-10 lg:px-16 pt-24 pb-12 md:pt-28 md:pb-16">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="max-w-[1440px] mx-auto w-full px-5 sm:px-8 md:px-10 lg:px-16 pt-24 pb-10 sm:pb-12 md:pt-28 md:pb-16">
+          <div className="grid items-center gap-10 md:gap-12 lg:grid-cols-[1.05fr_0.95fr]">
             {/* IZQUIERDA */}
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] sm:text-xs font-medium uppercase tracking-[0.25em] text-white/80 backdrop-blur">
+            <div className="max-w-2xl text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] sm:text-xs font-medium uppercase tracking-[0.25em] text-white/80 backdrop-blur">
                 <span className="h-2 w-2 rounded-full bg-rose-500" />
                 Full Stack Developer
               </div>
 
-              <h1 className="mt-6 text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight">
+              <h1 className="mt-5 text-[42px] leading-[0.95] sm:text-6xl lg:text-7xl font-black tracking-tight">
                 Hola, soy
                 <span className="block bg-gradient-to-r from-rose-400 via-pink-400 to-amber-300 bg-clip-text text-transparent">
                   María Rosete
                 </span>
               </h1>
 
-              <p className="mt-6 text-lg sm:text-xl text-white/75 leading-8 max-w-2xl">
+              <p className="mt-5 text-base sm:text-xl text-white/75 leading-7 sm:leading-8 max-w-2xl mx-auto lg:mx-0">
                 {PERFIL.role}
               </p>
 
-              <p className="mt-4 text-base sm:text-lg text-white/60 leading-8 max-w-xl">
+              <p className="mt-4 text-[15px] sm:text-lg text-white/60 leading-8 max-w-xl mx-auto lg:mx-0">
                 {PERFIL.about}
               </p>
 
-              <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-4">
+              <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start">
                 <a
                   href="#proyectos"
                   className="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3.5 font-semibold text-white bg-gradient-to-r from-rose-500 to-pink-600 shadow-[0_15px_40px_-12px_rgba(244,63,94,.55)] transition hover:scale-[1.02] hover:brightness-110"
@@ -135,7 +135,7 @@ const Hero: React.FC = () => {
                 </a>
               </div>
 
-              <div className="mt-8 flex items-center gap-4 text-white/60">
+              <div className="mt-7 flex items-center gap-4 text-white/60 justify-center lg:justify-start">
                 <a
                   href="https://github.com/mariarosete"
                   target="_blank"
@@ -166,15 +166,15 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-         
             {/* DERECHA */}
             <div className="relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[640px] min-h-[520px] flex items-center justify-center">
+              <div className="relative w-full max-w-[620px] min-h-[300px] sm:min-h-[420px] lg:min-h-[520px] flex items-center justify-center">
                 <div className="absolute inset-0 rounded-[40px] bg-gradient-to-br from-rose-500/20 via-fuchsia-500/10 to-amber-300/20 blur-3xl scale-95" />
 
-                {/* Anillo orbital más grande */}
-                <div className="absolute inset-[3%] rounded-full border border-white/[0.04]" />
+                {/* anillo solo tablet/desktop */}
+                <div className="absolute inset-[6%] rounded-full border border-white/[0.04] hidden sm:block" />
 
+                {/* logos flotantes solo sm+ */}
                 {FLOATING_TECHS.map(
                   ({ Icono, label, wrapperClassName, bubbleClassName, color }) => (
                     <div
@@ -190,7 +190,7 @@ const Hero: React.FC = () => {
                   )
                 )}
 
-                {/* Imagen más centrada y libre */}
+                {/* Imagen */}
                 <div className="relative z-10 inline-block rounded-[24px] p-[1px] bg-gradient-to-br from-rose-500/70 via-fuchsia-500/45 to-violet-500/55 shadow-[0_24px_60px_-28px_rgba(0,0,0,0.7)]">
                   <div className="rounded-[24px] bg-[#12071f]/80 p-2 backdrop-blur-xl">
                     <div className="overflow-hidden rounded-[18px] bg-gradient-to-br from-[#12071f] via-[#0b0818] to-[#14070d] p-2">
@@ -199,7 +199,7 @@ const Hero: React.FC = () => {
                         alt={`Foto de ${PERFIL.name}`}
                         loading="eager"
                         decoding="async"
-                        className="block max-h-[240px] sm:max-h-[280px] md:max-h-[320px] w-auto object-contain rounded-[16px] drop-shadow-[0_24px_40px_rgba(0,0,0,0.45)]"
+                        className="block max-h-[230px] sm:max-h-[280px] md:max-h-[320px] w-auto object-contain rounded-[16px] drop-shadow-[0_24px_40px_rgba(0,0,0,0.45)]"
                       />
                     </div>
                   </div>
