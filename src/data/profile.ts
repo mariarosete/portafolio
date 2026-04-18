@@ -8,7 +8,7 @@ import pasteleria from "../assets/pasteleriaCreativa.jpg";
 import flowDocument from "../assets/pasteleria.jpg";
 import disney from "../assets/disney.jpg";
 import pizarra from "../assets/pizarra.jpg";
-
+import portada from "../assets/MRS.png";
 import skillTechVideo from "../assets/skillTech.mp4";
 import pokedexVideo from "../assets/Pokedex.mp4";
 import agendaVideo from "../assets/agenda.mp4";
@@ -298,9 +298,7 @@ export const PERFIL = {
   role: "Desarrolladora Full Stack Junior especializada en .NET y React",
   about:
     "Desarrollo aplicaciones web escalables y seguras. Tengo experiencia adicional con Node.js, Spring Boot y frameworks frontend como Angular y Vue.js, trabajando con buenas prácticas, testing y control de versiones.",
-  banner:
-    "https://github.com/mariarosete/mariarosete/blob/main/Banner.png?raw=true",
-  photo: "/maria.jpg",
+  photo: portada,
   socials: {
     email: "mailto:marlarosete89@gmail.com",
     linkedin: "https://linkedin.com/in/mariarosetesuarez",

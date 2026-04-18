@@ -166,7 +166,7 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* DERECHA */}
+         
             {/* DERECHA */}
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[640px] min-h-[520px] flex items-center justify-center">
