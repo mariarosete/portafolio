@@ -186,7 +186,7 @@ const Proyectos: React.FC = () => {
                           "
                         >
                           <Github className="w-4 h-4" />
-                          Repo
+                          
                         </a>
 
                         {proyecto.demo && (
