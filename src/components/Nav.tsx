@@ -6,6 +6,7 @@ import {
   FileDown,
   Menu,
   X,
+  ChevronRight,
 } from "lucide-react";
 import { PROFILE as PERFIL } from "../data/profile";
 import useScrollSpy from "../hooks/useScrollSpy";
@@ -59,7 +60,7 @@ const Nav: React.FC = () => {
     return (
       <a
         href={href}
-        className={`relative px-3 py-2 rounded-xl text-sm font-medium transition-colors ${esActivo ? "text-white" : "text-white/62 hover:text-rose-300"
+        className={`group relative px-3 py-2 rounded-xl text-sm font-medium transition-colors ${esActivo ? "text-white" : "text-white/62 hover:text-rose-300"
           }`}
       >
         <span className="relative z-10">{children}</span>
@@ -78,15 +79,29 @@ const Nav: React.FC = () => {
   }: {
     href: `#${string}`;
     children: React.ReactNode;
-  }) => (
-    <a
-      href={href}
-      onClick={() => setAbierto(false)}
-      className="block rounded-xl px-4 py-3 text-white/80 hover:bg-rose-500/10 hover:text-rose-300 transition"
-    >
-      {children}
-    </a>
-  );
+  }) => {
+    const id = href.slice(1);
+    const esActivo = activo === id;
+
+    return (
+      <a
+        href={href}
+        onClick={() => setAbierto(false)}
+        className={`group flex items-center justify-between rounded-2xl px-4 py-3.5 transition ${esActivo
+            ? "bg-gradient-to-r from-rose-500/14 to-fuchsia-500/10 border border-rose-500/20 text-white"
+            : "border border-transparent text-white/78 hover:bg-white/[0.04] hover:text-rose-300"
+          }`}
+      >
+        <span className="font-medium">{children}</span>
+        <ChevronRight
+          className={`w-4 h-4 transition ${esActivo
+              ? "text-rose-300"
+              : "text-white/30 group-hover:text-rose-300"
+            }`}
+        />
+      </a>
+    );
+  };
 
   return (
     <header
@@ -96,16 +111,16 @@ const Nav: React.FC = () => {
         }`}
     >
       <nav className="max-w-[1440px] mx-auto h-16 px-4 md:px-6 flex items-center justify-between">
-      <a
-  href="#inicio"
-  className="flex items-center gap-3 font-semibold tracking-tight text-white shrink-0"
->
-  <img
-    src="/favicon.svg"
-    alt="Logo MR"
-    className="h-12 w-12 object-contain"
-  />
-</a>
+        <a
+          href="#inicio"
+          className="flex items-center gap-3 font-semibold tracking-tight text-white shrink-0"
+        >
+          <img
+            src="/favicon.svg"
+            alt="Logo MR"
+            className="h-12 w-12 object-contain"
+          />
+        </a>
 
         <ul className="hidden min-[1126px]:flex items-center gap-1">
           <li><EnlaceAcento href="#sobre-mi">Sobre mí</EnlaceAcento></li>
@@ -190,41 +205,54 @@ const Nav: React.FC = () => {
       {abierto && (
         <div className="hidden max-[1125px]:block">
           <div
-            className="fixed inset-0 z-40 bg-black/60 backdrop-blur-[2px]"
+            className="fixed inset-0 z-40 bg-black/70 backdrop-blur-[3px]"
             onClick={() => setAbierto(false)}
           />
 
           <div
-            className="fixed top-20 inset-x-0 z-50 mx-4 rounded-[28px] p-[1px]
+            className="fixed top-[76px] inset-x-0 z-50 mx-4 rounded-[28px] p-[1px]
                        bg-gradient-to-br from-rose-500/30 via-fuchsia-500/15 to-amber-300/15
-                       shadow-[0_20px_60px_-20px_rgba(0,0,0,.5)]"
+                       shadow-[0_24px_70px_-20px_rgba(0,0,0,.6)]"
             role="dialog"
             aria-modal="true"
           >
-            <div className="rounded-[28px] border border-white/10 bg-[#120b1f]/95 backdrop-blur-xl flex flex-col max-h-[calc(100dvh-6rem)]">
-              <div className="flex items-center justify-between px-4 py-4 border-b border-white/10">
-                <span className="font-semibold text-white">Menú</span>
+            <div className="rounded-[28px] border border-white/10 bg-[#120b1f]/95 backdrop-blur-xl flex flex-col max-h-[calc(100dvh-6rem)] overflow-hidden">
+              {/* cabecera */}
+              <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
+                <div>
+                  <p className="text-[11px] uppercase tracking-[0.26em] text-rose-400">
+                    Navegación
+                  </p>
+                  <p className="mt-1 text-white font-semibold">
+                    Explora el portfolio
+                  </p>
+                </div>
+
                 <button
                   aria-label="Cerrar menú"
-                  className="rounded-xl border border-white/10 bg-white/5 p-2 text-white/80 hover:bg-rose-500/12 hover:border-rose-500/30 hover:text-rose-300 transition"
+                  className="rounded-xl border border-white/10 bg-white/5 p-2 text-white/80 transition hover:bg-rose-500/12 hover:border-rose-500/30 hover:text-rose-300"
                   onClick={() => setAbierto(false)}
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              <div className="px-2 py-3 space-y-1 overflow-y-auto">
-                <EnlaceMovil href="#sobre-mi">Sobre mí</EnlaceMovil>
-                <EnlaceMovil href="#educacion">Educación</EnlaceMovil>
-                <EnlaceMovil href="#certificados">Certificados</EnlaceMovil>
-                <EnlaceMovil href="#experiencia">Experiencia</EnlaceMovil>
-                <EnlaceMovil href="#proyectos">Proyectos</EnlaceMovil>
-                <EnlaceMovil href="#tecnologias">Tecnologías</EnlaceMovil>
-                <EnlaceMovil href="#contacto">Contacto</EnlaceMovil>
+              {/* cuerpo */}
+              <div className="overflow-y-auto px-3 py-3">
+                <div className="space-y-1.5">
+                  <EnlaceMovil href="#sobre-mi">Sobre mí</EnlaceMovil>
+                  <EnlaceMovil href="#educacion">Educación</EnlaceMovil>
+                  <EnlaceMovil href="#certificados">Certificados</EnlaceMovil>
+                  <EnlaceMovil href="#experiencia">Experiencia</EnlaceMovil>
+                  <EnlaceMovil href="#proyectos">Proyectos</EnlaceMovil>
+                  <EnlaceMovil href="#tecnologias">Tecnologías</EnlaceMovil>
+                  <EnlaceMovil href="#contacto">Contacto</EnlaceMovil>
+                </div>
 
-                <div className="my-3 border-t border-white/10" />
+                <div className="my-4 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-                <div className="px-2 pb-3 flex flex-col gap-2">
+                {/* acciones */}
+                <div className="grid gap-2 px-1">
                   <a
                     href="#contacto"
                     onClick={() => setAbierto(false)}
@@ -254,6 +282,45 @@ const Nav: React.FC = () => {
                     <FileDown className="w-4 h-4" />
                     Descargar CV
                   </a>
+                </div>
+
+                {/* redes dentro del panel */}
+                <div className="mt-5 px-1 pb-2">
+                  <p className="mb-3 text-[11px] uppercase tracking-[0.24em] text-white/35">
+                    También puedes encontrarme en
+                  </p>
+
+                  <div className="flex items-center gap-2">
+                    <a
+                      aria-label="GitHub"
+                      href={PERFIL.socials.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white/80 transition hover:bg-rose-500/12 hover:border-rose-500/30 hover:text-rose-300"
+                    >
+                      <Github className="w-4 h-4" />
+                      GitHub
+                    </a>
+
+                    <a
+                      aria-label="LinkedIn"
+                      href={PERFIL.socials.linkedin}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white/80 transition hover:bg-rose-500/12 hover:border-rose-500/30 hover:text-rose-300"
+                    >
+                      <Linkedin className="w-4 h-4" />
+                      LinkedIn
+                    </a>
+
+                    <a
+                      aria-label="Email"
+                      href={PERFIL.socials.email}
+                      className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-3 text-white/80 transition hover:bg-rose-500/12 hover:border-rose-500/30 hover:text-rose-300"
+                    >
+                      <Mail className="w-4 h-4" />
+                    </a>
+                  </div>
                 </div>
 
                 <div className="pb-[env(safe-area-inset-bottom)]" />
