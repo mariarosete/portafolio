@@ -56,9 +56,9 @@ const Proyectos: React.FC = () => {
                 transition={{ duration: 0.4 }}
                 className="group min-w-[88%] snap-center"
               >
-                <div className="h-full rounded-[26px] p-[1px] bg-gradient-to-br from-rose-500/20 via-fuchsia-500/10 to-amber-300/10 shadow-[0_18px_60px_-30px_rgba(0,0,0,0.65)]">
-                  <div className="rounded-[26px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl overflow-hidden h-full">
-                    <div className="relative aspect-[16/9] overflow-hidden bg-[#0f0a1a]">
+                <div className="h-full rounded-[26px] p-[1px] bg-gradient-to-br from-rose-500/20 via-fuchsia-500/10 to-amber-300/10 shadow-[0_18px_60px_-30px_rgba(0,0,0,0.65)] transition-all duration-300 active:from-rose-500/35 active:via-fuchsia-500/20 active:to-amber-300/18 active:shadow-[0_18px_60px_-24px_rgba(244,63,94,0.32)]">
+                  <div className="rounded-[26px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl overflow-hidden h-full transition-all duration-300 active:bg-[#171126]/90 active:border-rose-400/20">
+                    <div className="relative aspect-[16/9] overflow-hidden bg-[#0f0a1a] active:[&>img]:scale-[1.03] active:[&>.mobile-overlay]:opacity-15">
                       <img
                         src={proyecto.banner}
                         alt={proyecto.title}
@@ -71,7 +71,7 @@ const Proyectos: React.FC = () => {
                         ].join(" ")}
                       />
 
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#090611] via-[#090611]/45 to-transparent" />
+                      <div className="mobile-overlay absolute inset-0 bg-gradient-to-t from-[#090611] via-[#090611]/45 to-transparent transition-opacity duration-300" />
 
                       {proyecto.award && (
                         <div className="absolute left-3 top-3">
@@ -366,7 +366,6 @@ const Proyectos: React.FC = () => {
                           "
                         >
                           <Github className="w-4 h-4" />
-                          Repositorio
                         </a>
 
                         {proyecto.demo && (
@@ -383,7 +382,7 @@ const Proyectos: React.FC = () => {
                             "
                           >
                             <PlayCircle className="w-4 h-4" />
-                            Ver demo
+                            Demo
                           </a>
                         )}
                       </div>
@@ -412,9 +411,9 @@ const Proyectos: React.FC = () => {
               transition={{ duration: 0.35 }}
               className="group h-full"
             >
-              <div className="h-full rounded-[24px] p-[1px] bg-gradient-to-br from-rose-500/14 via-fuchsia-500/8 to-amber-300/8 shadow-[0_14px_45px_-28px_rgba(0,0,0,0.65)] transition-all duration-300 group-hover:from-rose-500/24 group-hover:via-fuchsia-500/16 group-hover:to-amber-300/12">
-                <div className="rounded-[24px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl overflow-hidden h-full transition-all duration-300 group-hover:bg-[#171126]/85 flex flex-col">
-                  <div className="relative aspect-[16/10] sm:aspect-[4/3] overflow-hidden bg-[#0f0a1a]">
+              <div className="h-full rounded-[24px] p-[1px] bg-gradient-to-br from-rose-500/14 via-fuchsia-500/8 to-amber-300/8 shadow-[0_14px_45px_-28px_rgba(0,0,0,0.65)] transition-all duration-300 group-hover:from-rose-500/24 group-hover:via-fuchsia-500/16 group-hover:to-amber-300/12 active:from-rose-500/24 active:via-fuchsia-500/16 active:to-amber-300/12 active:shadow-[0_14px_45px_-22px_rgba(244,63,94,0.28)]">
+                <div className="rounded-[24px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl overflow-hidden h-full transition-all duration-300 group-hover:bg-[#171126]/85 active:bg-[#171126]/90 active:border-rose-400/20 flex flex-col">
+                  <div className="relative aspect-[16/10] sm:aspect-[4/3] overflow-hidden bg-[#0f0a1a] active:[&>img]:scale-[1.03] active:[&>.mobile-overlay]:opacity-15">
                     <img
                       src={proyecto.banner}
                       alt={proyecto.title}
@@ -429,7 +428,7 @@ const Proyectos: React.FC = () => {
                       ].join(" ")}
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#090611] via-[#090611]/55 to-transparent transition-opacity duration-300 group-hover:opacity-10" />
+                    <div className="mobile-overlay absolute inset-0 bg-gradient-to-t from-[#090611] via-[#090611]/55 to-transparent transition-opacity duration-300 group-hover:opacity-10" />
                   </div>
 
                   <div className="p-3.5 sm:p-4 flex flex-col flex-1">
@@ -521,6 +520,22 @@ const Proyectos: React.FC = () => {
                     </ul>
 
                     <div className="mt-3 flex flex-wrap gap-2">
+                      <a
+                        href={proyecto.repo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="
+                          inline-flex items-center justify-center gap-2
+                          rounded-2xl px-4 py-2.5
+                          text-sm font-semibold text-white
+                          bg-gradient-to-r from-rose-500 to-fuchsia-600
+                          shadow-[0_15px_40px_-12px_rgba(244,63,94,.45)]
+                          transition hover:brightness-110
+                        "
+                      >
+                        <Github className="w-4 h-4" />
+                      </a>
+
                       {proyecto.demo && (
                         <a
                           href={proyecto.demo}
@@ -528,31 +543,16 @@ const Proyectos: React.FC = () => {
                           rel="noreferrer"
                           className="
                             inline-flex items-center justify-center gap-2
-                            rounded-2xl px-3 py-2
-                            text-[13px] sm:text-sm font-semibold text-white
-                            bg-gradient-to-r from-rose-500 to-fuchsia-600
-                            transition hover:brightness-110
+                            rounded-2xl px-4 py-2.5
+                            text-sm font-semibold text-white/90
+                            border border-white/10 bg-white/5
+                            transition hover:bg-white/10
                           "
                         >
-                          Ver demo
-                          <ArrowUpRight className="w-4 h-4" />
+                          <PlayCircle className="w-4 h-4" />
+                          Demo
                         </a>
                       )}
-
-                      <a
-                        href={proyecto.repo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="
-                          inline-flex items-center justify-center gap-2
-                          rounded-2xl px-3 py-2
-                          text-[13px] sm:text-sm font-semibold text-white/90
-                          border border-white/10 bg-white/5
-                          transition hover:bg-white/10
-                        "
-                      >
-                        <Github className="w-4 h-4" />
-                      </a>
                     </div>
                   </div>
                 </div>

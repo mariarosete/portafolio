@@ -16,7 +16,7 @@ const Footer: React.FC = () => (
       <div className="absolute right-[10%] bottom-0 h-24 w-24 rounded-full bg-rose-500/10 blur-[80px]" />
     </div>
 
-    <div className="relative max-w-[1440px] mx-auto px-4 md:px-6 py-10 md:py-10">
+    <div className="relative max-w-[1440px] mx-auto px-4 md:px-6 py-10">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         {/* Izquierda */}
         <div className="space-y-4 md:space-y-3">
@@ -41,7 +41,7 @@ const Footer: React.FC = () => (
         </div>
 
         {/* Derecha */}
-        <div className="flex flex-col gap-5 lg:items-end">
+        <div className="flex items-center justify-between gap-4 sm:gap-5 lg:flex-col lg:items-end">
           <div className="flex items-center gap-3">
             <a
               aria-label="GitHub"
@@ -75,7 +75,7 @@ const Footer: React.FC = () => (
           <a
             href="#inicio"
             className="
-              inline-flex w-full sm:w-auto items-center justify-center gap-2
+              inline-flex items-center justify-center gap-2
               rounded-2xl px-4 py-3
               text-sm font-semibold text-white/85
               border border-white/10 bg-white/5
@@ -89,7 +89,6 @@ const Footer: React.FC = () => (
               alt="Inicio"
               className="w-4 h-4 object-contain"
             />
-            <span className="sm:hidden">Volver arriba</span>
             <ChevronUp className="w-4 h-4 text-white/60" />
           </a>
         </div>
