@@ -15,7 +15,6 @@ import agendaVideo from "../assets/agenda.mp4";
 import pasteleriaVideo from "../assets/pasteleria.mp4";
 import asgardGym from "../assets/AsgardGym.mp4";
 import servidorVideo from "../assets/Servidor.mp4";
-import portafolioVideo from "../assets/portafolio.mp4";
 import flowDocumentVideo from "../assets/flowDocument.mp4";
 import pizarraVideo from "../assets/pizarra.mp4";
 import disneyVideo from "../assets/disney.mp4";
@@ -279,7 +278,7 @@ export const PROJECT_BADGE_MAP: Record<string, TechBadgeCfg> = {
   Git: TECH_BADGE_MAP.Git,
   MySQL: TECH_BADGE_MAP.MySQL,
   JWT: TECH_BADGE_MAP.JWT,
- 
+
   "JS/HTML/CSS": {
     Icono: SiJavascript,
     ring: "ring-[#ffefb3]",
@@ -294,7 +293,7 @@ export const getTechBadge = (tech: string): TechBadgeCfg | null =>
 // Perfil (datos generales)
 // ─────────────────────────────────────────────────────────────
 export const PERFIL = {
-  name: "María Rosete Suárez",
+  name: "María Rosete",
   role: "Desarrolladora Full Stack Junior especializada en .NET y React",
   about:
     "Desarrollo aplicaciones web escalables y seguras. Tengo experiencia adicional con Node.js, Spring Boot y frameworks frontend como Angular y Vue.js, trabajando con buenas prácticas, testing y control de versiones.",
@@ -354,22 +353,31 @@ export const EDUCATION = EDUCACION;
 // ─────────────────────────────────────────────────────────────
 // Certificados
 // ─────────────────────────────────────────────────────────────
-export const CERTIFICADOS = [
-  
+export type Certificado = {
+  title: string;
+  org: string;
+  date: string;
+  link?: string;
+  logo?: string;
+  credId?: string;
+  online?: boolean;
+};
+export const CERTIFICADOS: Certificado[] = [
   {
     title: "Micro-Certification – Welcome to ServiceNow",
     org: "ServiceNow",
     date: "Feb. 2026",
     link: "https://www.linkedin.com/in/mariarosetesuarez/overlay/1771586252483/single-media-viewer/?profileId=ACoAAEr-PaoBY5xohXS4VTc50eGRdX1PM-ImnOo",
     logo: LOGO_CERT.servicenow,
+    online: true,
   },
-  
   {
     title: "Foundational C# with Microsoft",
     org: "freeCodeCamp",
     date: "Dic. 2025",
     link: "https://freecodecamp.org/certification/fcc-8f71be83-65d7-40d2-95e3-e4bca09cd50a/foundational-c-sharp-with-microsoft",
     logo: LOGO_CERT.freecodecamp,
+    online: true,
   },
   {
     title: "Curso de Angular: Ampliando Conceptos",
@@ -377,6 +385,7 @@ export const CERTIFICADOS = [
     date: "Jul. 2025",
     link: "https://openwebinars.net/cert/62se",
     logo: LOGO_CERT.openwebinars,
+    online: true,
   },
   {
     title: ".NET Framework",
@@ -384,6 +393,7 @@ export const CERTIFICADOS = [
     date: "Jul. 2025",
     link: "https://openwebinars.net/cert/lWvO",
     logo: LOGO_CERT.openwebinars,
+    online: true,
   },
   {
     title: "Fundamentos de React",
@@ -391,6 +401,7 @@ export const CERTIFICADOS = [
     date: "Jul. 2025",
     link: "https://openwebinars.net/cert/q9Yr",
     logo: LOGO_CERT.openwebinars,
+    online: true,
   },
   {
     title: "MongoDB: Creación y gestión de bases de datos NoSQL",
@@ -398,6 +409,7 @@ export const CERTIFICADOS = [
     date: "Mar. 2025",
     link: "https://openwebinars.net/certificacion/0QCj1YwR",
     logo: LOGO_CERT.openwebinars,
+    online: true,
   },
   {
     title: "Learning the Basics of ABAP Programming on SAP BTP",
@@ -405,6 +417,7 @@ export const CERTIFICADOS = [
     date: "Ene. 2025",
     link: "https://www.credly.com/badges/0d749aff-8745-4737-abb0-90058a1ca0bb",
     logo: LOGO_CERT.sap,
+    online: true,
   },
   {
     title: "Perfil Trailhead de Salesforce – Insignias y Rutas",
@@ -412,6 +425,7 @@ export const CERTIFICADOS = [
     date: "Ene. 2025",
     link: "https://www.salesforce.com/trailblazer/dvpl9jhprurtdm3g7i",
     logo: LOGO_CERT.salesforce,
+    online: true,
   },
   {
     title: "Servidor Web Apache 2.4",
@@ -419,21 +433,23 @@ export const CERTIFICADOS = [
     date: "Nov. 2023",
     link: "https://openwebinars.net/cert/PuCz",
     logo: LOGO_CERT.openwebinars,
+    online: true,
   },
   {
-    title:
-      "Certificado profesional en Soporte de Tecnologías de la Información de Google",
+    title: "Soporte de Tecnologías de la Información de Google",
     org: "Coursera",
     date: "Ago. 2022",
     link: "https://www.coursera.org/account/accomplishments/professional-cert/WU7LEUWZ8FLE",
     logo: LOGO_CERT.coursera,
+    online: true,
   },
   {
-    title: 'Certificado de profesionalidad de Seguridad Informática',
+    title: "Certificado de profesionalidad de Seguridad Informática",
     org: "ASATA",
     date: "Dic. 2018",
     credId: "03/18/00004962/IFCT0109",
     logo: LOGO_CERT.asata,
+    online: false,
   },
   {
     title: "Acreditación de competencias digitales europeas ECDL",
@@ -441,13 +457,15 @@ export const CERTIFICADOS = [
     date: "Dic. 2017",
     credId: "ES004660",
     logo: LOGO_CERT.ecdl,
+    online: false,
   },
   {
-    title: "Curso de Seguridad Informática en la Gestión Empresarial",
+    title: "Seguridad Informática en la Gestión Empresarial",
     org: "Dicampus",
     date: "2017",
     credId: "PLF 2017/165",
     logo: LOGO_CERT.dicampus,
+    online: false,
   },
 ];
 export const CERTS = CERTIFICADOS;
@@ -472,10 +490,7 @@ export const EXPERIENCIA = [
     ],
     points: [
       "Backend: Desarrollé y optimicé una API REST en .NET 9 / ASP.NET Core, asegurando escalabilidad y mantenibilidad del sistema.",
-      "Frontend: Implementé interfaces modernas y responsive con React, Vite y Tailwind CSS, mejorando la usabilidad y la experiencia de usuario.",
-      "Persistencia: Consolidé las migraciones de Entity Framework en una única versión para MySQL, facilitando el mantenimiento y mejorando la estabilidad de la base de datos.",
-      "Calidad: Aumenté la calidad del software mediante pruebas unitarias con MSTest, reduciendo errores en producción.",
-      "Colaboración: Gestioné repositorios con Git y Azure DevOps, creando PRs para revisión y validación que facilitaron integraciones más ágiles y seguras.",
+      "Frontend: Implementé interfaces modernas y responsive con React, Vite y Tailwind CSS, mejorando la usabilidad y la experiencia de usuario."
     ],
   },
   {
@@ -486,9 +501,6 @@ export const EXPERIENCIA = [
     points: [
       "Backend: Desarrollé un backend con Node.js + Express.js, implementando API REST con autenticación JWT para un sistema de gestión interna.",
       "Frontend: Construí una interfaz dinámica y modular con Vue.js + Quasar Framework, optimizando la experiencia del usuario y mejorando la mantenibilidad del código.",
-      "Persistencia: Gestioné datos con MongoDB/Mongoose, reforzando la seguridad y la consistencia del sistema.",
-      "Funcionalidades implementadas: Implementé funcionalidades clave: visor de facturas en PDF, listado de noticias con paginación y gestión interna de usuarios y clientes.",
-      "Colaboración: Mejoré la colaboración y control de versiones mediante GitHub y buenas prácticas ágiles, fomentando un desarrollo más ordenado y eficiente.",
     ],
   },
 ];
@@ -552,8 +564,7 @@ export const PROYECTOS: Proyecto[] = [
       "Portafolio personal con React + Vite y TailwindCSS. Diseño moderno, animaciones con Framer Motion, responsive completo y sección de contacto funcional con validación.",
     tech: ["React", "Vite", "TailwindCSS", "TypeScript", "Framer Motion"],
     fit: "contain",
-    position: "center",
-    demo: portafolioVideo,
+    position: "center"
   },
   {
     title: "Agenda de Contactos – Node.js + JavaScript + HTML + CSS",

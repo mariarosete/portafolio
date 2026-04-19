@@ -56,9 +56,9 @@ const Proyectos: React.FC = () => {
                 transition={{ duration: 0.4 }}
                 className="group min-w-[88%] snap-center"
               >
-                <div className="h-full rounded-[28px] p-[1px] bg-gradient-to-br from-rose-500/20 via-fuchsia-500/10 to-amber-300/10 shadow-[0_18px_60px_-30px_rgba(0,0,0,0.65)]">
-                  <div className="rounded-[28px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl overflow-hidden h-full">
-                    <div className="relative aspect-[16/10] overflow-hidden bg-[#0f0a1a]">
+                <div className="h-full rounded-[26px] p-[1px] bg-gradient-to-br from-rose-500/20 via-fuchsia-500/10 to-amber-300/10 shadow-[0_18px_60px_-30px_rgba(0,0,0,0.65)]">
+                  <div className="rounded-[26px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl overflow-hidden h-full">
+                    <div className="relative aspect-[16/9] overflow-hidden bg-[#0f0a1a]">
                       <img
                         src={proyecto.banner}
                         alt={proyecto.title}
@@ -67,7 +67,7 @@ const Proyectos: React.FC = () => {
                         style={{ objectPosition: proyecto.position ?? "center" }}
                         className={[
                           "absolute inset-0 w-full h-full transition-transform duration-500",
-                          usarContain ? "object-contain p-3" : "object-cover",
+                          usarContain ? "object-contain p-2.5" : "object-cover",
                         ].join(" ")}
                       />
 
@@ -75,7 +75,7 @@ const Proyectos: React.FC = () => {
 
                       {proyecto.award && (
                         <div className="absolute left-3 top-3">
-                          <span className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[10px] font-semibold text-white bg-gradient-to-r from-rose-500 to-amber-400 shadow-[0_8px_20px_-8px_rgba(244,63,94,.45)]">
+                          <span className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-semibold text-white bg-gradient-to-r from-rose-500 to-amber-400 shadow-[0_8px_20px_-8px_rgba(244,63,94,.45)]">
                             <Trophy className="w-3.5 h-3.5" />
                             {proyecto.award}
                           </span>
@@ -84,20 +84,20 @@ const Proyectos: React.FC = () => {
                     </div>
 
                     <div className="p-4">
-                      <h3 className="text-[26px] font-black italic leading-tight text-white">
+                      <h3 className="text-[20px] font-black italic leading-[1.08] text-white">
                         {proyecto.title}
                       </h3>
 
                       <p
                         className={[
-                          "mt-3 text-white/68 text-sm leading-7",
-                          isOpen ? "" : "line-clamp-3",
+                          "mt-2.5 text-white/68 text-[14px] leading-6",
+                          isOpen ? "" : "line-clamp-2",
                         ].join(" ")}
                       >
                         {proyecto.description}
                       </p>
 
-                      <div className="mt-2">
+                      <div className="mt-1.5">
                         <button
                           type="button"
                           onClick={() => toggle(key)}
@@ -107,8 +107,8 @@ const Proyectos: React.FC = () => {
                         </button>
                       </div>
 
-                      <ul className="mt-4 flex flex-wrap gap-2">
-                        {proyecto.tech.slice(0, 4).map((tecno) => {
+                      <ul className="mt-3 flex flex-wrap gap-1.5">
+                        {proyecto.tech.slice(0, 3).map((tecno) => {
                           const badge = getTechBadge(tecno);
                           const Icon = badge?.Icono;
 
@@ -118,8 +118,8 @@ const Proyectos: React.FC = () => {
                                 <span
                                   className="
                                     inline-flex items-center rounded-full
-                                    px-2.5 py-1
-                                    text-[10px] font-medium text-slate-700
+                                    px-2 py-[3px]
+                                    text-[9px] font-medium text-slate-700
                                     bg-gradient-to-r from-rose-50 to-amber-50
                                     ring-1 ring-rose-200/60
                                     whitespace-nowrap
@@ -135,9 +135,9 @@ const Proyectos: React.FC = () => {
                             <li key={tecno}>
                               <span
                                 className={[
-                                  "inline-flex items-center gap-2 rounded-full",
-                                  "px-2.5 py-1",
-                                  "text-[10px] font-medium",
+                                  "inline-flex items-center gap-1.5 rounded-full",
+                                  "px-2 py-[3px]",
+                                  "text-[9px] font-medium",
                                   "ring-1 whitespace-nowrap",
                                   badge.ring,
                                   badge.bg,
@@ -171,7 +171,7 @@ const Proyectos: React.FC = () => {
                         })}
                       </ul>
 
-                      <div className="mt-4 flex flex-wrap gap-2">
+                      <div className="mt-3.5 flex gap-2">
                         <a
                           href={proyecto.repo}
                           target="_blank"
@@ -215,7 +215,7 @@ const Proyectos: React.FC = () => {
           })}
         </div>
 
-        {/* DESKTOP*/}
+        {/* DESKTOP */}
         <div className="hidden lg:grid gap-6 lg:grid-cols-2">
           {featured.map((proyecto) => {
             const key = proyecto.title;
@@ -456,7 +456,6 @@ const Proyectos: React.FC = () => {
                       </button>
                     </div>
 
-                    {/* Tecnologías */}
                     <ul className="mt-3 flex flex-wrap gap-1.5 sm:min-h-[52px]">
                       {proyecto.tech.slice(0, 3).map((tecno) => {
                         const badge = getTechBadge(tecno);

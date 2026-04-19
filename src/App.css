@@ -62,3 +62,22 @@
 .animate-float-fast {
   animation: floatFast 3.6s ease-in-out infinite;
 }
+
+@keyframes logoIntro {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}

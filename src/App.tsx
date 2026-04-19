@@ -164,10 +164,10 @@ export default function App() {
               </p>
             </div>
 
-            <div className="mt-10 md:mt-12 grid gap-8 xl:grid-cols-[1.25fr_0.75fr] items-start">
+            <div className="mt-10 md:mt-12 grid gap-8 xl:grid-cols-[1.25fr_0.75fr] xl:items-stretch">
               {/* COLUMNA IZQUIERDA */}
-              <div className="rounded-[30px] p-[1px] bg-gradient-to-br from-rose-500/25 via-fuchsia-500/10 to-amber-300/15 shadow-[0_20px_80px_-35px_rgba(0,0,0,0.55)]">
-                <div className="rounded-[30px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] backdrop-blur-xl p-6 sm:p-8 md:p-10">
+              <div className="h-full rounded-[30px] p-[1px] bg-gradient-to-br from-rose-500/25 via-fuchsia-500/10 to-amber-300/15 shadow-[0_20px_80px_-35px_rgba(0,0,0,0.55)]">
+                <div className="h-full rounded-[30px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] backdrop-blur-xl p-6 sm:p-8 md:p-10 flex flex-col">
                   <div className="max-w-3xl">
                     <span className="inline-flex items-center rounded-full border border-rose-500/20 bg-rose-500/10 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-rose-300">
                       Especialización
@@ -182,15 +182,16 @@ export default function App() {
 
                     <div className="mt-6 space-y-4 text-[15px] sm:text-base leading-8 text-white/72">
                       <p>
-                        Soy María Rosete Suárez, desarrolladora Full Stack especializada en{" "}
+                        Soy María Rosete, desarrolladora Full Stack especializada en{" "}
                         <strong className="text-white font-semibold">.NET</strong> y{" "}
                         <strong className="text-white font-semibold">React</strong>.
                       </p>
 
                       <p>
                         Desarrollo APIs REST e interfaces web modernas, con especial atención a
-                        la claridad del código, las buenas prácticas y la mantenibilidad. Además, cuento con experiencia en Node.js, Vue.js, MySQL, Git y
-                        tecnologías actuales del ecosistema frontend.
+                        la claridad del código, las buenas prácticas y la mantenibilidad. Además,
+                        cuento con experiencia en Node.js, Vue.js, MySQL, Git y tecnologías
+                        actuales del ecosistema frontend.
                       </p>
                     </div>
                   </div>
@@ -231,20 +232,20 @@ export default function App() {
               </div>
 
               {/* COLUMNA DERECHA */}
-              <div className="rounded-[30px] p-[1px] bg-gradient-to-br from-white/10 via-white/5 to-transparent shadow-[0_20px_80px_-35px_rgba(0,0,0,0.7)]">
-                <div className="rounded-[30px] border border-white/10 bg-[#0b0818]/95 backdrop-blur-xl p-5 sm:p-6">
-                  <div className="space-y-4">
+              <div className="h-full rounded-[30px] p-[1px] bg-gradient-to-br from-white/10 via-white/5 to-transparent shadow-[0_20px_80px_-35px_rgba(0,0,0,0.7)]">
+                <div className="h-full rounded-[30px] border border-white/10 bg-[#0b0818]/95 backdrop-blur-xl p-5 sm:p-6 flex flex-col">
+                  <div className="grid gap-4">
                     {HIGHLIGHTS.map((item) => (
                       <div
                         key={item.title}
-                        className="rounded-2xl border border-white/8 bg-white/[0.03] p-4 sm:p-5"
+                        className="rounded-2xl border border-white/8 bg-white/[0.03] p-4 sm:p-5 min-h-[132px] flex"
                       >
-                        <div className="flex items-start gap-4">
+                        <div className="flex items-start gap-4 w-full">
                           <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-white/10 bg-white/5 text-rose-400">
                             {item.icon}
                           </div>
 
-                          <div>
+                          <div className="flex flex-col justify-center min-h-full">
                             <h3 className="text-xl font-semibold text-white">
                               {item.title}
                             </h3>
@@ -259,6 +260,7 @@ export default function App() {
 
                   <div className="mt-6 rounded-2xl border border-white/8 bg-gradient-to-r from-rose-500/10 to-fuchsia-500/5 p-5">
                     <p className="text-sm sm:text-[15px] leading-7 text-white/70">
+                      <span className="mr-2 font-semibold text-rose-400">{"/>"}</span>
                       Me interesa formar parte de proyectos donde pueda seguir creciendo,
                       aportar valor desde el primer día y construir producto con criterio
                       técnico y visual.

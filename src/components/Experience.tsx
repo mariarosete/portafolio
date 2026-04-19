@@ -4,6 +4,7 @@ import { EXPERIENCE as EXPERIENCIA, PROFILE as PERFIL } from "../data/profile";
 import {
   Briefcase,
   CalendarDays,
+  Building2
 } from "lucide-react";
 
 type ExperienceItem = {
@@ -74,7 +75,8 @@ const Experiencia: React.FC = () => {
                         {experiencia.role}
                       </h3>
 
-                      <p className="mt-2 text-rose-500 font-semibold uppercase tracking-[0.08em] text-sm sm:text-base">
+                      <p className="mt-2 flex items-center gap-2 text-rose-500 font-semibold uppercase tracking-[0.08em] text-sm sm:text-base">
+                        <Building2 className="w-4 h-4 text-rose-400" />
                         {experiencia.company}
                       </p>
                     </div>

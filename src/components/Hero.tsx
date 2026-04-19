@@ -106,8 +106,7 @@ const Hero: React.FC = () => {
                   María Rosete
                 </span>
               </h1>
-
-              <p className="mt-5 text-base sm:text-xl text-white/75 leading-7 sm:leading-8 max-w-2xl mx-auto lg:mx-0">
+              <p className="mt-5 text-base sm:text-xl font-bold text-white leading-7 sm:leading-8 max-w-2xl mx-auto lg:mx-0">
                 {PERFIL.role}
               </p>
 
@@ -128,7 +127,7 @@ const Hero: React.FC = () => {
                   href={PERFIL.cv}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 py-3.5 font-semibold text-white/90 backdrop-blur transition hover:bg-white/10"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 py-3.5 font-semibold text-white/90 backdrop-blur transition hover:text-white hover:bg-white/10"
                 >
                   Descargar CV
                   <FileDown className="h-4 w-4" />

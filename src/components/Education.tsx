@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { EDUCATION as EDUCACION } from "../data/profile";
 import {
   GraduationCap,
-  BookOpen,
+  School,
   CalendarDays,
-  FileText,
+
 } from "lucide-react";
 
 /**
@@ -66,9 +66,10 @@ const Educacion: React.FC = () => (
                         {estudio.title}
                       </h3>
 
-                      <p className="mt-1.5 text-white/68 text-sm sm:text-[15px]">
-                        {estudio.center}
-                      </p>
+                      <div className="mt-1.5 inline-flex items-center gap-2 text-white/68 text-sm sm:text-[15px]">
+                        <School className="h-4 w-4 shrink-0 text-rose-300/80" />
+                        <span>{estudio.center}</span>
+                      </div>
                     </div>
 
                     <div className="shrink-0">

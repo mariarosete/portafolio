@@ -123,32 +123,34 @@ const Contacto: React.FC = () => (
       </div>
 
       {/* COLUMNA DERECHA */}
-      <div className="rounded-[32px] p-[1px] bg-gradient-to-br from-rose-500/18 via-fuchsia-500/8 to-amber-300/8 shadow-[0_20px_70px_-35px_rgba(0,0,0,0.7)]">
-        <div className="rounded-[32px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl p-5 sm:p-6 md:p-8">
-          <div className="flex items-center gap-3">
-            <div className="grid h-11 w-11 place-items-center rounded-2xl border border-rose-500/20 bg-rose-500/10 text-rose-400">
-              <Send className="w-5 h-5" />
-            </div>
-            <div>
-              <p className="text-[11px] uppercase tracking-[0.24em] text-white/40">
-                Formulario
-              </p>
-              <h3 className="text-white text-xl font-bold">
-                Envíame un mensaje
-              </h3>
-            </div>
-          </div>
 
-          <p className="mt-4 text-white/58 text-sm sm:text-[15px] leading-7">
-            Cuéntame brevemente tu idea, propuesta o interés, y te responderé
-            lo antes posible.
-          </p>
-
-          <div className="mt-6">
-            <ContactForm />
-          </div>
-        </div>
+{/* COLUMNA DERECHA */}
+<div className="xl:mt-10 w-full xl:max-w-[720px] xl:ml-auto rounded-[32px] p-[1px] bg-gradient-to-br from-rose-500/18 via-fuchsia-500/8 to-amber-300/8 shadow-[0_20px_70px_-35px_rgba(0,0,0,0.7)]">
+  <div className="rounded-[32px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl p-5 sm:p-6 md:p-8">
+    <div className="flex items-center gap-3">
+      <div className="grid h-11 w-11 place-items-center rounded-2xl border border-rose-500/20 bg-rose-500/10 text-rose-400">
+        <Send className="w-5 h-5" />
       </div>
+      <div>
+        <p className="text-[11px] uppercase tracking-[0.24em] text-white/40">
+          Formulario
+        </p>
+        <h3 className="text-white text-xl font-bold">
+          Envíame un mensaje
+        </h3>
+      </div>
+    </div>
+
+    <p className="mt-4 text-white/58 text-sm sm:text-[15px] leading-7">
+      Cuéntame brevemente tu idea, propuesta o interés, y te responderé
+      lo antes posible.
+    </p>
+
+    <div className="mt-6">
+      <ContactForm />
+    </div>
+  </div>
+</div>
     </div>
   </section>
 );

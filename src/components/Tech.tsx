@@ -58,6 +58,12 @@ const Tecnologias: React.FC = () => {
       bg: "bg-[#f4fff6] text-[#239120]",
     },
     {
+      Icono: FaJava,
+      etiqueta: "Java",
+      ring: "ring-[#f5c7c7]",
+      bg: "bg-[#fff5f5] text-[#EA2D2E]",
+    },
+    {
       Icono: SiTypescript,
       etiqueta: "TypeScript",
       ring: "ring-[#d9e9ff]",
@@ -69,18 +75,7 @@ const Tecnologias: React.FC = () => {
       ring: "ring-[#ffefb3]",
       bg: "bg-[#fffbed] text-[#C8A500]",
     },
-    {
-      Icono: FaJava,
-      etiqueta: "Java",
-      ring: "ring-[#f5c7c7]",
-      bg: "bg-[#fff5f5] text-[#EA2D2E]",
-    },
-    {
-      Icono: SiKotlin,
-      etiqueta: "Kotlin",
-      ring: "ring-[#dacfff]",
-      bg: "bg-[#f7f5ff] text-[#7F52FF]",
-    },
+    
     {
       Icono: SiHtml5,
       etiqueta: "HTML5",
@@ -92,6 +87,12 @@ const Tecnologias: React.FC = () => {
       etiqueta: "CSS3",
       ring: "ring-[#dcecff]",
       bg: "bg-[#f6fbff] text-[#1572B6]",
+    },
+    {
+      Icono: SiKotlin,
+      etiqueta: "Kotlin",
+      ring: "ring-[#dacfff]",
+      bg: "bg-[#f7f5ff] text-[#7F52FF]",
     },
   ];
 
@@ -136,6 +137,12 @@ const Tecnologias: React.FC = () => {
       bg: "bg-[#f8f6ff] text-[#512BD4]",
     },
     {
+      Icono: SiSpringboot,
+      etiqueta: "Spring Boot",
+      ring: "ring-[#def5c2]",
+      bg: "bg-[#f8fff0] text-[#6DB33F]",
+    },
+    {
       Icono: SiNodedotjs,
       etiqueta: "Node.js",
       ring: "ring-[#d5f0d1]",
@@ -147,11 +154,12 @@ const Tecnologias: React.FC = () => {
       ring: "ring-slate-200",
       bg: "bg-white text-slate-900",
     },
+
     {
-      Icono: SiSpringboot,
-      etiqueta: "Spring Boot",
-      ring: "ring-[#def5c2]",
-      bg: "bg-[#f8fff0] text-[#6DB33F]",
+      Icono: SiOracle,
+      etiqueta: "Oracle",
+      ring: "ring-[#ffd0d0]",
+      bg: "bg-[#fff5f5] text-[#F80000]",
     },
     {
       Icono: SiMysql,
@@ -165,23 +173,18 @@ const Tecnologias: React.FC = () => {
       ring: "ring-[#d6ddfd]",
       bg: "bg-[#f5f7ff] text-[#4169E1]",
     },
-    {
-      Icono: SiSqlite,
-      etiqueta: "SQLite",
-      ring: "ring-[#cbdde8]",
-      bg: "bg-[#f3f9ff] text-[#003B57]",
-    },
-    {
-      Icono: SiOracle,
-      etiqueta: "Oracle",
-      ring: "ring-[#ffd0d0]",
-      bg: "bg-[#fff5f5] text-[#F80000]",
-    },
+       
     {
       Icono: SiMongodb,
       etiqueta: "MongoDB",
       ring: "ring-[#cfead1]",
       bg: "bg-[#f3fff3] text-[#47A248]",
+    },
+    {
+      Icono: SiSqlite,
+      etiqueta: "SQLite",
+      ring: "ring-[#cbdde8]",
+      bg: "bg-[#f3f9ff] text-[#003B57]",
     },
   ];
 
@@ -472,16 +475,17 @@ const Tecnologias: React.FC = () => {
 
             {/* nodo central */}
             <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-              <div className="rounded-2xl border border-rose-500/20 bg-[#170d22]/95 px-3 py-2 shadow-[0_18px_45px_-18px_rgba(244,63,94,.45)] sm:px-4 sm:py-3">
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <div className="grid h-8 w-8 place-items-center rounded-xl bg-rose-500/12 text-rose-400 border border-rose-500/20 sm:h-10 sm:w-10">
-                    <Cpu className="w-4 h-4 sm:w-5 sm:h-5" />
+              <div className="rounded-xl border border-rose-500/20 bg-[#170d22]/95 px-2 py-1.5 shadow-[0_18px_45px_-18px_rgba(244,63,94,.45)] sm:px-2.5 sm:py-2">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <div className="grid h-6 w-6 place-items-center rounded-lg border border-rose-500/20 bg-rose-500/12 text-rose-400 sm:h-7 sm:w-7">
+                    <Cpu className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                   </div>
-                  <div>
-                    <p className="text-[8px] uppercase tracking-[0.22em] text-white/40 sm:text-[10px]">
+
+                  <div className="leading-none">
+                    <p className="text-[6px] uppercase tracking-[0.16em] text-white/40 sm:text-[7px]">
                       Núcleo técnico
                     </p>
-                    <p className="text-sm text-white font-semibold sm:text-base">
+                    <p className="mt-0.5 text-[10px] font-semibold text-white sm:text-[12px]">
                       Frontend + Backend
                     </p>
                   </div>
