@@ -1,8 +1,8 @@
-# 💼 Portafolio – React + Vite + TailwindCSS
+# 💼 Portfolio – React + Vite + TailwindCSS
 
 ![Banner Portafolio](https://github.com/mariarosete/portafolio/blob/main/banner.png?raw=true)
 
-**Portafolio personal** desarrollado con **React**, **Vite** y **TailwindCSS**, donde presento mis proyectos, experiencia y habilidades como desarrolladora web.  
+**Portfolio personal** desarrollado con **React**, **Vite** y **TailwindCSS**, donde presento mis proyectos, experiencia y habilidades como desarrolladora web.  
 Cuenta con un diseño moderno, animaciones suaves y una interfaz completamente responsive.
 
 ---
@@ -98,7 +98,7 @@ Proyecto desplegado en **Vercel**:
 
 ---
 
-<p align="center">Desarrollado con ❤️ por <b>María Rosete Suárez</b> </p>
+<p align="center">Desarrollado con ❤️ por <b>María Rosete</b> </p>
 
 
 
