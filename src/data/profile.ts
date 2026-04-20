@@ -557,11 +557,11 @@ export const PROYECTOS: Proyecto[] = [
     demo: servidorVideo,
   },
   {
-    title: "Portafolio – React + Vite + TailwindCSS",
+    title: "Portfolio – React + Vite + TailwindCSS",
     banner: portafolio,
     repo: "https://github.com/mariarosete/portafolio",
     description:
-      "Portafolio personal con React + Vite y TailwindCSS. Diseño moderno, animaciones con Framer Motion, responsive completo y sección de contacto funcional con validación.",
+      "Portfolio personal con React + Vite y TailwindCSS. Diseño moderno, animaciones con Framer Motion, responsive completo y sección de contacto funcional con validación.",
     tech: ["React", "Vite", "TailwindCSS", "TypeScript", "Framer Motion"],
     fit: "contain",
     position: "center"
