@@ -97,7 +97,7 @@ const Hero: React.FC = () => {
             <div className="max-w-2xl text-center lg:text-left">
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] sm:text-xs font-medium uppercase tracking-[0.25em] text-white/80 backdrop-blur">
                 <span className="h-2 w-2 rounded-full bg-rose-500" />
-                Full Stack Developer
+                .NET Developer
               </div>
 
               <h1 className="mt-5 text-[42px] leading-[0.95] sm:text-6xl lg:text-7xl font-black tracking-tight">

@@ -294,9 +294,9 @@ export const getTechBadge = (tech: string): TechBadgeCfg | null =>
 // ─────────────────────────────────────────────────────────────
 export const PERFIL = {
   name: "María Rosete",
-  role: "Desarrolladora Full Stack Junior especializada en .NET y React",
+  role: "Desarrolladora .NET con enfoque en backend, perfil full stack y experiencia en React.",
   about:
-    "Desarrollo aplicaciones web escalables y seguras. Tengo experiencia adicional con Node.js, Spring Boot y frameworks frontend como Angular y Vue.js, trabajando con buenas prácticas, testing y control de versiones.",
+    "Desarrollo APIs y aplicaciones web escalables y mantenibles, aplicando buenas prácticas y cuidando la calidad del código. Además, cuento con experiencia en tecnologías backend como Node.js y Spring Boot, y en frontend con Vue.js y Angular.",
   photo: portada,
   socials: {
     email: "mailto:marlarosete89@gmail.com",

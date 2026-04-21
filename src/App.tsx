@@ -107,17 +107,17 @@ export default function App() {
     {
       icon: <Code2 className="h-5 w-5" />,
       title: "Full Stack",
-      text: "Desarrollo aplicaciones web con .NET, React y una base sólida en backend y frontend.",
+      text: "Desarrollo aplicaciones full stack con .NET y React, con especial enfoque en backend y APIs escalables.",
     },
     {
       icon: <Briefcase className="h-5 w-5" />,
       title: "Experiencia real",
-      text: "He trabajado en proyectos profesionales y académicos orientados a producto y usuario.",
+      text: "He trabajado en proyectos profesionales y académicos desarrollando APIs y aplicaciones web orientadas a producto y usuario.",
     },
     {
       icon: <BrainCircuit className="h-5 w-5" />,
       title: "Mentalidad",
-      text: "Me gusta construir soluciones limpias, útiles y bien pensadas, cuidando cada detalle.",
+      text: "Interesada en incorporarme a un equipo donde pueda seguir creciendo, aportar valor desde el primer día y construir software de calidad.",
     },
   ];
 
@@ -160,7 +160,7 @@ export default function App() {
               </h2>
 
               <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
-                Desarrollo web full stack con foco en producto y claridad técnica.
+              Desarrollo de aplicaciones web con foco en backend, APIs y código limpio.
               </p>
             </div>
 
@@ -182,16 +182,13 @@ export default function App() {
 
                     <div className="mt-6 space-y-4 text-[15px] sm:text-base leading-8 text-white/72">
                       <p>
-                        Soy María Rosete, desarrolladora especializada en{" "}
-                        <strong className="text-white font-semibold">.NET</strong> y{" "}
-                        <strong className="text-white font-semibold">React</strong>.
+                        Soy María Rosete, desarrolladora .NET especializada en{" "}
+                        <strong className="text-white font-semibold">backend</strong> y{" "}
+                        <strong className="text-white font-semibold">desarrollo de APIs</strong>.
                       </p>
 
                       <p>
-                        Desarrollo APIs REST e interfaces web modernas, con especial atención a
-                        la claridad del código, las buenas prácticas y la mantenibilidad. Además,
-                        cuento con experiencia en Node.js, Vue.js, MySQL, Git y tecnologías
-                        actuales del ecosistema frontend.
+                      Desarrollo APIs REST e interfaces web modernas, con especial atención a la claridad del código, las buenas prácticas y la mantenibilidad. Además, cuento con experiencia en React y en otras tecnologías como Node.js, Spring Boot, Vue.js, MySQL y Git.
                       </p>
                     </div>
                   </div>
