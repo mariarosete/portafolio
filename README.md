@@ -43,7 +43,7 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
  1. Clona este repositorio:
 
  ```bash
-   git clone https://github.com/mariarosete/portafolio.git
+   git clone https://github.com/mariarosete/portfolio.git
  ```
 
  2. Acceder a la carpeta del proyecto
