@@ -117,7 +117,7 @@ export default function App() {
     {
       icon: <BrainCircuit className="h-5 w-5" />,
       title: "Mentalidad",
-      text: "Interesada en incorporarme a un equipo donde pueda seguir creciendo, aportar valor desde el primer día y construir software de calidad.",
+      text: "Enfocada en construir software de calidad, cuidando el detalle y las buenas prácticas. Me interesa entender bien el problema antes de resolverlo, trabajar en equipo y desarrollar soluciones claras, mantenibles y con impacto real.",
     },
   ];
 
