@@ -16,6 +16,7 @@ import asgardGym from "../assets/AsgardGym.mp4";
 import servidorVideo from "../assets/Servidor.mp4";
 import flowDocumentVideo from "../assets/flowDocument.mp4";
 import type { IconType } from "react-icons";
+import { FaDesktop } from "react-icons/fa";
 
 import {
   SiDotnet,
@@ -160,6 +161,11 @@ export const TECH_BADGE_MAP: Record<string, TechBadgeCfg> = {
     ring: "ring-slate-200",
     bg: "bg-white text-[#181717]",
   },
+  "Desktop-first": {
+  Icono: FaDesktop,
+  ring: "ring-slate-300",
+  bg: "bg-slate-100 text-slate-700",
+},
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -609,7 +615,7 @@ export const PROYECTOS: Proyecto[] = [
     repo: "https://github.com/mariarosete/disney-drag-drop",
     description:
       "Aplicación web interactiva desarrollada con JavaScript que implementa funcionalidades de Drag & Drop, validación visual y manipulación dinámica del DOM.",
-      tech: ["JavaScript", "HTML", "CSS", "Canvas API"],
+      tech: ["JavaScript", "HTML","Desktop-first"],
     fit: "cover",
     position: "center",
     demo: "https://disney-drag-drop.vercel.app/",
@@ -620,7 +626,7 @@ export const PROYECTOS: Proyecto[] = [
     repo: "https://github.com/mariarosete/digidraw-pizarra",
     description:
       "Aplicación web de dibujo desarrollada con Canvas API y JavaScript, que implementa funcionalidades de trazo libre, borrado, inserción de imágenes y texto mediante manipulación directa del lienzo.",
-    tech: ["JavaScript", "HTML", "CSS", "Canvas API"],
+    tech: ["JavaScript", "HTML", "Desktop-first"],
     fit: "cover",
     position: "center",
     demo: "https://digidraw-app.vercel.app/",
