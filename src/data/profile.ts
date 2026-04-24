@@ -519,6 +519,7 @@ export const PROYECTOS: Proyecto[] = [
     position: "center",
     award: "Mención honorífica · TFG DAW",
     demo: skillTechVideo,
+    demoType: "video",
   },
   {
     title: "Asgard Gym – App móvil para gimnasios",
@@ -531,6 +532,7 @@ export const PROYECTOS: Proyecto[] = [
     position: "center",
     award: "Mención honorífica · TFG DAM",
     demo: asgardGym,
+    demoType: "video",
   },
   {
     title: "Servidor de Archivos – Cliente Android + Servidor TCP",
