@@ -10,14 +10,11 @@ import disney from "../assets/disney.jpg";
 import pizarra from "../assets/pizarra.jpg";
 import portada from "../assets/MRS.png";
 import skillTechVideo from "../assets/skillTech.mp4";
-import pokedexVideo from "../assets/Pokedex.mp4";
 import agendaVideo from "../assets/agenda.mp4";
 import pasteleriaVideo from "../assets/pasteleria.mp4";
 import asgardGym from "../assets/AsgardGym.mp4";
 import servidorVideo from "../assets/Servidor.mp4";
 import flowDocumentVideo from "../assets/flowDocument.mp4";
-import pizarraVideo from "../assets/pizarra.mp4";
-import disneyVideo from "../assets/disney.mp4";
 import type { IconType } from "react-icons";
 
 import {
@@ -61,6 +58,7 @@ export type Project = {
   position?: string;
   award?: string;
   demo?: string;
+  demoType?: "live" | "video";
 };
 export type Proyecto = Project;
 
@@ -515,8 +513,8 @@ export const PROYECTOS: Proyecto[] = [
     banner: skilltech,
     repo: "https://github.com/mariarosete/skillTech",
     description:
-    "Plataforma web educativa con backend en Spring Boot y API REST para la gestión de cursos, usuarios e inscripciones. Incluye autenticación con JWT, control de acceso por roles y persistencia de datos con MySQL.",
-    tech: ["Java", "Spring Boot", "MySQL", "JWT", "JS/HTML/CSS"],
+    "Desarrollo de backend en Spring Boot con base de datos MySQL, creando una API REST para la gestión de usuarios, cursos e inscripciones. Implementa autenticación con JWT, control de acceso por roles y persistencia de datos, siguiendo una arquitectura cliente-servidor.",
+    tech: ["Spring Boot", "Java",  "MySQL", "JWT", "JS/HTML/CSS"],
     fit: "contain",
     position: "center",
     award: "Mención honorífica · TFG DAW",
@@ -527,7 +525,7 @@ export const PROYECTOS: Proyecto[] = [
     banner: asgard,
     repo: "https://github.com/mariarosete/asgardGym",
     description:
-      "Aplicación Android en Kotlin para la gestión de centros deportivos. Incluye sistema de reservas, gestión de usuarios y horarios, persistencia con SQLite y diseño con Material Design.",
+      "Aplicación móvil Android desarrollada en Kotlin para la gestión de centros deportivos. Implementa sistema de reservas, gestión de usuarios y horarios, persistencia de datos con SQLite y diseño basado en Material Design.",
     tech: ["Kotlin", "SQLite", "Material Design"],
     fit: "contain",
     position: "center",
@@ -539,63 +537,67 @@ export const PROYECTOS: Proyecto[] = [
     banner: servidor,
     repo: "https://github.com/mariarosete/servidorArchivos",
     description:
-      "Aplicación cliente-servidor con sockets TCP en Java. Incluye cliente Android en Kotlin y servidor que gestiona conexiones y transferencia de archivos en red local.",
-    tech: ["Kotlin", "Java", "Sockets TCP"],
+      "Desarrollo de servidor backend en Java utilizando sockets TCP para la gestión de conexiones concurrentes y transferencia de archivos en red local. Implementa arquitectura cliente-servidor con cliente Android en Kotlin que consume el servicio.",
+    tech: [ "Java", "Kotlin", "Sockets TCP"],
     fit: "contain",
     position: "center",
     demo: servidorVideo,
+    demoType: "video",
   },
   {
     title: "Agenda de Contactos – Node.js + JavaScript",
     banner: agenda,
     repo: "https://github.com/mariarosete/agenda-contactos",
     description:
-      "Aplicación web con backend en Node.js que implementa un sistema CRUD de contactos. Incluye búsqueda, paginación, gestión de favoritos y visualización de datos.",
-    tech: ["Node.js", "JavaScript", "HTML5", "CSS3", "Chart.js"],
+    "Desarrollo de backend en Node.js con base de datos MySQL, creando una API REST para la gestión de contactos con operaciones CRUD, búsqueda avanzada, paginación y sistema de favoritos. Incluye capa frontend para visualización y análisis de datos.",
+    tech: ["Node.js", "MySQL","JavaScript", "HTML5", "CSS3"],
     fit: "contain",
     position: "center",
     demo: agendaVideo,
+    demoType: "video",
   },
   {
     title: "Pokedex – Aplicación web Angular",
     banner: pokedexBanner,
     repo: "https://github.com/mariarosete/pokedex",
     description:
-      "Aplicación en Angular centrada en consumo de APIs y gestión de estado con NgRx, obteniendo datos en tiempo real desde PokeAPI.",
+    "Aplicación frontend en Angular orientada al consumo de APIs REST, con gestión de estado mediante NgRx y arquitectura reactiva con RxJS. Consume datos en tiempo real desde PokeAPI, simulando un flujo completo de integración con backend.",
     tech: ["Angular", "NgRx", "RxJS", "Angular Material", "TypeScript"],
     fit: "contain",
     position: "center",
-    demo: pokedexVideo,
+    demo: "https://pokedex-maria.vercel.app/",
   },
   {
     title: "Pastelería Creativa – WPF (.NET)",
     banner: flowDocument,
     repo: "https://github.com/mariarosete/pasteleria",
     description:
-      "Aplicación en C# con WPF que incluye interfaz avanzada con FlowDocument y operaciones CRUD mediante DataGrid conectado a base de datos.",
-    tech: ["C#", "WPF", ".NET", "XAML", "DataGrid"],
+      "Aplicación de escritorio en C# con WPF orientada a la gestión de datos mediante operaciones CRUD conectadas a base de datos. Incluye diseño de interfaz avanzada con FlowDocument y visualización de datos con DataGrid.",
+    tech: [".NET", "C#", "WPF"],
     fit: "contain",
     position: "center",
     demo: flowDocumentVideo,
+    demoType: "video",
   },
   {
     title: "Pastelería Creativa – Java Swing",
     banner: pasteleria,
     repo: "https://github.com/mariarosete/pasteleriaCreativa",
     description:
-      "Aplicación de escritorio en Java Swing para gestión de recetas con almacenamiento en archivos y personalización de interfaz.",
+      "Aplicación de escritorio en Java Swing para la gestión de recetas, implementando lógica de negocio y almacenamiento de datos en archivos. Incluye personalización de interfaz y manejo de eventos.",
     tech: ["Java", "Swing"],
     fit: "contain",
     position: "center",
     demo: pasteleriaVideo,
+    demoType: "video",
   },
   {
     title: "Portfolio – React + Vite",
     banner: portafolio,
     repo: "https://github.com/mariarosete/portafolio",
     description:
-      "Portfolio personal con React y Vite. Diseño responsive, animaciones y formulario de contacto funcional.",
-    tech: ["React", "Vite", "TailwindCSS", "TypeScript"],
+      "Portfolio personal desarrollado con React y Vite, con diseño responsive, animaciones y estructura modular orientada a la presentación de proyectos y experiencia.",
+    tech: ["React", "TailwindCSS", "TypeScript"],
     fit: "contain",
     position: "center",
   },
@@ -604,22 +606,23 @@ export const PROYECTOS: Proyecto[] = [
     banner: disney,
     repo: "https://github.com/mariarosete/disney-drag-drop",
     description:
-      "Juego interactivo con HTML, CSS y JavaScript que utiliza Drag & Drop, validación visual y carga dinámica de datos.",
-    tech: ["HTML", "CSS", "JavaScript"],
+      "Aplicación web interactiva desarrollada con JavaScript que implementa funcionalidades de Drag & Drop, validación visual y manipulación dinámica del DOM.",
+      tech: ["JavaScript", "HTML", "CSS", "Canvas API"],
     fit: "cover",
     position: "center",
-    demo: disneyVideo,
+    demo: "https://disney-drag-drop.vercel.app/",
   },
   {
     title: "DigiDraw – Canvas App",
     banner: pizarra,
     repo: "https://github.com/mariarosete/digidraw-pizarra",
     description:
-      "Aplicación de dibujo en canvas con JavaScript que permite trazo libre, borrado, inserción de imágenes y texto.",
-    tech: ["HTML", "CSS", "JavaScript", "Canvas API"],
+      "Aplicación web de dibujo desarrollada con Canvas API y JavaScript, que implementa funcionalidades de trazo libre, borrado, inserción de imágenes y texto mediante manipulación directa del lienzo.",
+    tech: ["JavaScript", "HTML", "CSS", "Canvas API"],
     fit: "cover",
     position: "center",
-    demo: pizarraVideo,
+    demo: "https://digidraw-app.vercel.app/",
+    demoType: "live",
   },
 ];
 

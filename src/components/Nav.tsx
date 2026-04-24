@@ -259,7 +259,7 @@ const Nav: React.FC = () => {
                   <EnlaceMovil href="#tecnologias">Tecnologías</EnlaceMovil>
                   <EnlaceMovil href="#educacion">Educación</EnlaceMovil>
                   <EnlaceMovil href="#certificados">Certificados</EnlaceMovil>
-                  <EnlaceMovil href="#contacto">Contacto</EnlaceMovil>
+           
                 </div>
 
                 <div className="my-4 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
