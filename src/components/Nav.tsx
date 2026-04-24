@@ -17,12 +17,12 @@ const Nav: React.FC = () => {
 
   const activo = useScrollSpy([
     "inicio",
+    "proyectos",
     "sobre-mi",
+    "experiencia",
+    "tecnologias",
     "educacion",
     "certificados",
-    "experiencia",
-    "proyectos",
-    "tecnologias",
     "contacto",
   ]);
 
@@ -136,12 +136,12 @@ const Nav: React.FC = () => {
         </a>
 
         <ul className="hidden min-[1126px]:flex items-center gap-1">
+          <li><EnlaceAcento href="#proyectos">Proyectos</EnlaceAcento></li>
           <li><EnlaceAcento href="#sobre-mi">Sobre mí</EnlaceAcento></li>
+          <li><EnlaceAcento href="#experiencia">Experiencia</EnlaceAcento></li>
+          <li><EnlaceAcento href="#tecnologias">Tecnologías</EnlaceAcento></li>
           <li><EnlaceAcento href="#educacion">Educación</EnlaceAcento></li>
           <li><EnlaceAcento href="#certificados">Certificados</EnlaceAcento></li>
-          <li><EnlaceAcento href="#experiencia">Experiencia</EnlaceAcento></li>
-          <li><EnlaceAcento href="#proyectos">Proyectos</EnlaceAcento></li>
-          <li><EnlaceAcento href="#tecnologias">Tecnologías</EnlaceAcento></li>
         </ul>
 
         <div className="flex items-center gap-2">
@@ -253,12 +253,12 @@ const Nav: React.FC = () => {
 
               <div className="overflow-y-auto px-3 py-3">
                 <div className="space-y-1.5">
+                  <EnlaceMovil href="#proyectos">Proyectos</EnlaceMovil>
                   <EnlaceMovil href="#sobre-mi">Sobre mí</EnlaceMovil>
+                  <EnlaceMovil href="#experiencia">Experiencia</EnlaceMovil>
+                  <EnlaceMovil href="#tecnologias">Tecnologías</EnlaceMovil>
                   <EnlaceMovil href="#educacion">Educación</EnlaceMovil>
                   <EnlaceMovil href="#certificados">Certificados</EnlaceMovil>
-                  <EnlaceMovil href="#experiencia">Experiencia</EnlaceMovil>
-                  <EnlaceMovil href="#proyectos">Proyectos</EnlaceMovil>
-                  <EnlaceMovil href="#tecnologias">Tecnologías</EnlaceMovil>
                   <EnlaceMovil href="#contacto">Contacto</EnlaceMovil>
                 </div>
 

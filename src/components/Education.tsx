@@ -31,8 +31,7 @@ const Educacion: React.FC = () => (
       </h2>
 
       <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
-        Estudios y formación que refuerzan mi perfil como desarrolladora y mi
-        capacidad para construir soluciones sólidas.
+      Formación técnica orientada al desarrollo backend y aplicaciones web, con base en .NET, APIs REST y arquitecturas modernas.
       </p>
     </div>
 

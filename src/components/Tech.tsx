@@ -246,12 +246,7 @@ const Tecnologias: React.FC = () => {
   ];
 
   const DESTACADAS: TechItem[] = [
-    {
-      Icono: SiVuedotjs,
-      etiqueta: "Vue.js",
-      ring: "ring-[#cfeadf]",
-      bg: "bg-[#f3fff7] text-[#42B883]",
-    },
+    
     {
       Icono: SiSpringboot,
       etiqueta: "Spring Boot",
@@ -259,10 +254,10 @@ const Tecnologias: React.FC = () => {
       bg: "bg-[#f8fff0] text-[#6DB33F]",
     },
     {
-      Icono: SiAngular,
-      etiqueta: "Angular",
-      ring: "ring-[#cfe8f0]",
-      bg: "bg-[#f4fbff] text-[#00758F]",
+      Icono: SiVuedotjs,
+      etiqueta: "Vue.js",
+      ring: "ring-[#cfeadf]",
+      bg: "bg-[#f3fff7] text-[#42B883]",
     },
     {
       Icono: SiNodedotjs,
@@ -270,12 +265,14 @@ const Tecnologias: React.FC = () => {
       ring: "ring-[#d5f0d1]",
       bg: "bg-[#f6fff6] text-[#339933]",
     },
+    
     {
-      Icono: SiReact,
-      etiqueta: "React",
-      ring: "ring-[#cfefff]",
-      bg: "bg-[#f0fcff] text-[#61DAFB]",
+      Icono: SiAngular,
+      etiqueta: "Angular",
+      ring: "ring-[#cfe8f0]",
+      bg: "bg-[#f4fbff] text-[#00758F]",
     },
+   
     {
       Icono: SiDotnet,
       etiqueta: ".NET",
@@ -283,17 +280,25 @@ const Tecnologias: React.FC = () => {
       bg: "bg-[#f8f6ff] text-[#512BD4]",
     },
     {
-      Icono: SiTypescript,
-      etiqueta: "TypeScript",
-      ring: "ring-[#d9e9ff]",
-      bg: "bg-[#f4f9ff] text-[#3178C6]",
+      Icono: SiReact,
+      etiqueta: "React",
+      ring: "ring-[#cfefff]",
+      bg: "bg-[#f0fcff] text-[#61DAFB]",
     },
+    
+    
     {
       Icono: SiMysql,
       etiqueta: "MySQL",
       ring: "ring-[#cfe9ff]",
       bg: "bg-[#f4fbff] text-[#2496ED]",
     },
+    {
+      Icono: SiTypescript,
+      etiqueta: "TypeScript",
+      ring: "ring-[#d9e9ff]",
+      bg: "bg-[#f4f9ff] text-[#3178C6]",
+    }
   ];
 
   const SOFT_SKILLS: TechItem[] = [
@@ -457,9 +462,7 @@ const Tecnologias: React.FC = () => {
           </h2>
 
           <p className="mt-6 max-w-2xl text-white/58 text-base sm:text-lg leading-8">
-            Mi stack refleja cómo trabajo: interfaces cuidadas, backend sólido,
-            bases de datos bien modeladas y herramientas que ayudan a construir,
-            mantener y escalar producto.
+          Mi stack refleja cómo trabajo: desarrollo backend sólido, diseño de APIs REST, modelado de bases de datos y frontend como complemento para construir aplicaciones completas.
           </p>
         </div>
 
@@ -486,7 +489,7 @@ const Tecnologias: React.FC = () => {
                       Núcleo técnico
                     </p>
                     <p className="mt-0.5 text-[10px] font-semibold text-white sm:text-[12px]">
-                      Frontend + Backend
+                        Backend + Frontend
                     </p>
                   </div>
                 </div>

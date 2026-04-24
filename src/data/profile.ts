@@ -294,9 +294,9 @@ export const getTechBadge = (tech: string): TechBadgeCfg | null =>
 // ─────────────────────────────────────────────────────────────
 export const PERFIL = {
   name: "María Rosete",
-  role: "Desarrolladora .NET con enfoque en backend, perfil full stack y experiencia en React.",
+  role: "Desarrolladora backend .NET / Spring Boot con perfil full stack.",
   about:
-    "Desarrollo APIs y aplicaciones web escalables y mantenibles, aplicando buenas prácticas y cuidando la calidad del código. Además, cuento con experiencia en tecnologías backend como Node.js y Spring Boot, y en frontend con Vue.js y Angular.",
+    "Me centro en el desarrollo de APIs REST y aplicaciones web, cuidando la claridad del código, la mantenibilidad y las buenas prácticas. También tengo experiencia en frontend con React, Vue.js y Angular, lo que me permite entender mejor el producto completo.",
   photo: portada,
   socials: {
     email: "mailto:marlarosete89@gmail.com",
@@ -476,7 +476,7 @@ export const CERTS = CERTIFICADOS;
 export const EXPERIENCIA = [
   {
     company: "Clarcat Cantábrico S.L. Gijón",
-    role: "Full Stack ASP.NET Core (.NET 9) + React (Vite + Tailwind CSS)",
+    role: "Desarrollo backend con .NET / ASP.NET Core + React",
     period: "mar. 2025 – jun. 2025",
     techs: [
       ".NET 9",
@@ -489,18 +489,18 @@ export const EXPERIENCIA = [
       "Git",
     ],
     points: [
-      "Backend: Desarrollé y optimicé una API REST en .NET 9 / ASP.NET Core, asegurando escalabilidad y mantenibilidad del sistema.",
-      "Frontend: Implementé interfaces modernas y responsive con React, Vite y Tailwind CSS, mejorando la usabilidad y la experiencia de usuario."
+      "Backend: Diseñé, desarrollé y optimicé una API REST en .NET 9 / ASP.NET Core, asegurando escalabilidad, mantenibilidad y buenas prácticas.",
+      "Frontend: Implementé interfaces modernas y responsive con React, Vite y Tailwind CSS, mejorando la usabilidad y la experiencia de usuario.",
     ],
   },
   {
     company: "Ticmedia Soluciones Profesionales, S.L. Gijón",
-    role: "Full Stack Node.js + Vue.js",
+    role: "Desarrollo backend con Node.js + Vue.js",
     period: "mar. 2024 – jun. 2024",
     techs: ["Node.js", "Express", "JWT", "Vue.js", "Quasar", "MongoDB", "Mongoose", "GitHub"],
     points: [
-      "Backend: Desarrollé un backend con Node.js + Express.js, implementando API REST con autenticación JWT para un sistema de gestión interna.",
-      "Frontend: Construí una interfaz dinámica y modular con Vue.js + Quasar Framework, optimizando la experiencia del usuario y mejorando la mantenibilidad del código.",
+      "Backend: Desarrollé una API REST con Node.js y Express, implementando autenticación JWT para un sistema de gestión interna.",
+      "Frontend: Construí una interfaz dinámica y modular con Vue.js y Quasar Framework, optimizando la experiencia de usuario y mejorando la mantenibilidad del código.",
     ],
   },
 ];
@@ -511,23 +511,11 @@ export const EXPERIENCE = EXPERIENCIA;
 // ─────────────────────────────────────────────────────────────
 export const PROYECTOS: Proyecto[] = [
   {
-    title: "Asgard Gym – App móvil para gimnasios",
-    banner: asgard,
-    repo: "https://github.com/mariarosete/asgardGym",
-    description:
-      "Asgard Gym es una aplicación Android desarrollada para mejorar la experiencia de gestión en centros deportivos. Permite a los usuarios consultar y reservar actividades fácilmente, mientras el personal puede gestionar usuarios y actividades de forma eficiente.",
-    tech: ["Kotlin", "SQLite", "Material Design"],
-    fit: "contain",
-    position: "center",
-    award: "Mención honorífica · TFG DAM",
-    demo: asgardGym,
-  },
-  {
     title: "SkillTech – Plataforma web educativa",
     banner: skilltech,
     repo: "https://github.com/mariarosete/skillTech",
     description:
-      "SkillTech es una plataforma web desarrollada para la gestión de cursos y recursos educativos, dirigida a estudiantes y profesionales de informática. Brinda una experiencia de aprendizaje personalizada y acceso centralizado a materiales educativos.",
+    "Plataforma web educativa con backend en Spring Boot y API REST para la gestión de cursos, usuarios e inscripciones. Incluye autenticación con JWT, control de acceso por roles y persistencia de datos con MySQL.",
     tech: ["Java", "Spring Boot", "MySQL", "JWT", "JS/HTML/CSS"],
     fit: "contain",
     position: "center",
@@ -535,88 +523,100 @@ export const PROYECTOS: Proyecto[] = [
     demo: skillTechVideo,
   },
   {
-    title: "Pokedex – Aplicación web Angular",
-    banner: pokedexBanner,
-    repo: "https://github.com/mariarosete/pokedex",
+    title: "Asgard Gym – App móvil para gimnasios",
+    banner: asgard,
+    repo: "https://github.com/mariarosete/asgardGym",
     description:
-      "Aplicación desarrollada durante una formación especializada en Angular, enfocada en el consumo de APIs y la gestión de estado con NgRx. Los datos se obtienen en tiempo real desde la API pública PokeAPI.",
-    tech: ["Angular", "NgRx", "RxJS", "Angular Material", "TypeScript"],
+      "Aplicación Android en Kotlin para la gestión de centros deportivos. Incluye sistema de reservas, gestión de usuarios y horarios, persistencia con SQLite y diseño con Material Design.",
+    tech: ["Kotlin", "SQLite", "Material Design"],
     fit: "contain",
     position: "center",
-    demo: pokedexVideo,
+    award: "Mención honorífica · TFG DAM",
+    demo: asgardGym,
   },
   {
     title: "Servidor de Archivos – Cliente Android + Servidor TCP",
     banner: servidor,
     repo: "https://github.com/mariarosete/servidorArchivos",
     description:
-      "Aplicación de gestión de archivos en red local desarrollada con una interfaz Android moderna en Kotlin y un servidor TCP en Java. Permite subir, descargar y visualizar archivos desde un dispositivo móvil conectado a la misma red.",
+      "Aplicación cliente-servidor con sockets TCP en Java. Incluye cliente Android en Kotlin y servidor que gestiona conexiones y transferencia de archivos en red local.",
     tech: ["Kotlin", "Java", "Sockets TCP"],
     fit: "contain",
     position: "center",
     demo: servidorVideo,
   },
   {
-    title: "Portfolio – React + Vite + TailwindCSS",
-    banner: portafolio,
-    repo: "https://github.com/mariarosete/portafolio",
-    description:
-      "Portfolio personal con React + Vite y TailwindCSS. Diseño moderno, animaciones con Framer Motion, responsive completo y sección de contacto funcional con validación.",
-    tech: ["React", "Vite", "TailwindCSS", "TypeScript", "Framer Motion"],
-    fit: "contain",
-    position: "center"
-  },
-  {
-    title: "Agenda de Contactos – Node.js + JavaScript + HTML + CSS",
+    title: "Agenda de Contactos – Node.js + JavaScript",
     banner: agenda,
     repo: "https://github.com/mariarosete/agenda-contactos",
     description:
-      "Agenda web de contactos con Node.js (backend) y JavaScript (frontend). Incluye CRUD con modales, ordenación, búsqueda, favoritos, paginación en cliente y gráficos con Chart.js. Proyecto 100% sin frameworks CSS, accesible y con .env de ejemplo.",
+      "Aplicación web con backend en Node.js que implementa un sistema CRUD de contactos. Incluye búsqueda, paginación, gestión de favoritos y visualización de datos.",
     tech: ["Node.js", "JavaScript", "HTML5", "CSS3", "Chart.js"],
     fit: "contain",
     position: "center",
     demo: agendaVideo,
   },
   {
-    title: "Pastelería Creativa – Aplicación de escritorio en Java Swing",
-    banner: pasteleria,
-    repo: "https://github.com/mariarosete/pasteleriaCreativa",
+    title: "Pokedex – Aplicación web Angular",
+    banner: pokedexBanner,
+    repo: "https://github.com/mariarosete/pokedex",
     description:
-      "Aplicación de escritorio desarrollada en Java Swing para crear y gestionar recetas de repostería. Permite definir postres, añadir ingredientes, guardar y cargar recetas desde archivos de texto, personalizar colores y acceder a una ayuda integrada con JavaHelp.",
-    tech: ["Java", "Swing", "JavaHelp"],
+      "Aplicación en Angular centrada en consumo de APIs y gestión de estado con NgRx, obteniendo datos en tiempo real desde PokeAPI.",
+    tech: ["Angular", "NgRx", "RxJS", "Angular Material", "TypeScript"],
     fit: "contain",
     position: "center",
-    demo: pasteleriaVideo,
+    demo: pokedexVideo,
   },
   {
-    title: "Pastelería Creativa – FlowDocument + DataGrid (WPF)",
+    title: "Pastelería Creativa – WPF (.NET)",
     banner: flowDocument,
     repo: "https://github.com/mariarosete/pasteleria",
     description:
-      "Proyecto en WPF (C#) orientado al mundo de la pastelería creativa. Incluye un FlowDocument interactivo con secciones formateadas e imágenes, y un módulo de acceso a datos con DataGrid y operaciones CRUD conectado a una base de datos Microsoft Access (recetas.accdb).",
-    tech: ["C#", "WPF", ".NET", "XAML", "FlowDocument", "DataGrid", "Microsoft Access"],
+      "Aplicación en C# con WPF que incluye interfaz avanzada con FlowDocument y operaciones CRUD mediante DataGrid conectado a base de datos.",
+    tech: ["C#", "WPF", ".NET", "XAML", "DataGrid"],
     fit: "contain",
     position: "center",
     demo: flowDocumentVideo,
   },
   {
-    title: "¿Quién es este personaje de Disney? – Drag & Drop Game",
+    title: "Pastelería Creativa – Java Swing",
+    banner: pasteleria,
+    repo: "https://github.com/mariarosete/pasteleriaCreativa",
+    description:
+      "Aplicación de escritorio en Java Swing para gestión de recetas con almacenamiento en archivos y personalización de interfaz.",
+    tech: ["Java", "Swing"],
+    fit: "contain",
+    position: "center",
+    demo: pasteleriaVideo,
+  },
+  {
+    title: "Portfolio – React + Vite",
+    banner: portafolio,
+    repo: "https://github.com/mariarosete/portafolio",
+    description:
+      "Portfolio personal con React y Vite. Diseño responsive, animaciones y formulario de contacto funcional.",
+    tech: ["React", "Vite", "TailwindCSS", "TypeScript"],
+    fit: "contain",
+    position: "center",
+  },
+  {
+    title: "Disney Drag & Drop Game",
     banner: disney,
     repo: "https://github.com/mariarosete/disney-drag-drop",
     description:
-      "Proyecto frontend desarrollado con HTML, CSS y JavaScript (Vanilla). Consiste en un juego interactivo de Drag & Drop donde el usuario debe asociar correctamente personajes de Disney con sus nombres, con validación visual inmediata, lógica de juego, carga dinámica de datos desde JSON y una sección informativa con fichas animadas de personajes.",
-    tech: ["HTML", "CSS", "JavaScript", "Drag & Drop API", "JSON"],
+      "Juego interactivo con HTML, CSS y JavaScript que utiliza Drag & Drop, validación visual y carga dinámica de datos.",
+    tech: ["HTML", "CSS", "JavaScript"],
     fit: "cover",
     position: "center",
     demo: disneyVideo,
   },
   {
-    title: "DigiDraw – Pizarra interactiva (Canvas)",
+    title: "DigiDraw – Canvas App",
     banner: pizarra,
     repo: "https://github.com/mariarosete/digidraw-pizarra",
     description:
-      "Proyecto frontend desarrollado con HTML, CSS y JavaScript (Vanilla) que simula una pizarra digital en canvas. Permite dibujar a mano alzada, cambiar color y grosor del rotulador, usar goma de borrar, limpiar el lienzo, insertar imágenes desde el equipo y añadir texto directamente sobre la pizarra.",
-    tech: ["HTML", "CSS", "JavaScript", "Canvas API", "FileReader"],
+      "Aplicación de dibujo en canvas con JavaScript que permite trazo libre, borrado, inserción de imágenes y texto.",
+    tech: ["HTML", "CSS", "JavaScript", "Canvas API"],
     fit: "cover",
     position: "center",
     demo: pizarraVideo,

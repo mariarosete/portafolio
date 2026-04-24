@@ -32,11 +32,10 @@ const Contacto: React.FC = () => (
         </h2>
 
         <p className="mt-6 max-w-xl text-white/58 text-base sm:text-lg leading-8">
-          Estoy abierta a oportunidades, colaboraciones y proyectos donde pueda
-          aportar valor desde desarrollo frontend, backend o producto digital.
+        Estoy abierta a oportunidades y proyectos donde aportar valor desde el desarrollo backend y APIs, complementando con frontend para construir aplicaciones completas.
         </p>
 
-        {/* Bloque destacado */}
+        { }
         <div className="mt-8 rounded-[28px] p-[1px] bg-gradient-to-br from-rose-500/16 via-fuchsia-500/8 to-amber-300/8 shadow-[0_16px_55px_-30px_rgba(0,0,0,0.65)]">
           <div className="rounded-[28px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl p-5 sm:p-6">
             <p className="text-[11px] uppercase tracking-[0.28em] text-rose-400">

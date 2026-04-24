@@ -33,8 +33,7 @@ const Proyectos: React.FC = () => {
         </h2>
 
         <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
-          Una selección de proyectos donde combino desarrollo, diseño funcional
-          y enfoque orientado a producto.
+        Proyectos enfocados en backend y APIs REST, con desarrollo frontend para construir aplicaciones web completas.
         </p>
       </div>
 

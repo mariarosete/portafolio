@@ -38,8 +38,7 @@ const Experiencia: React.FC = () => {
         </h2>
 
         <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
-          Experiencia aplicada en entornos reales, con foco en desarrollo,
-          producto y mejora continua.
+        Experiencia en entornos reales, centrada en desarrollo backend, APIs REST y construcción de aplicaciones web mantenibles.
         </p>
       </div>
 

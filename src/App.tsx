@@ -106,8 +106,8 @@ export default function App() {
   const HIGHLIGHTS: Highlight[] = [
     {
       icon: <Code2 className="h-5 w-5" />,
-      title: "Full Stack",
-      text: "Desarrollo aplicaciones full stack con .NET y React, con especial enfoque en backend y APIs escalables.",
+      title: "Backend con visión full stack",
+      text: "Desarrollo aplicaciones web con .NET y React, con especial enfoque en backend, APIs REST y soluciones escalables.",
     },
     {
       icon: <Briefcase className="h-5 w-5" />,
@@ -141,6 +141,8 @@ export default function App() {
             <div className="absolute right-[-80px] top-[220px] h-[260px] w-[260px] rounded-full bg-fuchsia-500/10 blur-[130px]" />
           </div>
 
+          <Projects />
+
           {/* SOBRE MÍ */}
           <section
             id="sobre-mi"
@@ -160,12 +162,11 @@ export default function App() {
               </h2>
 
               <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
-              Desarrollo de aplicaciones web con foco en backend, APIs y código limpio.
+                Desarrollo de aplicaciones web con foco en backend, APIs y código limpio.
               </p>
             </div>
 
             <div className="mt-10 md:mt-12 grid gap-8 xl:grid-cols-[1.25fr_0.75fr] xl:items-stretch">
-              {/* COLUMNA IZQUIERDA */}
               <div className="h-full rounded-[30px] p-[1px] bg-gradient-to-br from-rose-500/25 via-fuchsia-500/10 to-amber-300/15 shadow-[0_20px_80px_-35px_rgba(0,0,0,0.55)]">
                 <div className="h-full rounded-[30px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] backdrop-blur-xl p-6 sm:p-8 md:p-10 flex flex-col">
                   <div className="max-w-3xl">
@@ -182,18 +183,17 @@ export default function App() {
 
                     <div className="mt-6 space-y-4 text-[15px] sm:text-base leading-8 text-white/72">
                       <p>
-                        Soy María Rosete, desarrolladora .NET especializada en{" "}
-                        <strong className="text-white font-semibold">backend</strong> y{" "}
-                        <strong className="text-white font-semibold">desarrollo de APIs</strong>.
+                        Soy María Rosete, desarrolladora backend con .NET, especializada en{" "}
+                        <strong className="text-white font-semibold">APIs REST</strong> y{" "}
+                        <strong className="text-white font-semibold">aplicaciones web</strong>.
                       </p>
 
                       <p>
-                      Desarrollo APIs REST e interfaces web modernas, con especial atención a la claridad del código, las buenas prácticas y la mantenibilidad. Además, cuento con experiencia en React y en otras tecnologías como Node.js, Spring Boot, Vue.js, MySQL y Git.
+                        Desarrollo APIs REST e interfaces web modernas, con especial atención a la claridad del código, las buenas prácticas y la mantenibilidad. Además, cuento con experiencia en React y en otras tecnologías como Node.js, Spring Boot, Vue.js, MySQL y Git.
                       </p>
                     </div>
                   </div>
 
-                  {/* Tecnologías en grid */}
                   <div className="mt-8">
                     <h4 className="text-sm font-semibold uppercase tracking-[0.22em] text-white/45">
                       Tecnologías principales
@@ -228,7 +228,6 @@ export default function App() {
                 </div>
               </div>
 
-              {/* COLUMNA DERECHA */}
               <div className="h-full rounded-[30px] p-[1px] bg-gradient-to-br from-white/10 via-white/5 to-transparent shadow-[0_20px_80px_-35px_rgba(0,0,0,0.7)]">
                 <div className="h-full rounded-[30px] border border-white/10 bg-[#0b0818]/95 backdrop-blur-xl p-5 sm:p-6 flex flex-col">
                   <div className="grid gap-4">
@@ -268,11 +267,10 @@ export default function App() {
             </div>
           </section>
 
+          <Experience />
+          <Tech />
           <Education />
           <Certificates />
-          <Experience />
-          <Projects />
-          <Tech />
           <Contact />
         </div>
       </main>
