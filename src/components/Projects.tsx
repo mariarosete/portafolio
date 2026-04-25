@@ -68,7 +68,7 @@ const Proyectos: React.FC = () => {
       </div>
       {/* PROYECTOS PRINCIPALES */}
       <div className="mt-12 md:mt-14">
-        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 px-1 lg:hidden [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 pr-6 lg:hidden [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {featured.map((proyecto) => {
             const key = proyecto.title;
             const isOpen = !!open[key];
