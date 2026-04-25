@@ -66,10 +66,9 @@ const Proyectos: React.FC = () => {
           para construir aplicaciones web completas.
         </p>
       </div>
-
       {/* PROYECTOS PRINCIPALES */}
       <div className="mt-12 md:mt-14">
-        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 lg:hidden [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 px-1 lg:hidden [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {featured.map((proyecto) => {
             const key = proyecto.title;
             const isOpen = !!open[key];
@@ -82,7 +81,7 @@ const Proyectos: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.4 }}
-                className="group min-w-[88%] snap-center"
+                className="group min-w-[86%] snap-start"
               >
                 <div className="h-full rounded-[26px] p-[1px] bg-gradient-to-br from-rose-500/20 via-fuchsia-500/10 to-amber-300/10 shadow-[0_18px_60px_-30px_rgba(0,0,0,0.65)]">
                   <div className="rounded-[26px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl overflow-hidden h-full">
@@ -181,6 +180,10 @@ const Proyectos: React.FC = () => {
               </motion.article>
             );
           })}
+        </div>
+        <div className="mt-3 flex items-center justify-end gap-1.5 pr-2 text-xs font-medium text-white/45 lg:hidden">
+          <span>Desliza</span>
+          <span className="animate-pulse">→</span>
         </div>
 
         {/* DESKTOP */}
