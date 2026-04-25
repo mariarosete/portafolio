@@ -81,7 +81,7 @@ const Proyectos: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.4 }}
-                className="group min-w-[86%] snap-start"
+                className="group min-w-[82%] snap-start"
               >
                 <div className="h-full rounded-[26px] p-[1px] bg-gradient-to-br from-rose-500/20 via-fuchsia-500/10 to-amber-300/10 shadow-[0_18px_60px_-30px_rgba(0,0,0,0.65)]">
                   <div className="rounded-[26px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl overflow-hidden h-full">
