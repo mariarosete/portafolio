@@ -615,7 +615,7 @@ export const PROYECTOS: Proyecto[] = [
     repo: "https://github.com/mariarosete/disney-drag-drop",
     description:
       "Aplicación web interactiva desarrollada con JavaScript que implementa funcionalidades de Drag & Drop, validación visual y manipulación dinámica del DOM.",
-      tech: ["JavaScript", "HTML","Desktop-first"],
+      tech: ["JavaScript", "HTML","CSS"],
     fit: "cover",
     position: "center",
     demo: "https://disney-drag-drop.vercel.app/",
@@ -626,7 +626,7 @@ export const PROYECTOS: Proyecto[] = [
     repo: "https://github.com/mariarosete/digidraw-pizarra",
     description:
       "Aplicación web de dibujo desarrollada con Canvas API y JavaScript, que implementa funcionalidades de trazo libre, borrado, inserción de imágenes y texto mediante manipulación directa del lienzo.",
-    tech: ["JavaScript", "HTML", "Desktop-first"],
+    tech: ["JavaScript", "HTML", "CSS"],
     fit: "cover",
     position: "center",
     demo: "https://digidraw-app.vercel.app/",
