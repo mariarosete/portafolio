@@ -300,7 +300,7 @@ export const PERFIL = {
   name: "María Rosete",
   role: "Desarrolladora backend .NET / Spring Boot con perfil full stack.",
   about:
-    "Me centro en el desarrollo de APIs REST y aplicaciones web, cuidando la claridad del código, la mantenibilidad y las buenas prácticas. También tengo experiencia en frontend con React, Vue.js y Angular, lo que me permite entender mejor el producto completo.",
+    "Me centro en el desarrollo de APIs REST y aplicaciones web, cuidando la claridad del código, la mantenibilidad y las buenas prácticas. Además, tengo experiencia en frontend con React, Vue.js y Angular, lo que me permite tener una visión global del desarrollo de aplicaciones web.",
   photo: portada,
   socials: {
     email: "mailto:marlarosete89@gmail.com",
@@ -525,7 +525,7 @@ export const PROYECTOS: Proyecto[] = [
     position: "center",
     award: "Mención honorífica · TFG DAW",
     demo: skillTechVideo,
-    demoType: "video",
+    demoType: "live",
   },
   {
     title: "Asgard Gym – App móvil para gimnasios",

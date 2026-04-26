@@ -112,7 +112,7 @@ export default function App() {
     {
       icon: <Briefcase className="h-5 w-5" />,
       title: "Experiencia real",
-      text: "He trabajado en proyectos profesionales y académicos desarrollando APIs y aplicaciones web orientadas a producto y usuario.",
+      text: "He trabajado en proyectos profesionales y académicos desarrollando APIs y aplicaciones web en entornos reales.",
     },
     {
       icon: <BrainCircuit className="h-5 w-5" />,
@@ -155,14 +155,14 @@ export default function App() {
               </div>
 
               <h2 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-black leading-[0.95] tracking-tight">
-                <span className="text-white/70">Construyendo</span>
+                <span className="text-white/70">De ideas a</span>
                 <span className="block bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-600 bg-clip-text text-transparent">
-                  Soluciones Reales
+                  aplicaciones web funcionales
                 </span>
               </h2>
 
               <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
-                Desarrollo de aplicaciones web con foco en backend, APIs y código limpio.
+                Desarrollo aplicaciones web modernas, cuidando la claridad del código, la mantenibilidad y la experiencia del usuario.
               </p>
             </div>
 
@@ -175,9 +175,9 @@ export default function App() {
                     </span>
 
                     <h3 className="mt-5 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
-                      Desarrollo soluciones web modernas,
+                       Aplicaciones web 
                       <span className="block bg-gradient-to-r from-rose-400 via-pink-400 to-fuchsia-400 bg-clip-text text-transparent">
-                        claras y escalables
+                      con backend sólido y UX cuidada
                       </span>
                     </h3>
 

@@ -31,14 +31,14 @@ const Experiencia: React.FC = () => {
         </div>
 
         <h2 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-black leading-[0.95] tracking-tight">
-          <span className="text-white/80">Experiencia que</span>
+          <span className="text-white/80">Experiencia</span>
           <span className="block bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-600 bg-clip-text text-transparent">
-            aporta contexto real
+            en desarrollo web
           </span>
         </h2>
 
         <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
-        Experiencia en entornos reales, centrada en desarrollo backend, APIs REST y construcción de aplicaciones web mantenibles.
+          Desarrollo backend, APIs REST y aplicaciones web con foco en código limpio, mantenibilidad y buenas prácticas.
         </p>
       </div>
 

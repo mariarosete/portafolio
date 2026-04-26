@@ -75,7 +75,7 @@ const Tecnologias: React.FC = () => {
       ring: "ring-[#ffefb3]",
       bg: "bg-[#fffbed] text-[#C8A500]",
     },
-    
+
     {
       Icono: SiHtml5,
       etiqueta: "HTML5",
@@ -173,7 +173,7 @@ const Tecnologias: React.FC = () => {
       ring: "ring-[#d6ddfd]",
       bg: "bg-[#f5f7ff] text-[#4169E1]",
     },
-       
+
     {
       Icono: SiMongodb,
       etiqueta: "MongoDB",
@@ -246,7 +246,7 @@ const Tecnologias: React.FC = () => {
   ];
 
   const DESTACADAS: TechItem[] = [
-    
+
     {
       Icono: SiSpringboot,
       etiqueta: "Spring Boot",
@@ -265,14 +265,14 @@ const Tecnologias: React.FC = () => {
       ring: "ring-[#d5f0d1]",
       bg: "bg-[#f6fff6] text-[#339933]",
     },
-    
+
     {
       Icono: SiAngular,
       etiqueta: "Angular",
       ring: "ring-[#cfe8f0]",
       bg: "bg-[#f4fbff] text-[#00758F]",
     },
-   
+
     {
       Icono: SiDotnet,
       etiqueta: ".NET",
@@ -285,8 +285,8 @@ const Tecnologias: React.FC = () => {
       ring: "ring-[#cfefff]",
       bg: "bg-[#f0fcff] text-[#61DAFB]",
     },
-    
-    
+
+
     {
       Icono: SiMysql,
       etiqueta: "MySQL",
@@ -360,8 +360,8 @@ const Tecnologias: React.FC = () => {
           radarMobile
             ? "gap-1 px-1.5 py-1 text-[9px] font-medium sm:gap-2 sm:px-3 sm:py-1.5 sm:text-[12px]"
             : compact
-            ? "gap-2 px-2.5 py-1 text-[11px] font-medium"
-            : "gap-2 px-3 py-1.5 text-[12px] font-medium",
+              ? "gap-2 px-2.5 py-1 text-[11px] font-medium"
+              : "gap-2 px-3 py-1.5 text-[12px] font-medium",
           ring,
           bg,
         ].join(" ")}
@@ -373,8 +373,8 @@ const Tecnologias: React.FC = () => {
             radarMobile
               ? "h-4 w-4 sm:h-6 sm:w-6"
               : compact
-              ? "h-5 w-5"
-              : "h-6 w-6",
+                ? "h-5 w-5"
+                : "h-6 w-6",
           ].join(" ")}
         >
           <Icono
@@ -382,8 +382,8 @@ const Tecnologias: React.FC = () => {
               radarMobile
                 ? "h-2.5 w-2.5 sm:h-3.5 sm:w-3.5"
                 : compact
-                ? "h-3 w-3"
-                : "h-3.5 w-3.5"
+                  ? "h-3 w-3"
+                  : "h-3.5 w-3.5"
             }
           />
         </span>
@@ -455,14 +455,13 @@ const Tecnologias: React.FC = () => {
           </div>
 
           <h2 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-black leading-[0.95] tracking-tight">
-            <span className="text-white/82">Tecnología que</span>
+            <span className="text-white/82">Stack para crear</span>
             <span className="block bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-600 bg-clip-text text-transparent">
-              uso para construir
+              aplicaciones web
             </span>
           </h2>
-
-          <p className="mt-6 max-w-2xl text-white/58 text-base sm:text-lg leading-8">
-          Mi stack refleja cómo trabajo: desarrollo backend sólido, diseño de APIs REST, modelado de bases de datos y frontend como complemento para construir aplicaciones completas.
+          <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
+            Combino backend, APIs REST, bases de datos y frontend para desarrollar aplicaciones web claras, funcionales y mantenibles.
           </p>
         </div>
 
@@ -489,7 +488,7 @@ const Tecnologias: React.FC = () => {
                       Núcleo técnico
                     </p>
                     <p className="mt-0.5 text-[10px] font-semibold text-white sm:text-[12px]">
-                        Backend + Frontend
+                      Backend + Frontend
                     </p>
                   </div>
                 </div>

@@ -14,6 +14,28 @@ const Proyectos: React.FC = () => {
   const featured = items.slice(0, 2);
   const secondary = items.slice(2);
 
+  const GithubButton = ({ proyecto }: { proyecto: any }) => {
+    if (!proyecto.repo) return null;
+
+    return (
+      <a
+        href={proyecto.repo}
+        target="_blank"
+        rel="noreferrer"
+        className="
+          inline-flex items-center justify-center gap-2
+          rounded-2xl px-4 py-2.5
+          text-sm font-semibold text-white/90
+          border border-white/10 bg-white/5
+          transition hover:bg-white/10
+        "
+        aria-label={`Ver código de ${proyecto.title}`}
+      >
+        <Github className="w-4 h-4" />
+      </a>
+    );
+  };
+
   const DemoButton = ({ proyecto }: { proyecto: any }) => {
     if (!proyecto.demo) return null;
 
@@ -27,9 +49,10 @@ const Proyectos: React.FC = () => {
         className="
           inline-flex items-center justify-center gap-2
           rounded-2xl px-4 py-2.5
-          text-sm font-semibold text-white/90
-          border border-white/10 bg-white/5
-          transition hover:bg-white/10
+          text-sm font-semibold text-white
+          bg-gradient-to-r from-rose-500 to-fuchsia-600
+          shadow-[0_15px_40px_-12px_rgba(244,63,94,.45)]
+          transition hover:brightness-110
         "
       >
         {isVideo ? (
@@ -37,8 +60,7 @@ const Proyectos: React.FC = () => {
         ) : (
           <PlayCircle className="w-4 h-4" />
         )}
-
-        {isVideo ? "Demo vídeo" : "Demo"}
+        {isVideo ? "Ver vídeo" : "Probar aplicación"}
       </a>
     );
   };
@@ -55,17 +77,17 @@ const Proyectos: React.FC = () => {
         </div>
 
         <h2 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-black leading-[0.95] tracking-tight">
-          <span className="text-white/80">Ideas hechas</span>
+          <span className="text-white/80">Proyectos llevados</span>
           <span className="block bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-600 bg-clip-text text-transparent italic">
-            producto
+            a la práctica
           </span>
         </h2>
 
         <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
-          Proyectos enfocados en backend y APIs REST, con desarrollo frontend
-          para construir aplicaciones web completas.
+           Proyectos centrados en backend y APIs REST, conectados a frontend para crear aplicaciones web reales.
         </p>
       </div>
+
       {/* PROYECTOS PRINCIPALES */}
       <div className="mt-12 md:mt-14">
         <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 pr-6 lg:hidden [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -163,16 +185,8 @@ const Proyectos: React.FC = () => {
                       </ul>
 
                       <div className="mt-3.5 flex gap-2">
-                        <a
-                          href={proyecto.repo}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-rose-500 to-fuchsia-600 shadow-[0_15px_40px_-12px_rgba(244,63,94,.45)] transition hover:brightness-110"
-                        >
-                          <Github className="w-4 h-4" />
-                        </a>
-
                         <DemoButton proyecto={proyecto} />
+                        <GithubButton proyecto={proyecto} />
                       </div>
                     </div>
                   </div>
@@ -181,6 +195,7 @@ const Proyectos: React.FC = () => {
             );
           })}
         </div>
+
         <div className="mt-3 flex items-center justify-end gap-1.5 pr-2 text-xs font-medium text-white/45 lg:hidden">
           <span>Desliza</span>
           <span className="animate-pulse">→</span>
@@ -273,17 +288,9 @@ const Proyectos: React.FC = () => {
                         })}
                       </ul>
 
-                      <div className="mt-5 flex flex-wrap gap-3">
-                        <a
-                          href={proyecto.repo}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-rose-500 to-fuchsia-600 shadow-[0_15px_40px_-12px_rgba(244,63,94,.45)] transition hover:brightness-110"
-                        >
-                          <Github className="w-4 h-4" />
-                        </a>
-
+                      <div className="mt-3.5 flex gap-2">
                         <DemoButton proyecto={proyecto} />
+                        <GithubButton proyecto={proyecto} />
                       </div>
                     </div>
                   </div>
@@ -382,17 +389,9 @@ const Proyectos: React.FC = () => {
                       })}
                     </ul>
 
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      <a
-                        href={proyecto.repo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-rose-500 to-fuchsia-600 shadow-[0_15px_40px_-12px_rgba(244,63,94,.45)] transition hover:brightness-110"
-                      >
-                        <Github className="w-4 h-4" />
-                      </a>
-
+                    <div className="mt-3.5 flex gap-2">
                       <DemoButton proyecto={proyecto} />
+                      <GithubButton proyecto={proyecto} />
                     </div>
                   </div>
                 </div>

@@ -25,14 +25,14 @@ const Contacto: React.FC = () => (
         </div>
 
         <h2 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-black leading-[0.95] tracking-tight">
-          <span className="text-white/85">Hablemos de</span>
+          <span className="text-white/80">Disponible para</span>
           <span className="block bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-600 bg-clip-text text-transparent italic">
-            tu próximo paso
+            nuevos proyectos
           </span>
         </h2>
 
         <p className="mt-6 max-w-xl text-white/58 text-base sm:text-lg leading-8">
-        Estoy abierta a oportunidades y proyectos donde aportar valor desde el desarrollo backend y APIs, complementando con frontend para construir aplicaciones completas.
+          Estoy abierta a oportunidades y proyectos donde aportar valor desde el desarrollo backend y APIs, complementando con frontend para construir aplicaciones completas.
         </p>
 
         { }

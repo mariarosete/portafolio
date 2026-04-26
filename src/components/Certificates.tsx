@@ -29,7 +29,7 @@ const Certificados: React.FC = () => {
         </h2>
 
         <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
-        Formación complementaria orientada al desarrollo backend y aplicaciones web, con especial foco en .NET, APIs REST y tecnologías modernas.
+        Sigo formándome en backend y desarrollo web, ampliando mis conocimientos en .NET, APIs REST y distintas tecnologías.
         </p>
       </div>
 
