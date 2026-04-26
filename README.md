@@ -7,6 +7,25 @@ Cuenta con un diseño moderno, animaciones suaves y una interfaz completamente r
 
 ---
 
+## 🌐 Aplicación en funcionamiento
+
+Puedes ver el portfolio aquí:
+
+👉 https://mariarosete.vercel.app/
+
+📱💻 Diseño responsive, adaptado a móvil y escritorio.
+
+---
+
+## 📑 Tabla de contenidos
+
+- [🛠 Tecnologías utilizadas](#-tecnologías-utilizadas)
+- [🚀 Funcionalidades destacadas](#-funcionalidades-destacadas)
+- [✨ Aspectos destacados](#-aspectos-destacados)
+- [📩 Contacto](#-contacto)
+
+---
+
 ## 🛠 Tecnologías utilizadas
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -19,64 +38,21 @@ Cuenta con un diseño moderno, animaciones suaves y una interfaz completamente r
 
 ## 🚀 Funcionalidades destacadas
 
-- 🎨 **Diseño moderno y minimalista** con TailwindCSS.  
-- ⚡ **Renderizado ultrarrápido** gracias a Vite.  
-- 📱 **Diseño responsive** adaptable a móviles, tablets y escritorio.  
-- 🧭 Navegación fluida entre secciones con animaciones de Framer Motion.  
-- 📬 Sección de **contacto funcional** con validación de formulario y envío de mensajes.  
-- 🌐 Enlaces directos a redes profesionales (GitHub, LinkedIn, correo).  
+- 🎨 **Diseño moderno y cuidado** con TailwindCSS  
+- ⚡ **Renderizado rápido** gracias a Vite  
+- 📱 **Diseño responsive** adaptable a distintos dispositivos  
+- 🧭 Navegación fluida con animaciones de Framer Motion  
+- 📬 Sección de contacto funcional  
+- 🌐 Integración con proyectos reales desplegados  
 
 ---
 
-## 💻 Cómo ejecutar el proyecto
+## ✨ Aspectos destacados
 
-### ✅ Requisitos previos
-Antes de comenzar, asegúrate de tener instalado lo siguiente:
-
-- **Node.js 18 o superior** → [Descargar aquí](https://nodejs.org/)
-- **npm** (incluido con Node.js)
-
----
-
-### 🚀 Instrucciones de instalación
-
- 1. Clona este repositorio:
-
- ```bash
-   git clone https://github.com/mariarosete/portfolio.git
- ```
-
- 2. Acceder a la carpeta del proyecto
-
- ```bash
-   cd portafolio
- ```
-
- 3. Instalar dependencias
-
- ```bash
-   npm install
- ```
-
- 4. Ejecutar en modo desarrollo
-
- ```bash
-   npm run dev
- ```
-
-Luego abre en tu navegador:  
-
-👉 [http://localhost:5173](http://localhost:5173)
-
----
-
-
-## 💻  Despliegue en línea
-
-Proyecto desplegado en **Vercel**:  
-**https://mariarosete.vercel.app/**
-
-> Cada `git push` a `main` actualiza automáticamente el sitio en producción.
+- Portfolio completo enfocado a desarrollo **backend y full stack**  
+- Organización clara de proyectos, experiencia y stack tecnológico  
+- Diseño visual coherente y profesional  
+- Preparado para mostrar proyectos reales en producción  
 
 ---
 
@@ -92,15 +68,8 @@ Proyecto desplegado en **Vercel**:
   <a href="https://github.com/mariarosete">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="https://mariarosete.vercel.app/">
-    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>
 </p>
 
 ---
 
-<p align="center">Desarrollado con ❤️ por <b>María Rosete</b> </p>
-
-
-
-
-
+<p align="center">Desarrollado con ❤️ por <b>María Rosete</b></p>
