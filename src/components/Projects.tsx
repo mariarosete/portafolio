@@ -143,16 +143,16 @@ const Proyectos: React.FC = () => {
                         </button>
                       </div>
 
-                      <ul className="mt-3 flex flex-wrap gap-1.5">
+                      <ul className="mt-3 flex flex-nowrap items-center gap-1 overflow-hidden">
                         {proyecto.tech.slice(0, 3).map((tecno) => {
                           const badge = getTechBadge(tecno);
                           const Icon = badge?.Icono;
 
                           return (
-                            <li key={tecno}>
+                            <li key={tecno} className="min-w-0">
                               <span
                                 className={[
-                                  "inline-flex items-center gap-1.5 rounded-full px-2 py-[3px] text-[9px] font-medium ring-1 whitespace-nowrap",
+                                  "inline-flex items-center gap-1 rounded-full px-1.5 py-[3px] text-[8px] font-medium ring-1 whitespace-nowrap",
                                   badge
                                     ? `${badge.ring} ${badge.bg}`
                                     : "text-slate-700 bg-gradient-to-r from-rose-50 to-amber-50 ring-rose-200/60",
@@ -160,11 +160,11 @@ const Proyectos: React.FC = () => {
                                 title={tecno}
                               >
                                 {Icon && (
-                                  <span className="inline-flex items-center justify-center h-4 w-4 rounded-full bg-white/70 ring-1 ring-black/5">
-                                    <Icon className="h-2.5 w-2.5" />
+                                  <span className="inline-flex items-center justify-center h-3.5 w-3.5 rounded-full bg-white/70 ring-1 ring-black/5">
+                                    <Icon className="h-2 w-2" />
                                   </span>
                                 )}
-                                {tecno === "Material Design" ? "MDesign" : tecno}
+                                {tecno === "Spring Boot" ? "Spring" : tecno}
                               </span>
                             </li>
                           );
