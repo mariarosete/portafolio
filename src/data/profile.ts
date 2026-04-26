@@ -10,7 +10,6 @@ import disney from "../assets/disney.jpg";
 import pizarra from "../assets/pizarra.jpg";
 import portada from "../assets/MRS.png";
 import skillTechVideo from "../assets/skillTech.mp4";
-import pokedexVideo from "../assets/Pokedex.mp4";
 import agendaVideo from "../assets/agenda.mp4";
 import pasteleriaVideo from "../assets/pasteleria.mp4";
 import asgardGym from "../assets/AsgardGym.mp4";
