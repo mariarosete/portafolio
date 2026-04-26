@@ -14,29 +14,21 @@ const Proyectos: React.FC = () => {
   const featured = items.slice(0, 2);
   const secondary = items.slice(2);
 
-  const GithubButton = ({ proyecto }: { proyecto: any }) => {
-    if (!proyecto.repo) return null;
+  const GithubButton = ({ proyecto, compact = false }: { proyecto: any; compact?: boolean }) => (
+    <a
+      href={proyecto.repo}
+      target="_blank"
+      rel="noreferrer"
+      className={[
+        "inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white/90 transition hover:bg-white/10",
+        compact ? "h-10 w-10" : "h-11 w-11",
+      ].join(" ")}
+    >
+      <Github className={compact ? "w-4 h-4" : "w-5 h-5"} />
+    </a>
+  );
 
-    return (
-      <a
-        href={proyecto.repo}
-        target="_blank"
-        rel="noreferrer"
-        className="
-          inline-flex items-center justify-center gap-2
-          rounded-2xl px-4 py-2.5
-          text-sm font-semibold text-white/90
-          border border-white/10 bg-white/5
-          transition hover:bg-white/10
-        "
-        aria-label={`Ver código de ${proyecto.title}`}
-      >
-        <Github className="w-4 h-4" />
-      </a>
-    );
-  };
-
-  const DemoButton = ({ proyecto }: { proyecto: any }) => {
+  const DemoButton = ({ proyecto, compact = false }: { proyecto: any; compact?: boolean }) => {
     if (!proyecto.demo) return null;
 
     const isVideo = proyecto.demoType === "video";
@@ -46,25 +38,16 @@ const Proyectos: React.FC = () => {
         href={proyecto.demo}
         target="_blank"
         rel="noreferrer"
-        className="
-          inline-flex items-center justify-center gap-2
-          rounded-2xl px-4 py-2.5
-          text-sm font-semibold text-white
-          bg-gradient-to-r from-rose-500 to-fuchsia-600
-          shadow-[0_15px_40px_-12px_rgba(244,63,94,.45)]
-          transition hover:brightness-110
-        "
+        className={[
+          "inline-flex items-center justify-center gap-2 rounded-2xl font-semibold text-white bg-gradient-to-r from-rose-500 to-fuchsia-600 shadow-[0_15px_40px_-12px_rgba(244,63,94,.45)] transition hover:brightness-110",
+          compact ? "px-3 py-2 text-xs" : "px-4 py-2.5 text-sm",
+        ].join(" ")}
       >
-        {isVideo ? (
-          <Video className="w-4 h-4" />
-        ) : (
-          <PlayCircle className="w-4 h-4" />
-        )}
-        {isVideo ? "Ver vídeo" : "Probar aplicación"}
+        {isVideo ? <Video className="w-4 h-4" /> : <PlayCircle className="w-4 h-4" />}
+        {isVideo ? "Ver vídeo" : "Probar"}
       </a>
     );
   };
-
   return (
     <section
       id="proyectos"
@@ -146,11 +129,10 @@ const Proyectos: React.FC = () => {
                         {proyecto.description}
                       </p>
                       {proyecto.note && (
-                        <p className="mt-3 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs sm:text-sm text-white/65">
+                        <p className="mt-2 inline-flex max-w-full items-center rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] leading-tight text-white/60">
                           {proyecto.note}
                         </p>
                       )}
-
                       <div className="mt-1.5">
                         <button
                           type="button"
@@ -189,9 +171,9 @@ const Proyectos: React.FC = () => {
                         })}
                       </ul>
 
-                      <div className="mt-3.5 flex gap-2">
-                        <DemoButton proyecto={proyecto} />
-                        <GithubButton proyecto={proyecto} />
+                      <div className="mt-3 flex items-center gap-2">
+                        <DemoButton proyecto={proyecto} compact />
+                        <GithubButton proyecto={proyecto} compact />
                       </div>
                     </div>
                   </div>
