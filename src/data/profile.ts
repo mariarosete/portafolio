@@ -10,13 +10,12 @@ import disney from "../assets/disney.jpg";
 import pizarra from "../assets/pizarra.jpg";
 import portada from "../assets/MRS.png";
 import skillTechVideo from "../assets/skillTech.mp4";
-import agendaVideo from "../assets/agenda.mp4";
 import pasteleriaVideo from "../assets/pasteleria.mp4";
 import asgardGym from "../assets/AsgardGym.mp4";
 import servidorVideo from "../assets/Servidor.mp4";
 import flowDocumentVideo from "../assets/flowDocument.mp4";
 import type { IconType } from "react-icons";
-import { FaDesktop } from "react-icons/fa";
+
 
 import {
   SiDotnet,
@@ -60,6 +59,7 @@ export type Project = {
   award?: string;
   demo?: string;
   demoType?: "live" | "video";
+  note?: string;
 };
 export type Proyecto = Project;
 
@@ -160,12 +160,8 @@ export const TECH_BADGE_MAP: Record<string, TechBadgeCfg> = {
     Icono: SiGithub,
     ring: "ring-slate-200",
     bg: "bg-white text-[#181717]",
-  },
-  "Desktop-first": {
-  Icono: FaDesktop,
-  ring: "ring-slate-300",
-  bg: "bg-slate-100 text-slate-700",
-},
+  }
+  
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -526,6 +522,7 @@ export const PROYECTOS: Proyecto[] = [
     award: "Mención honorífica · TFG DAW",
     demo: skillTechVideo,
     demoType: "live",
+    note: "🖥️ Optimizada para versión escritorio",
   },
   {
     title: "Asgard Gym – App móvil para gimnasios",
@@ -561,8 +558,9 @@ export const PROYECTOS: Proyecto[] = [
     tech: ["Node.js", "MySQL","JavaScript", "HTML5", "CSS3"],
     fit: "contain",
     position: "center",
-    demo: agendaVideo,
-    demoType: "video",
+    demo: "https://agenda-contactos-smid.onrender.com/",
+    demoType: "live",
+    note: "🖥️ Optimizada para versión escritorio",
   },
   {
     title: "Pokedex – Aplicación web Angular",

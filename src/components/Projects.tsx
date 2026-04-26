@@ -84,7 +84,7 @@ const Proyectos: React.FC = () => {
         </h2>
 
         <p className="mt-6 max-w-2xl text-white/55 text-base sm:text-lg leading-8">
-           Proyectos centrados en backend y APIs REST, conectados a frontend para crear aplicaciones web reales.
+          Proyectos centrados en backend y APIs REST, conectados a frontend para crear aplicaciones web reales.
         </p>
       </div>
 
@@ -145,6 +145,11 @@ const Proyectos: React.FC = () => {
                       >
                         {proyecto.description}
                       </p>
+                      {proyecto.note && (
+                        <p className="mt-3 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs sm:text-sm text-white/65">
+                          {proyecto.note}
+                        </p>
+                      )}
 
                       <div className="mt-1.5">
                         <button
@@ -259,6 +264,12 @@ const Proyectos: React.FC = () => {
                       >
                         {proyecto.description}
                       </p>
+                      {proyecto.note && (
+                        <p className="mt-3 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs sm:text-sm text-white/65">
+                          {proyecto.note}
+                        </p>
+                      )}
+
 
                       <ul className="mt-4 flex flex-wrap gap-2">
                         {proyecto.tech.slice(0, 5).map((tecno) => {
@@ -350,6 +361,11 @@ const Proyectos: React.FC = () => {
                     >
                       {proyecto.description}
                     </p>
+                    {proyecto.note && (
+                      <p className="mt-3 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs sm:text-sm text-white/65">
+                        {proyecto.note}
+                      </p>
+                    )}
 
                     <div className="mt-2 sm:hidden">
                       <button
