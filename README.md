@@ -2,7 +2,7 @@
 
 ![Banner Portafolio](https://github.com/mariarosete/portafolio/blob/main/banner.png?raw=true)
 
-Portfolio personal desarrollado con **React**, **Vite** y **TailwindCSS**, donde presento mis proyectos, experiencia y stack tecnológico como desarrolladora backend y full stack.
+Portfolio personal desarrollado con **React**, **Vite** y **TailwindCSS**, donde presento mis proyectos, experiencia y stack tecnológico como desarrolladora backend y full stack.<br>
 Diseñado para mostrar proyectos reales de forma clara, visual y profesional.
 
 ---
