@@ -2,8 +2,8 @@
 
 ![Banner Portafolio](https://github.com/mariarosete/portafolio/blob/main/banner.png?raw=true)
 
-**Portfolio personal** desarrollado con **React**, **Vite** y **TailwindCSS**, donde presento mis proyectos, experiencia y habilidades como desarrolladora web.  
-Cuenta con un diseño moderno, animaciones suaves y una interfaz completamente responsive.
+Portfolio personal desarrollado con **React**, **Vite** y **TailwindCSS**, donde presento mis proyectos, experiencia y stack tecnológico como desarrolladora backend y full stack.
+Diseñado para mostrar proyectos reales de forma clara, visual y profesional.
 
 ---
 
@@ -14,15 +14,6 @@ Puedes ver el portfolio aquí:
 👉 https://mariarosete.vercel.app/
 
 📱💻 Diseño responsive, adaptado a móvil y escritorio.
-
----
-
-## 📑 Tabla de contenidos
-
-- [🛠 Tecnologías utilizadas](#-tecnologías-utilizadas)
-- [🚀 Funcionalidades destacadas](#-funcionalidades-destacadas)
-- [✨ Aspectos destacados](#-aspectos-destacados)
-- [📩 Contacto](#-contacto)
 
 ---
 
@@ -42,7 +33,7 @@ Puedes ver el portfolio aquí:
 - ⚡ **Renderizado rápido** gracias a Vite  
 - 📱 **Diseño responsive** adaptable a distintos dispositivos  
 - 🧭 Navegación fluida con animaciones de Framer Motion  
-- 📬 Sección de contacto funcional  
+- 📬 Formulario de contacto funcional
 - 🌐 Integración con proyectos reales desplegados  
 
 ---
