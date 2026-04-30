@@ -5,9 +5,13 @@ import { PROJECTS as PROYECTOS, getTechBadge } from "../data/profile";
 
 const Proyectos: React.FC = () => {
   const [open, setOpen] = useState<Record<string, boolean>>({});
+  const [activeImage, setActiveImage] = useState<Record<string, boolean>>({});
 
   const toggle = (key: string) =>
     setOpen((prev) => ({ ...prev, [key]: !prev[key] }));
+
+  const toggleImage = (key: string) =>
+    setActiveImage((prev) => ({ ...prev, [key]: !prev[key] }));
 
   const items = useMemo(() => PROYECTOS ?? [], []);
 
@@ -48,6 +52,7 @@ const Proyectos: React.FC = () => {
       </a>
     );
   };
+
   return (
     <section
       id="proyectos"
@@ -77,6 +82,7 @@ const Proyectos: React.FC = () => {
           {featured.map((proyecto) => {
             const key = proyecto.title;
             const isOpen = !!open[key];
+            const isImageActive = !!activeImage[key];
             const usarContain = proyecto.fit === "contain";
 
             return (
@@ -90,7 +96,10 @@ const Proyectos: React.FC = () => {
               >
                 <div className="h-full rounded-[26px] p-[1px] bg-gradient-to-br from-rose-500/20 via-fuchsia-500/10 to-amber-300/10 shadow-[0_18px_60px_-30px_rgba(0,0,0,0.65)]">
                   <div className="rounded-[26px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl overflow-hidden h-full">
-                    <div className="relative aspect-[16/9] overflow-hidden bg-[#0f0a1a]">
+                    <div
+                      onClick={() => toggleImage(key)}
+                      className="relative aspect-[16/9] overflow-hidden bg-[#0f0a1a] cursor-pointer"
+                    >
                       <img
                         src={proyecto.banner}
                         alt={proyecto.title}
@@ -99,11 +108,17 @@ const Proyectos: React.FC = () => {
                         style={{ objectPosition: proyecto.position ?? "center" }}
                         className={[
                           "absolute inset-0 w-full h-full transition-transform duration-500",
+                          isImageActive ? "scale-[1.02]" : "",
                           usarContain ? "object-contain p-2.5" : "object-cover",
                         ].join(" ")}
                       />
 
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#090611] via-[#090611]/45 to-transparent" />
+                      <div
+                        className={[
+                          "absolute inset-0 bg-gradient-to-t from-[#090611] via-[#090611]/45 to-transparent transition-opacity duration-300",
+                          isImageActive ? "opacity-10" : "opacity-100",
+                        ].join(" ")}
+                      />
 
                       {proyecto.award && (
                         <div className="absolute left-3 top-3">
@@ -128,11 +143,13 @@ const Proyectos: React.FC = () => {
                       >
                         {proyecto.description}
                       </p>
+
                       {proyecto.note && (
                         <p className="mt-2 inline-flex max-w-full items-center rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] leading-tight text-white/60">
                           {proyecto.note}
                         </p>
                       )}
+
                       <div className="mt-1.5">
                         <button
                           type="button"
@@ -221,7 +238,7 @@ const Proyectos: React.FC = () => {
                         ].join(" ")}
                       />
 
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#090611] via-[#090611]/45 to-transparent group-hover:opacity-10" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#090611] via-[#090611]/45 to-transparent group-hover:opacity-10 transition-opacity duration-300" />
 
                       {proyecto.award && (
                         <div className="absolute left-4 top-4">
@@ -246,12 +263,12 @@ const Proyectos: React.FC = () => {
                       >
                         {proyecto.description}
                       </p>
+
                       {proyecto.note && (
                         <p className="mt-3 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs sm:text-sm text-white/65">
                           {proyecto.note}
                         </p>
                       )}
-
 
                       <ul className="mt-4 flex flex-wrap gap-2">
                         {proyecto.tech.slice(0, 5).map((tecno) => {
@@ -299,6 +316,7 @@ const Proyectos: React.FC = () => {
         {secondary.map((proyecto) => {
           const key = proyecto.title;
           const isOpen = !!open[key];
+          const isImageActive = !!activeImage[key];
           const usarContain = proyecto.fit === "contain";
 
           return (
@@ -312,7 +330,10 @@ const Proyectos: React.FC = () => {
             >
               <div className="h-full rounded-[24px] p-[1px] bg-gradient-to-br from-rose-500/14 via-fuchsia-500/8 to-amber-300/8 shadow-[0_14px_45px_-28px_rgba(0,0,0,0.65)]">
                 <div className="rounded-[24px] border border-white/10 bg-[#120b1f]/80 backdrop-blur-xl overflow-hidden h-full flex flex-col">
-                  <div className="relative aspect-[16/10] sm:aspect-[4/3] overflow-hidden bg-[#0f0a1a]">
+                  <div
+                    onClick={() => toggleImage(key)}
+                    className="relative aspect-[16/10] sm:aspect-[4/3] overflow-hidden bg-[#0f0a1a] cursor-pointer"
+                  >
                     <img
                       src={proyecto.banner}
                       alt={proyecto.title}
@@ -321,13 +342,19 @@ const Proyectos: React.FC = () => {
                       style={{ objectPosition: proyecto.position ?? "center" }}
                       className={[
                         "absolute inset-0 w-full h-full transition-transform duration-500",
+                        isImageActive ? "scale-[1.02]" : "",
                         usarContain
-                          ? "object-contain object-center p-0 group-hover:scale-[1.02]"
-                          : "object-cover object-center group-hover:scale-[1.03]",
+                          ? "object-contain object-center p-0 sm:group-hover:scale-[1.02]"
+                          : "object-cover object-center sm:group-hover:scale-[1.03]",
                       ].join(" ")}
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#090611] via-[#090611]/55 to-transparent group-hover:opacity-10" />
+                    <div
+                      className={[
+                        "absolute inset-0 bg-gradient-to-t from-[#090611] via-[#090611]/55 to-transparent transition-opacity duration-300 sm:group-hover:opacity-10",
+                        isImageActive ? "opacity-10" : "opacity-100",
+                      ].join(" ")}
+                    />
                   </div>
 
                   <div className="p-3.5 sm:p-4 flex flex-col flex-1">
@@ -343,6 +370,7 @@ const Proyectos: React.FC = () => {
                     >
                       {proyecto.description}
                     </p>
+
                     {proyecto.note && (
                       <p className="mt-3 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs sm:text-sm text-white/65">
                         {proyecto.note}
