@@ -27,18 +27,18 @@ Puedes ver el portfolio aquí:
 
 ---
 
-## 🚀 Funcionalidades destacadas
+## Funcionalidades destacadas
 
-- 🎨 **Diseño moderno y cuidado** con TailwindCSS  
-- ⚡ **Renderizado rápido** gracias a Vite  
-- 📱 **Diseño responsive** adaptable a distintos dispositivos  
-- 🧭 Navegación fluida con animaciones de Framer Motion  
-- 📬 Formulario de contacto funcional
-- 🌐 Integración con proyectos reales desplegados  
+- **Diseño moderno y cuidado** con TailwindCSS  
+- **Renderizado rápido** gracias a Vite  
+- **Diseño responsive** adaptable a distintos dispositivos  
+- Navegación fluida con animaciones de Framer Motion  
+- Formulario de contacto funcional
+- Integración con proyectos reales desplegados  
 
 ---
 
-## ✨ Aspectos destacados
+## Aspectos destacados
 
 - Portfolio completo enfocado a desarrollo **backend y full stack**  
 - Organización clara de proyectos, experiencia y stack tecnológico  
