@@ -48,7 +48,7 @@ const Proyectos: React.FC = () => {
         ].join(" ")}
       >
         {isVideo ? <Video className="w-4 h-4" /> : <PlayCircle className="w-4 h-4" />}
-        {isVideo ? "Ver vídeo" : "Probar"}
+        {isVideo ? "Ver vídeo" : "Probar aplicación"}
       </a>
     );
   };
