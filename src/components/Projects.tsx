@@ -145,7 +145,7 @@ const Proyectos: React.FC = () => {
                       </p>
 
                       {proyecto.note && (
-                        <p className="mt-2 inline-flex max-w-full items-center rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] leading-tight text-white/60">
+                        <p className="mt-2 inline-flex w-fit max-w-fit items-center rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] leading-tight text-white/60">
                           {proyecto.note}
                         </p>
                       )}
@@ -265,7 +265,7 @@ const Proyectos: React.FC = () => {
                       </p>
 
                       {proyecto.note && (
-                        <p className="mt-3 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs sm:text-sm text-white/65">
+                        <p className="mt-2 inline-flex w-fit max-w-fit items-center rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] leading-tight text-white/60">
                           {proyecto.note}
                         </p>
                       )}
@@ -372,7 +372,7 @@ const Proyectos: React.FC = () => {
                     </p>
 
                     {proyecto.note && (
-                      <p className="mt-3 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs sm:text-sm text-white/65">
+                      <p className="mt-2 inline-flex w-fit max-w-fit items-center rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] leading-tight text-white/60">
                         {proyecto.note}
                       </p>
                     )}
