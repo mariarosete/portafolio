@@ -9,7 +9,6 @@ import flowDocument from "../assets/pasteleria.jpg";
 import disney from "../assets/disney.jpg";
 import pizarra from "../assets/pizarra.jpg";
 import portada from "../assets/MRS.png";
-import skillTechVideo from "../assets/skillTech.mp4";
 import pasteleriaVideo from "../assets/pasteleria.mp4";
 import asgardGym from "../assets/AsgardGym.mp4";
 import servidorVideo from "../assets/Servidor.mp4";
@@ -520,7 +519,7 @@ export const PROYECTOS: Proyecto[] = [
     fit: "contain",
     position: "center",
     award: "Mención honorífica · TFG DAW",
-    demo: skillTechVideo,
+    demo: "https://maria-skilltech.vercel.app/usuarios/html/anonimo/indexAnonimo.html",
     demoType: "live",
     note: "🖥️ Optimizada para versión escritorio",
   },
