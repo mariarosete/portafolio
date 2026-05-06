@@ -7,24 +7,45 @@ type Status = "idle" | "sending" | "sent";
 export default function ContactForm() {
   const [status, setStatus] = React.useState<Status>("idle");
 
+  React.useEffect(() => {
+    if (status === "sent") {
+      const timer = setTimeout(() => {
+        setStatus("idle");
+      }, 4000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
+
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
     if (status === "sending" || status === "sent") return;
 
+    const form = e.currentTarget;
     setStatus("sending");
 
     try {
-      const data = new FormData(e.currentTarget);
+      const data = new FormData(form);
 
-      await fetch(FORM_ENDPOINT, {
+      const response = await fetch(FORM_ENDPOINT, {
         method: "POST",
-        headers: { Accept: "application/json" },
+        headers: {
+          Accept: "application/json",
+        },
         body: data,
       });
 
-      e.currentTarget.reset();
-    } finally {
+      if (!response.ok) {
+        throw new Error("No se pudo enviar el formulario");
+      }
+
+      form.reset();
       setStatus("sent");
+    } catch (error) {
+      console.error(error);
+      setStatus("idle");
+      alert("No se pudo enviar el mensaje. Inténtalo de nuevo.");
     }
   }
 
@@ -33,15 +54,15 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} aria-busy={isSending} className="space-y-5">
-      {/* Fila: nombre y email */}
       <div className="grid gap-4 md:grid-cols-2">
         <div>
           <label className="block text-[11px] uppercase tracking-[0.24em] text-white/40">
-            Nombre
+            Nombre *
           </label>
           <input
             name="name"
             type="text"
+            required
             placeholder="Tu nombre"
             className="
               mt-2 w-full rounded-2xl
@@ -63,7 +84,7 @@ export default function ContactForm() {
             name="email"
             type="email"
             required
-            placeholder="marlarosete89@gmail.com"
+            placeholder="tu@email.com"
             className="
               mt-2 w-full rounded-2xl
               border border-white/10 bg-white/5
@@ -77,7 +98,6 @@ export default function ContactForm() {
         </div>
       </div>
 
-      {/* Mensaje */}
       <div>
         <label className="block text-[11px] uppercase tracking-[0.24em] text-white/40">
           Mensaje *
@@ -100,10 +120,8 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* Honeypot anti-bots */}
       <input type="text" name="_gotcha" className="hidden" aria-hidden="true" />
 
-      {/* Pie */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-xs text-white/38">* Campos obligatorios.</p>
 
@@ -140,6 +158,12 @@ export default function ContactForm() {
           )}
         </button>
       </div>
+
+      {isSent && (
+        <p className="text-sm text-emerald-400">
+          Mensaje enviado correctamente.
+        </p>
+      )}
     </form>
   );
 }

@@ -37,9 +37,15 @@ import {
   Server,
   Monitor,
   Wrench,
-  Sparkles,
+  HeartHandshake,
   Cpu,
-  Boxes,
+  ClipboardList,
+  UsersRound,
+  Brain,
+  Puzzle,
+  ScanSearch,
+  RefreshCw,
+  UserCheck,
 } from "lucide-react";
 
 type TechItem = {
@@ -303,43 +309,43 @@ const Tecnologias: React.FC = () => {
 
   const SOFT_SKILLS: TechItem[] = [
     {
-      Icono: Boxes,
+      Icono: ClipboardList,
       etiqueta: "Organización",
       ring: "ring-[#d9e9ff]",
       bg: "bg-[#f4f9ff] text-[#3178C6]",
     },
     {
-      Icono: Boxes,
+      Icono: UsersRound,
       etiqueta: "Trabajo en equipo",
       ring: "ring-[#ffd7c8]",
       bg: "bg-[#fff5f1] text-[#F05032]",
     },
     {
-      Icono: Boxes,
+      Icono: Brain,
       etiqueta: "Pensamiento analítico",
       ring: "ring-[#e2f6bf]",
       bg: "bg-[#f7ffea] text-[#65a30d]",
     },
     {
-      Icono: Boxes,
+      Icono: Puzzle,
       etiqueta: "Resolución de problemas",
       ring: "ring-[#ffe6e2]",
       bg: "bg-[#fff7f5] text-[#EA2D2E]",
     },
     {
-      Icono: Boxes,
+      Icono: ScanSearch,
       etiqueta: "Atención al detalle",
       ring: "ring-[#ffe9c4]",
       bg: "bg-[#fff9e9] text-[#F59E0B]",
     },
     {
-      Icono: Boxes,
+      Icono: RefreshCw,
       etiqueta: "Adaptabilidad",
       ring: "ring-[#cfe9ff]",
       bg: "bg-[#f4fbff] text-[#2496ED]",
     },
     {
-      Icono: Boxes,
+      Icono: UserCheck,
       etiqueta: "Orientación al usuario",
       ring: "ring-[#ffe9c4]",
       bg: "bg-[#fff9e9] text-[#F59E0B]",
@@ -559,48 +565,48 @@ const Tecnologias: React.FC = () => {
         />
 
         <CategoryPanel
-          icon={<Sparkles className="w-5 h-5" />}
+          icon={<HeartHandshake className="w-5 h-5" />}
           title="Soft Skills"
           description="Habilidades que aplico en proyectos reales para trabajar mejor en equipo, organizar el desarrollo y aportar soluciones de calidad."
           items={[
             {
-              Icono: Boxes,
+              Icono: ClipboardList,
               etiqueta: "Organización",
               ring: "ring-[#d9e9ff]",
               bg: "bg-[#f4f9ff] text-[#3178C6]",
             },
             {
-              Icono: Boxes,
+              Icono: UsersRound,
               etiqueta: "Trabajo en equipo",
               ring: "ring-[#ffd7c8]",
               bg: "bg-[#fff5f1] text-[#F05032]",
             },
             {
-              Icono: Boxes,
+              Icono: Brain,
               etiqueta: "Pensamiento analítico",
               ring: "ring-[#e2f6bf]",
               bg: "bg-[#f7ffea] text-[#65a30d]",
             },
             {
-              Icono: Boxes,
+              Icono: Puzzle,
               etiqueta: "Resolución de problemas",
               ring: "ring-[#ffe6e2]",
               bg: "bg-[#fff7f5] text-[#EA2D2E]",
             },
             {
-              Icono: Boxes,
+              Icono: ScanSearch,
               etiqueta: "Atención al detalle",
               ring: "ring-[#ffe9c4]",
               bg: "bg-[#fff9e9] text-[#F59E0B]",
             },
             {
-              Icono: Boxes,
+              Icono: RefreshCw,
               etiqueta: "Adaptabilidad",
               ring: "ring-[#cfe9ff]",
               bg: "bg-[#f4fbff] text-[#2496ED]",
             },
             {
-              Icono: Boxes,
+              Icono: UserCheck,
               etiqueta: "Orientación al usuario",
               ring: "ring-[#ffe9c4]",
               bg: "bg-[#fff9e9] text-[#F59E0B]",

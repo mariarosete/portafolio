@@ -1,3 +1,5 @@
-// Lee el endpoint desde variables de entorno de Vite.
+// src/config/forms.ts
+
 export const FORM_ENDPOINT =
-  import.meta.env.VITE_GETFORM_ENDPOINT ?? "https://getform.io/f/bejedjoa";
+  import.meta.env.VITE_FORMSPREE_ENDPOINT ??
+  "https://formspree.io/f/mbdwyqwg";
